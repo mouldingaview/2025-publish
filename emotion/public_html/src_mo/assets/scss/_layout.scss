@@ -1,0 +1,72 @@
+html {
+  overflow-y: scroll;
+}
+#container {
+  position: relative;
+}
+
+.contents {
+  @include globalWidth(min-width);
+}
+
+.el-dialog__wrapper {
+}
+.el-dialog {
+  margin: 0 !important;
+  .el-dialog__header {
+    padding: 55px 20px 0 20px;
+
+    .el-dialog__title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+    }
+    .el-dialog__headerbtn {
+      position:fixed;
+      top: 15px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: $red;
+      .el-dialog__close {
+        color: #fff !important;
+      }
+    }
+  }
+
+  .el-dialog__body {
+    padding: 25px 20px 20px;
+  }
+}
+
+.loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.5);
+  @keyframes circle {
+    0%,
+    100% {
+      animation-timing-function: cubic-bezier(0.45, 0, 0.9, 0.55);
+    }
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 108px);
+      animation-timing-function: cubic-bezier(0, 0.45, 0.55, 0.9);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+}

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="main-html">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Mobile]e-motion</title>
+  <link rel="stylesheet" href="./assets/scss/common.css">
+  <link rel="stylesheet" href="./assets/scss/main.css">
+  <script src="./assets/js/plugin/gsap.min.js"></script>
+  <script src="./assets/js/plugin/ScrollTrigger.min.js"></script>
+  <!-- <script src="/assets/js/plugin/smooth-scrollbar.js"></script> -->
+  <script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+  
+  <header class="new-header">
+    <div class="new-header-inner">
+      <!-- nav -->
+      <div class="nav">
+        <div class="nav-inner">
+          <h1 class="logo">
+            <a href="/"><span class="blind">emotion</span></a>
+          </h1>
+					<button type="button" class="btn-allmenu" id="open-allmenu"><span class="blind">전체메뉴</span></button>
+
+					<!-- 전체메뉴 -->
+					<div class="allmenu-wrap">
+						<div class="allmenu-inner">
+							<button type="button" class="btn-allmenu-close" id="close-allmenu">닫기</button>
+
+							<br><br><br>
+							로고, .gnb, 소셜링크, 카피라이트<br><br>
+							PC와 맞출 필요 없으니,<br>
+							디자인에 맞게 스타일 & 인터렉션 진행
+						</div>
+					</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+	<!-- Intro -->
+	<section class="section-main section-intro" id="main-intro">
+		<div class="section-main-inner">
+			<div class="intro-text">
+				<div class="txt-intro txt-intro01"> 
+					<div class="mo_line slice-text" data-slice="By adding value">By adding value</div>
+					<div class="mo_line slice-text" data-slice="to the experience">to the experience</div>
+				</div>
+				<div class="txt-intro txt-intro02">
+					<div class="mo_line slice-text" data-slice="We make greatness">We make greatness</div>
+				</div>
+			</div>
+			<div class="intro-bg"></div>
+		</div>
+	</section>
+
+  <div id="container">
+    <!-- section 01 -->
+    <section class="section-main section-slogan" >
+      <div class="section-main-inner">
+				<div class="slogan-text">
+					<div class="txt-slogan txt-slogan01">
+						<div class="mo_line slice-text" data-slice="By adding value">By adding value</div>
+						<div class="mo_line slice-text" data-slice="to the experience">to the experience</div>
+					</div>
+					<div class="txt-slogan txt-slogan02">
+						<div class="mo_line slice-text" data-slice="We make greatness">We make greatness</div>
+					</div>
+				</div>
+
+				<div class="scroll-down">
+					<i class="ico-arr"></i><span class="txt">Scroll to Explore</span>
+				</div>
+      </div>
+    </section>
+
+    <!-- section 02 Work -->
+    <section class="section-main section-work" data-link="work">
+			<div class="section-work-inner">
+				<h2 class="sec-tit">GREAT PERFORMANCE</h2>
+				<div class="work-wrap sec-cont">
+					<section class="work-list">
+						<ul>
+							<li>
+								<a href="#" class="item item-work">
+									<div class="img-area"><img src="/assets/images/@temp/main-work-img-02.png" alt=""></div>
+									<div class="cont-area">
+										<div class="itm-cont itm-tag">Award</div>
+										<div class="itm-cont itm-tit">S2W</div>
+										<div class="itm-cont itm-date">2024</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item item-work">
+									<div class="img-area"><img src="/assets/images/@temp/main-work-img-03.png" alt=""></div>
+									<div class="cont-area">
+										<!-- <div class="itm-cont itm-tag"></div> -->
+										<div class="itm-cont itm-tit">Seoul Viosys</div>
+										<div class="itm-cont itm-date">2024</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item item-work">
+									<div class="img-area"><img src="/assets/images/@temp/main-work-img-04.png" alt=""></div>
+									<div class="cont-area">
+										<div class="itm-cont itm-tag">Award</div>
+										<div class="itm-cont itm-tit">Seoul Semiconductor</div>
+										<div class="itm-cont itm-date">2024</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item item-work">
+									<div class="img-area"><img src="/assets/images/@temp/main-work-img-05.png" alt=""></div>
+									<div class="cont-area">
+										<!-- <div class="itm-cont itm-tag"></div> -->
+										<div class="itm-cont itm-tit">OCI Holdings</div>
+										<div class="itm-cont itm-date">2024</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item item-work">
+									<div class="img-area"><img src="/assets/images/@temp/main-work-img-06.png" alt=""></div>
+									<div class="cont-area">
+										<!-- <div class="itm-cont itm-tag"></div> -->
+										<div class="itm-cont itm-tit">핵심소재 기업 OCI</div>
+										<div class="itm-cont itm-date">2023</div>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item item-work">
+									<div class="img-area"><img src="/assets/images/@temp/main-work-img-01.png" alt=""></div>
+									<div class="cont-area">
+										<!-- <div class="itm-cont itm-tag"></div> -->
+										<div class="itm-cont itm-tit">TDS 공시지원금 개편</div>
+										<div class="itm-cont itm-date">2023</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+    </section>
+
+		<!-- section03 Business -->
+    <section class="section-main section-business">
+      <div class="section-main-inner sec-cont">
+        <div class="bg">
+          <video id="video" muted autoplay loop > <!-- autoplay loop -->
+            <source src="/assets/images/main/emotion_main_video.webm" type="video/webm" />
+          </video>
+        </div>
+        <div class="cont business-cont">
+          <section class="sec sec-text">
+            <div class="text-wrap">
+              <div class="txt-main">
+                <div  class="_line" data-slice="We are digital experts">We are digital experts</div> 
+                <div  class="_line" data-slice="who will make">who will make</div>
+                <div  class="_line" data-slice="your business greater.">your business greater.</div>
+              </div>
+              <div class="txt-sub">
+                <div>With e · motion, you can do anything</div>
+                <div>and become anyone.</div>
+              </div>
+            </div>
+          </section>
+          <section class="sec sec-list">
+            <div class="list-wrap">
+              <ul>
+                <li>UX / CX Consulting</li>
+                <li>AI Digital Solution</li>
+                <li>Data Analysis and Visualization</li>
+                <li>UX Research & Strategy</li>
+                <li>Experience Design</li>
+                <li>UI / GUI Design</li>
+                <li>Interaction Design</li>
+                <li>2D / 3D Motiongraphic</li>
+                <li>Brand Identity Design</li>
+                <li>SNS Marketing</li>
+                <li>Total Management</li>
+                <li>Creative idea&Development</li>
+                <li>Digital Transformation</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- section 04 Magazine -->
+    <section class="section-main section-magazine" data-link="magazine">
+			<div class="section-main-inner">
+				<h2 class="sec-tit">RADICAL THINKING. <span class="color2">MAGAZINE</span></h2>
+				<div class="magazine-wrap sec-cont">
+					<ul class="item-list">
+						<li class="item">
+								<a href="#" class="article">
+									<div class="img-area">
+										<img src="/assets/images/@temp/main-magazine-img-01.jpg" alt="">
+									</div>
+									<div class="cont-area">
+										<ul>
+											<li class="art-date">2024.11.27</li>
+											<li class="art-tit">공감하는 AI, 감성 기술로 나아가는 ‘AI 에이전트’</li>
+											<li class="art-desc">단순한 응답을 넘어 인간의 감정을 이해하고 공감하는 ‘AI 에이전트’에 대해 알아봅시다.</li>
+										</ul>
+									</div>
+								</a>
+						</li>
+						<!-- 02 -->
+						<li class="item">
+							<a href="#" class="article">
+								<div class="img-area">
+									<img src="/assets/images/@temp/main-magazine-img-02.jpg" alt="">
+								</div>
+								<div class="cont-area">
+									<ul>
+										<li class="art-date">2025.01.23</li>
+										<li class="art-tit">2025년의 새로운 기준: UXUI, 기술, 문화 트렌드의 변화</li>
+										<li class="art-desc">2025년의 UXUI, AI·통신 기술, 문화 트렌드에 대해 알아봅시다.</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<!-- 03 -->
+						<li class="item">
+							<a href="#"  class="article">
+								<div class="img-area">
+									<img src="/assets/images/@temp/main-magazine-img-03.jpg" alt="">
+								</div>
+								<div class="cont-area">
+									<ul>
+										<li class="art-date">2024.09.27</li>
+										<li class="art-tit">지금 주목해야 할 코어 세대</li>
+										<li class="art-desc">알파 세대와 액티브 시니어 세대를 알아보고 다양한 디지털 사례를 통해 편리한 사용성이란 무엇인지 살펴봅시다.</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<!-- 04 -->
+						<li class="item">
+							<a href="#" class="article">
+								<div class="img-area">
+									<img src="/assets/images/@temp/main-magazine-img-04.jpg" alt="">
+								</div>
+								<div class="cont-area">
+									<ul>
+										<li class="art-date">2024.07.29</li>
+										<li class="art-tit">프롬프트 엔지니어링, AI와의 대화를 이끄는 핵심 기술을 알아보겠습니다.</li>
+										<li class="art-desc">프롬프트 엔지니어링, AI와의 대화를 이끄는 핵심 기술을 알아보겠습니다.</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<!-- 05 -->
+						<li class="item">
+							<a href="#" class="article">
+								<div class="img-area">
+									<img src="/assets/images/@temp/main-magazine-img-05.jpg" alt="">
+								</div>
+								<div class="cont-area">
+									<ul>
+										<li class="art-date">2024.06.10</li>
+										<li class="art-tit">모든 사용자를 위한 웹: 접근성으로 디지털 장벽 넘기</li>
+										<li class="art-desc">모든 사용자를 위한 웹: 접근성으로 디지털 장벽 넘기</li>
+									</ul>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+    </section>
+
+    <!-- footer -->
+    <footer class="new-footer">
+      <div class="new-footer-inner">
+        <!-- footer cont area -->
+        <section class="footer-content">
+          <!-- top -->
+          <div class="footer-cont top-area">
+            <div class="cont-left cont-button">
+              <button type="button" class="btn-top btn-scrollTop">
+                <i class="ico-arr"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 19V5" stroke="#2F363D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19 12L12 5L5 12" stroke="#2F363D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></i><span class="txt">Scroll to Top</span>
+              </button>
+            </div>
+            <div class="cont-right cont-article">
+              <a href="#" class="link-privacy"><span class="txt">개인정보취급방침</span></a>
+            </div>
+          </div>
+          <!-- bottom -->
+          <div class="footer-cont bottom-area">
+            <div class="cont-left cont-social">
+              <div class="tit">Let’s Connect <br> With <span class="color2">Emotion Global</span></div>
+              <ul class="list">
+                <li><a href="#" target="_blank" title="새창열림"><span class="txt">Behance</span></a></li>
+                <li><a href="#" target="_blank" title="새창열림"><span class="txt">Facebook</span></a></li>
+                <li><a href="#" target="_blank" title="새창열림"><span class="txt">Career</span></a></li>
+                <li><a href="#" target="_blank" title="새창열림"><span class="txt">Introduce</span></a></li>
+              </ul>
+            </div>
+            <div class="cont-right cont-info">
+              <ul>
+                <li class="info-address">
+                  <div>5F, 637, Eonju-ro, Gangnam-gu,<br>Seoul, Republic of Korea</div>
+                  <div>T 02.542.1987 F 02.542.1988</div>
+                </li>
+                <li class="info-email">
+                  <a href="mailto:inquiry@emotion.co.kr">inquiry@emotion.co.kr</a>
+                </li>
+                <li class="info-copyright">ⓒ e · motion Global Inc. All rights reserved.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- animation area -->
+        <section class="footer-animation">
+          <article class="svg">
+            <div class="footer-copy">
+              <span class="_char">M</span>
+              <span class="_char">a</span>
+              <span class="_char">k</span>
+              <span class="_char">e</span>
+              <span class="_char">&nbsp;</span>
+              <span class="_char">G</span>
+              <span class="_char">r</span>
+              <span class="_char">e</span>
+              <span class="_char">a</span>
+              <span class="_char">t</span>
+              <span class="_char">n</span>
+              <span class="_char">e</span>
+              <span class="_char">s</span>
+              <span class="_char">s</span>
+            </div>
+          </article>
+        </section>
+      </div>
+    </footer>
+
+		<div class="fixed-wrap">
+			<!-- 플로팅 섹션 링크 -->
+			<section class="main-floating-section-link">
+				<div class="main-floating-link link-work" >
+					<a href="#" class="floating-btn">
+						<span class="btn-ico ico-work"></span>
+						<span class="btn-txt">See More Work</span>
+						<span class="btn-arr">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arr-svg">
+								<path d="M7 17L17 7" stroke="#2F363D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M7 7H17V17" stroke="#2F363D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</span>
+					</a>
+				</div>
+				<div class="main-floating-link link-magazine">
+					<a href="#" class="floating-btn">
+						<span class="btn-ico ico-magazine"></span>
+						<span class="btn-txt">See All Story</span>
+						<span class="btn-arr">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arr-svg">
+								<path d="M7 17L17 7" stroke="#2F363D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M7 7H17V17" stroke="#2F363D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</span>
+					</a>
+				</div>
+			</section>
+		</div>
+  </div>
+
+  <!-- 플로팅 메뉴 -->
+  <section class="floating-menu">
+		<!-- 퀵메뉴 -->
+    <div class="floating-quickmenu _floating-menu-wrap">
+
+      <button type="button" class="quickmenu-btn _btn-open-layer _cursor-link" id="quickmenu-open" aria-label="open menu">
+				<span class="ico-e"><i class="ico ico-f"></i><i class="ico ico-b"></i></span>
+			</button>
+
+			<div class="quickmenu-layer">
+				<div class="quckmenu-layer-inner">
+					<div class="tit">이모션글로벌과<br>위대함을 만들어보세요.</div>
+					<ul class="btns">
+						<li><a href="#contact" class="btn-round">프로젝트 문의</a></li>
+						<li><a href="#download" class="btn-round">회사 소개서 다운로드</a></li>
+					</ul>
+					<button type="button" class="quickmenu-btn-close _btn-close-layer _cursor-link" id="quickmenu-close" aria-label="close menu"><span class="ico-x"></span></button>
+				</div>
+			</div>
+    </div>
+
+		<!-- 30주년 -->
+		<div class="floating-anniversary _floating-menu-wrap">
+			<button type="button" class="anniv-btn _btn-open-layer _cursor-link" id="anniv-open" aria-label="open 30th Anniversary">
+				<span class="txt">Anniversary</span>
+				<span class="dot"></span>
+				<span class="ico-anniv"><i class="ico ico-f"></i><i class="ico ico-b"></i></span>
+			</button>
+
+			<div class="anniv-layer">
+				<div class="bg"></div>
+				<div class="anniv-layer-inner">
+					<div class="anniv-cont" style="color: #fff">
+						동영상 들어갑니다.
+					</div>
+					<button type="button" class="anniv-btn-close _btn-close-layer _cursor-link" id="anniv-close" aria-label="close 30th Anniversary"><span class="ico-x"></span></button>
+				</div>
+			</div>
+		</div>
+  </section>
+
+</body>
+</html>
