@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{margin: 0;}
+        .menu{
+            width: 200px;height: 50px;
+            position: fixed; left: 50px;
+            border-radius: 0 0 30px 30px;
+            background-color: rgba(0,0,0,.6);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: #fff;
+        }
+        .menu > span:hover{
+            border-bottom: 1px solid #fff;
+            cursor: pointer;
+        }
+
+        .content{
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div:nth-child(2){background-color: coral;}
+        div:nth-child(3){background-color: violet;}
+        div:nth-child(4){background-color: teal;}
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <span>1번</span><span>2번</span><span>3번</span>
+    </div>
+    <div class="content">1</div>
+    <div class="content">2</div>
+    <div class="content">3</div>
+    <script>
+        const spans = document.querySelectorAll('span')
+        const contents = document.querySelectorAll('.content')
+        const firstTop = contents[0].offsetTop
+        const secondTop = contents[1].offsetTop
+        const thirdTop = contents[2].offsetTop
+
+        spans[0].onclick = function(){
+            window.scroll({top:firstTop, behavior:'smooth'})
+        }
+
+        spans[1].onclick = function(){
+            window.scroll({top:secondTop, behavior:'auto'})
+        }
+
+        spans[2].onclick = function(){
+            window.scroll({top:thirdTop, behavior:'smooth'})
+        }
+    </script>
+</body>
+</html>

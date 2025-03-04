@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes cursor{
+            50%{border-color: transparent;}
+        }
+
+        .text{
+            display: table-cell;
+            vertical-align: middle;
+            border-right: .05em solid #000;
+            animation: cursor 0.5s ease infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text"></h1>
+    <script>
+        const content = "Typing Effect"
+        const text = document.querySelector('.text');
+        let index = 0;//문자열에 접근하기 위해
+        //인덱스를 늘려주며 글자를 추가
+        function typing(){
+            text.textContent += content[index++];
+            if(index > content.length){
+                text.textContent = ""
+                index = 0;
+            }
+        }
+
+        setInterval(typing, 500);
+    </script>
+</body>
+</html>

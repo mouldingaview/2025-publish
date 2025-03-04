@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        img{width: 100%;}
+    </style>
+</head>
+<body>
+    <img src="../img/textContent.JPG" alt="">
+    <div>요소의  <span style="display: none;"> 콘텐츠</span></div>
+    <script>
+        console.log(
+            document.querySelector('div').innerText
+        )
+        console.log(
+            document.createTextNode("안녕하세요").textContent
+        )
+    </script>
+</body>
+</html>
