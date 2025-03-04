@@ -1,0 +1,137 @@
+@mixin montserrat {
+  font-family: Montserrat, "Noto Sans KR", sans-serif;
+  letter-spacing: 0;
+}
+
+@mixin length($val: 4, $margin: 16) {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  li {
+    margin-left: #{$margin}px;
+    flex: 0 1 auto;
+    width: calc((100% - (#{$margin}px * #{$val - 1})) / #{$val});
+  }
+  li:nth-child(#{$val}n + 1) {
+    margin-left: 0;
+  }
+  li:nth-child(n + #{$val + 1}) {
+    margin-top: #{$margin}px;
+  }
+}
+
+@mixin globalWidth($min-width: false) {
+  box-sizing: border-box;
+  @if $min-width {
+    min-width: $globalWidth;
+  } @else {
+    width: $globalWidth;
+  }
+
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin clearFix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin ellipsis($lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if $lines == 1 {
+    white-space: nowrap;
+  } @else {
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+  }
+}
+
+@mixin lang($lang: ko) {
+  @if $lang == ko {
+    font-family: "Malgun Gothic", "Dotum", sans-serif;
+  }
+  @if $lang == en {
+    font-family: "Roboto", "Arial", sans-serif;
+  }
+}
+
+@mixin blind {
+  position: absolute !important;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin bullet($shape: circle) {
+  position: relative;
+  padding-left: 10px;
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    content: "";
+    display: inline-block;
+    @if $shape == circle {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #999;
+    }
+    @if $shape == dash {
+      width: 6px;
+      height: 1px;
+      background-color: #999;
+    }
+  }
+}
+
+@mixin aboutWidth {
+  box-sizing: border-box;
+  width: 1264px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* sprite image
+   : 경로를 분리할지 고정할지 고민됨. 어떤게 편할까여!?
+
+
+*/
+@mixin sprite($url, $repeat: no-repeat, $position: 0 0) {
+  background-image: url("#{$url}");
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: 500px auto;
+}
+
+/*
+  Breakpoint
+  use ex)
+  @include respond('mobile') {
+    color: blue;
+  }
+*/
+/*
+@mixin respond($breakpoints) {
+  @if map-has-key($breakpoints, mobile) {
+    @media (min-width: map-get($breakpoints, mobile)) {
+      @content;
+    };
+  } @else if map-has-key($breakpoints, tablet) {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      @content;
+    }
+  }
+}*/

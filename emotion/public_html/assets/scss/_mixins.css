@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* sprite image
+   : 경로를 분리할지 고정할지 고민됨. 어떤게 편할까여!?
+
+
+*/
+/*
+  Breakpoint
+  use ex)
+  @include respond('mobile') {
+    color: blue;
+  }
+*/
+/*
+@mixin respond($breakpoints) {
+  @if map-has-key($breakpoints, mobile) {
+    @media (min-width: map-get($breakpoints, mobile)) {
+      @content;
+    };
+  } @else if map-has-key($breakpoints, tablet) {
+    @media (min-width: map-get($breakpoints, tablet)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map-get($breakpoints, desktop)) {
+      @content;
+    }
+  }
+}*/
+
+/*# sourceMappingURL=mixins.css.map */

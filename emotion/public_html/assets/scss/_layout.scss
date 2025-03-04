@@ -1,0 +1,163 @@
+/* html {
+  overflow-y: scroll;
+} */ /* @@OSK 삭제 */
+#app {
+  &.nav-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* #scroll-wrap {
+}
+#scroll-inner {
+  position: relative;
+} */ /* @@OSK 삭제 */
+.contents {
+  @include globalWidth;
+  &:before {
+    content: "";
+    margin-top: -1px;
+    height: 1px;
+    width: 1px;
+    display: block;
+  }
+}
+#scroll-fake {
+  visibility: hidden;
+  opacity: 0;
+}
+.transition-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100vw;
+}
+/* .scrollbar-track {
+  display: none !important;
+} */ /* @@OSK 삭제 */
+.loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.5);
+  @keyframes circle {
+    0%,
+    100% {
+      animation-timing-function: cubic-bezier(0.45, 0, 0.9, 0.55);
+    }
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 108px);
+      animation-timing-function: cubic-bezier(0, 0.45, 0.55, 0.9);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  .loading-spinner {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    .circle {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateZ(0) scale(1);
+      backface-visibility: hidden;
+      transform-origin: 0 0;
+      div {
+        position: absolute;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #ee2c3c;
+        left: 74px;
+        top: 20px;
+        animation: circle 1s linear infinite;
+        box-sizing: content-box;
+      }
+    }
+  }
+}
+
+.el-dialog__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.el-dialog {
+  margin: 0 !important;
+  .el-dialog__header {
+    padding: 70px 60px 0 60px;
+
+    .el-dialog__title {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 50px;
+    }
+    .el-dialog__headerbtn {
+      top: 18px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: $red;
+      .el-dialog__close {
+        color: #fff !important;
+      }
+    }
+  }
+
+  .el-dialog__body {
+    padding:30px 60px 60px;
+  }
+}
+
+@media print {
+  #container {
+    position: static;
+    height: auto;
+    overflow: visible !important;
+    .magazine-view {
+      .page-cont {
+        margin-left: 0;
+      }
+    }
+  }
+  #scroll-fake {
+    display: none !important;
+    height: 0 !important;
+  }
+  header {
+    position: static !important;
+  }
+  .banner-area {
+    display: none !important;
+  }
+}
