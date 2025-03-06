@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/ui02.js"></script>
+</head>
+<body>
+    <div id="wrap" class="main">
+        <div id="container">
+            <aside id="left-aside">
+                <div class="left-aside-wrap">
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <div class="profile">
+                        <div class="frame"><img src="../img/imsi.png" alt="상담사사진"></div>
+                        <div class="name">이생명<br><span class="num">(1000000)</span></div>
+                        <div class="switch-wrap">
+                            <div class="switch">   
+                                <input type="radio" class="switch-input" name="view" value="false" id="screen-saver-off">
+                                <label for="screen-saver-off" class="switch-label switch-label-on"><span>스크린</span></label>                                
+                                <input type="radio" class="switch-input" name="view" value="true" id="screen-saver-on" checked>
+                                <label for="screen-saver-on" class="switch-label switch-label-off"><span>스크린</span></label>
+                                <span class="switch-selection"></span>
+                            </div>
+                            <div class="select">
+                                <select id="select01">
+                                    <option value="hide">상담대기</option>
+                                    <option value="v11">상담대기</option>
+                                    <option value="v12">상담중</option>
+                                    <option value="v13">자리비움</option>
+                                    <option value="v14">점심시간</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="sele"><a href="" class="menu menu00"><span>HOME</span><!--span class="qa">QA</span--></a></li>
+                            <!--li><a href="" class="menu menu05"><span>방만들기</span></a></li-->
+                            <li><!-- 메뉴 오픈상태 : open 클래스 -->
+                                <button type="button" class="menu menu01"><span>상담관리</span></button>
+                                <ul>
+                                    <li><a href="">대기고객조회</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">진행상담조회</a></li>
+                                    <li><a href="">예약상담조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="menu menu02"><span>상담이력</span></a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                            <li><a href="" class="menu menu03"><span>공지사항</span></a></li>
+                            <li><a href="" class="menu menu04"><span>커뮤니티</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <button type="button" class="btn-logout"><span>로그아웃</span></button>
+            </aside>
+            <main> 
+                <div class="main-center">
+                    <div class="main-cont">
+                        <div class="tit-wrap">
+                            <h2 class="tit"><span>오늘의 상담현황</span></h2>
+                            <div class="clock">
+                                <button type="button" class="btn-refresh"><span class="hide">새로고침</span></button> 
+                                <span>2023-10-23 13:53:23</span>
+                            </div>  
+                        </div>
+                        <div class="item-container">
+                            <div class="chart-area">
+                                <div class="chart-wrap">
+                                    <div class="total"><span>82</span> 총 상담</div>
+                                    <div>
+                                        <img src="../img/sp-chart.png" alt="" style="width:210px;height:auto;">
+                                    </div>
+                                </div>
+                                <div class="area-legend">
+                                    <div>대기상담</div>
+                                    <div>예약상담</div>
+                                    <div>진행상담</div>
+                                    <div>종료상담</div>
+                                </div>
+                                <div class="tooltip-wrap">
+                                    <div class="tooltip">대기상담, 예약상담, 진행상담, 종료상담<br>건수를 모두 더한 총 상담 수</div>
+                                </div>
+                            </div>
+                            <div class="item-conts">
+                                <div class="item-wrap">
+                                    <div class="item-box">
+                                        <div class="item-box-detail">
+                                            <div>
+                                                <dl class="item01">
+                                                    <dt>대기상담</dt>
+                                                    <dd><span>99</span> 건</dd>
+                                                </dl>
+                                            </div>
+                                            <div>
+                                                <dl class="item02">
+                                                    <dt>예약상담</dt>
+                                                    <dd><span>25</span> 건</dd>
+                                                </dl>
+                                            </div>
+                                            <div>
+                                                <dl class="item03">
+                                                    <dt>진행상담</dt>
+                                                    <dd><span>25</span> 건</dd>
+                                                </dl>
+                                            </div>
+                                            <div>
+                                                <dl class="item04">
+                                                    <dt>종료상담</dt>
+                                                    <dd><span>0</span> 건</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="item-box-detail02">
+                                            <div class="item-dl-wrap">
+                                                <dl>
+                                                    <dt>완료</dt>
+                                                    <dd><span>23</span> 건</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>미완료</dt>
+                                                    <dd><span>4</span> 건</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="tooltip-wrap">
+                                            <div class="tooltip">전체 상담 진행 현황</div>
+                                        </div>
+                                    </div>
+                                    <div class="item-box02">
+                                        <div class="title">나의 상담</div>
+                                        <div class="item-dl-wrap">
+                                            <dl>
+                                                <dt>완료</dt>
+                                                <dd><span>99</span> 건</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>미완료</dt>
+                                                <dd><span>99</span> 건</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="tooltip-wrap">
+                                            <div class="tooltip">현재 나의 상담 진행 현황</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-wrap02">      
+                                    <div class="item">
+                                        <dl>
+                                            <dt>평균 대기시간</dt>
+                                            <dd>
+                                                <div><span>3</span>분 <span>15</span>초</div>
+                                                <div class="level">낮음</div>
+                                            </dd>
+                                        </dl>
+                                        <div class="tooltip-wrap">
+                                            <div class="tooltip">현재 대기하고 있는 고객의 평균 대기시간</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">                            
+                                        <dl>
+                                            <dt>최장 대기시간</dt>
+                                            <dd>
+                                                <div><span>3</span>분 <span>15</span>초</div>
+                                                <div class="level">낮음</div>
+                                            </dd>
+                                        </dl>
+                                        <div class="tooltip-wrap">
+                                            <div class="tooltip">현재 대기하고 있는 고객중 최장 대기시간</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">                            
+                                        <dl>
+                                            <dt>평균 상담시간</dt>
+                                            <dd>
+                                                <div><span>3</span>분 <span>15</span>초</div>
+                                                <div class="level av">보통</div>
+                                            </dd>
+                                        </dl>
+                                        <div class="tooltip-wrap">
+                                            <div class="tooltip">전체 종료 상담에 대한 평균 상담시간</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">                            
+                                        <dl>
+                                            <dt>전체 응대율</dt>
+                                            <dd>
+                                                <div><span>3</span>%</div>
+                                                <div class="level up">높음</div>
+                                            </dd>
+                                        </dl>
+                                        <div class="tooltip-wrap">
+                                            <div class="tooltip">총 상담 건수에 대한 응대율</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-cont">     
+                        <div class="flex-wrap">
+                            <div class="box-notice type01">
+                                <div class="title">
+                                    <h2>대기상담</h2> 
+                                    <a href="" class="btn-ad"><span>더보기</span></a>
+                                </div>
+                                <div class="tbl-style01">
+                                    <table>
+                                        <colgroup>
+                                            <col>
+                                            <col style="width: 18%;" span="4">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>고객명</th>
+                                                <th>대기시작시간</th>
+                                                <th>대기시간</th>
+                                                <th>유입경로</th>
+                                                <th>상담</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag-wrap">
+                                                        <span class="flag">예약</span>
+                                                        <span>김한화</span>
+                                                    </div>
+                                                </td>
+                                                <td>10:25:18</td>
+                                                <td>135분</td>
+                                                <td>모바일앱</td>
+                                                <td>
+                                                    <button type="button" class="btn-tbl"><span>입장</span></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag-wrap">
+                                                        <span>김한화</span>
+                                                    </div>
+                                                </td>
+                                                <td>10:25:18</td>
+                                                <td>135분</td>
+                                                <td>모바일앱</td>
+                                                <td>
+                                                    <button type="button" class="btn-tbl" disabled><span>상담마감</span></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag-wrap">
+                                                        <span>김한화</span>
+                                                    </div>
+                                                </td>
+                                                <td>10:25:18</td>
+                                                <td>135분</td>
+                                                <td>모바일앱</td>
+                                                <td>
+                                                    <button type="button" class="btn-tbl" disabled><span>상담마감</span></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="flag-wrap">
+                                                        <span>김한화</span>
+                                                    </div>
+                                                </td>
+                                                <td>10:25:18</td>
+                                                <td>135분</td>
+                                                <td>모바일앱</td>
+                                                <td>
+                                                    <button type="button" class="btn-tbl" disabled><span>상담마감</span></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="box-notice type01">
+                                <div class="title">
+                                    <h2>예약상담</h2>    
+                                    <a href="" class="btn-ad"><span>더보기</span></a> 
+                                </div>
+                                <div class="tbl-style01">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 13%;"> 
+                                            <col style="width: 19%;">
+                                            <col style="width: 16%;">                                           
+                                            <col style="width: 190px;">
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>고객명</th>
+                                                <th>상담요청시간</th>
+                                                <th>유입경로</th>
+                                                <th>예약안내</th>
+                                                <th>상담상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>김한화</td>
+                                                <td>10:25:18</td>
+                                                <td>모바일앱</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li class="comp">입장<br>안내</li>
+                                                        <li class="comp">링크<br>안내</li>
+                                                        <li class="comp">링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td>만료</td>
+                                            </tr>
+                                            <tr>
+                                                <td>김한화</td>
+                                                <td>10:25:18</td>
+                                                <td>모바일앱</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li class="comp">입장<br>안내</li>
+                                                        <li class="comp">링크<br>안내</li>
+                                                        <li class="comp">링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td>만료</td>
+                                            </tr>
+                                            <tr>
+                                                <td>김한화</td>
+                                                <td>10:25:18</td>
+                                                <td>모바일앱</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li>입장<br>안내</li>
+                                                        <li>링크<br>안내</li>
+                                                        <li>링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td>완료</td>
+                                            </tr>
+                                            <tr>
+                                                <td>김한화</td>
+                                                <td>10:25:18</td>
+                                                <td>모바일앱</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li>예약<br>완료</li>
+                                                        <li>입장<br>안내</li>
+                                                        <li>링크<br>안내</li>
+                                                        <li>링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td>대기</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside id="right-aside">   
+                    <div class="flex-wrap">                        
+                        <div class="box-notice type02">                        
+                            <div class="title">
+                                <h2>공지사항</h2>
+                                <a href="" class="btn-ad"><span>더보기</span></a>
+                            </div>
+                            <div class="cont">
+                                <ul>
+                                    <li class="check new"><!-- 신규 : new, 확인한 글 : check -->
+                                        <a href="">
+                                            <div class="txt"><span>2024년 시작 시작</span></div>
+                                            <div class="date">
+                                                <div>2024.04.02 14:59</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="new">
+                                        <a href="">
+                                            <div class="txt"><span>2024년 상담서비스상담서비스상담서비스상담서비스상담서비스상담서비스 시작 시작 시작 시작 시작</span></div>
+                                            <div class="date">
+                                                <div>2024.04.02 14:59</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box-notice type02">                            
+                            <div class="title">
+                                <h2>커뮤니티</h2>
+                                <a href="" class="btn-ad"><span>더보기</span></a>
+                            </div>
+                            <div class="cont">
+                                <ul>
+                                    <li class="new">
+                                        <a href="">
+                                            <div class="txt"><span>2024년  시작 시작</span></div>
+                                            <div class="date">
+                                                <div>2024.04.02 14:59</div>
+                                                <div class="name">김한화</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="check">
+                                        <a href="">
+                                            <div class="txt"><span>2024년 상담서비스상담서비스 시작 시작 시작 시작 시작</span></div>
+                                            <div class="date">
+                                                <div>2024.04.02 14:59</div>
+                                                <div class="name">김한화</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box-notice calendar">
+                            <div class="calendar">
+                                <img src="../img/sp-calendar.png" alt="" style="vertical-align: middle;">
+                            </div>
+                            <div class="detail">
+                                <div>
+                                    <span class="me">김한화 상담사 연차</span>, 
+                                    <span>홍길동 상담사 반반차</span>, 
+                                    <span>홍길동 상담사 반반차</span>, 
+                                    <span>홍길동 상담사 반반차</span>, 
+                                    <span>홍길동 상담사 반반차</span>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </aside>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

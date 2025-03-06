@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">
+                <div class="left-aside-wrap">
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <div class="profile">
+                        <div class="frame"><img src="../img/imsi.png" alt="상담사사진"></div>
+                        <div class="name">이생명<br><span class="num">(1000000)</span></div>
+                        <div class="switch">
+                            <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+                            <label for="week" class="switch-label switch-label-off">전체상담</label>
+                            <input type="radio" class="switch-input" name="view" value="month" id="month">
+                            <label for="month" class="switch-label switch-label-on">나중상담</label>
+                            <span class="switch-selection"></span>
+                        </div>
+                        <div class="select">
+                            <select id="select05">
+                                <option value="hide">상담중</option>
+                                <option value="v11">상담중</option>
+                                <option value="v12">상담대기</option>
+                                <option value="v13">사무업무</option>
+                                <option value="v14">자리비움(이석)</option>
+                                <option value="v15">자리비움(식사)</option>
+                                <option value="v16">자리비움(교육)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 오픈상태 : open 클래스 -->
+                                <a href="#" class="menu menu01"><span>상담관리</span></a>
+                                <ul>
+                                    <li><a href="">상담대기조회</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">상담진행조회</a></li>
+                                    <li><a href="">나중상담조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="menu menu02"><span>나의 상담이력</span></a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                            <li><a href="" class="menu menu03"><span>공지사항</span></a></li>
+                            <li class="sele"><a href="" class="menu menu04"><span>공유 커뮤니티</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <button type="button" class="btn-logout"><span>로그아웃</span></button>
+            </aside>
+            <main>
+                <div class="title-area">
+                    <h2 class="title tit06">공유 커뮤니티</h2>
+                    <div class="bread-crumb">
+                        <ul>
+                            <li><a href="">홈</a></li>
+                            <li><a href="">공유 커뮤니티</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="board-read write">
+                    <input type="text" name="" id="" placeholder="제목을 입력하세요.">
+                    <div class="area-edit">
+                        <div><img src="../img/sp-edit.png" alt=" 에디터 영역"></div>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력하세요."></textarea>
+                    </div>               
+                </div> 
+                <div class="btn-wrap">                     
+                    <button type="button" class="btn style02 bg01"><span>취소</span></button>
+                    <button type="button" class="btn style02"><span>저장</span></button>
+                </div>  
+            </main>
+        </div>
+    </div>
+    
+</body>
+</html>

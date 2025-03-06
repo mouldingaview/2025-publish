@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/ui02.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">
+                <div class="left-aside-wrap">
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <div class="profile">
+                        <div class="frame"><img src="../img/imsi.png" alt="상담사사진"></div>
+                        <div class="name">이생명<br><span class="num">(1000000)</span></div>
+                        <div class="switch-wrap">
+                            <div class="switch">   
+                                <input type="radio" class="switch-input" name="view" value="false" id="screen-saver-off">
+                                <label for="screen-saver-off" class="switch-label switch-label-on"><span>스크린</span></label>                                
+                                <input type="radio" class="switch-input" name="view" value="true" id="screen-saver-on" checked>
+                                <label for="screen-saver-on" class="switch-label switch-label-off"><span>스크린</span></label>
+                                <span class="switch-selection"></span>
+                            </div>
+                            <div class="select">
+                                <select id="select01">
+                                    <option value="hide">상담대기</option>
+                                    <option value="v11">상담대기</option>
+                                    <option value="v12">상담중</option>
+                                    <option value="v13">자리비움</option>
+                                    <option value="v14">점심시간</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="" class="menu menu00"><span>HOME</span></a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                            <li class="sele open"><!-- 메뉴 오픈상태 : open 클래스 -->
+                                <button type="button" class="menu menu01"><span>상담관리</span></button>
+                                <ul>
+                                    <li><a href="">대기고객조회</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">진행상담조회</a></li>
+                                    <li class="sele"><a href="">예약상담조회</a></li>
+                                    <li><a href="">나중상담조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="menu menu02"><span>상담이력</span></a></li>
+                            <li><a href="" class="menu menu03"><span>공지사항</span></a></li>
+                            <li><a href="" class="menu menu04"><span>커뮤니티</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <button type="button" class="btn-logout"><span>로그아웃</span></button>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">예약상담조회</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">상담관리</a></li>
+                                <li><a href="">예약상담조회</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">        
+                    <div class="wrap-search">
+                        <div class="row-search">
+                            <dl>
+                                <dt>고객명</dt>
+                                <dd> 
+                                    <input type="text" name="" id="" placeholder="검색어를 입력하세요" disabled>
+                                </dd>
+                            </dl>
+                            <div class="btn-search-wrap">
+                                <button type="button" disabled>검색</button>
+                                <button type="button" class="btn-search" disabled>검색초기화</button>
+                            </div>
+                        </div>
+                    </div>            
+                    <div class="con-calendar">
+                        <div class="c-header">
+                            <button type="button" class="prev"><span class="hide">이전</span></button>
+                            <div>2024년 8월 7일</div>
+                            <button type="button" class="next" disabled><span class="hide">다음</span></button>
+                        </div>
+                        <div class="c-body"> 
+                            <div class="tbl-top">
+                                <div class="left">
+                                    <div class="count"><span>총</span> <strong>12</strong> 건</div>
+                                    <button class="btn-refresh"><span class="hide">새로고침</span></button>
+                                    <div class="time">13:50</div>
+                                </div>
+                                <div class="right">
+                                    <div class="btn-calendar-wrap">
+                                        <button type="button" class="active">일</button>
+                                        <button type="button">주</button>
+                                        <button type="button">월</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 일 -->
+                            <div class="area active">
+                                <div class="tbl-fix02 day">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 12%;" span="4">
+                                            <col style="width: 260px;">
+                                            <col>
+                                            <col style="width: 12%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>상담요청시간</th>
+                                                <th>상담예약현황</th>
+                                                <th>예약신청일자</th>
+                                                <th>예약신청시간</th>
+                                                <th>유입경로</th>
+                                                <th>예약안내상태</th>
+                                                <th>상담상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>09:00</td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li class="comp">입장<br>안내</li>
+                                                        <li class="comp">링크<br>안내</li>
+                                                        <li class="comp">링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state st04">만료</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li class="comp">입장<br>안내</li>
+                                                        <li class="comp">링크<br>안내</li>
+                                                        <li class="comp">링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state st04">만료</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:00</td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li class="comp">입장<br>안내</li>
+                                                        <li class="comp">링크<br>안내</li>
+                                                        <li class="comp">링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state st04">만료</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li class="comp">입장<br>안내</li>
+                                                        <li class="comp">링크<br>안내</li>
+                                                        <li class="comp">링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state st04">만료</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>11:00</td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li class="comp">입장<br>안내</li>
+                                                        <li class="comp">링크<br>안내</li>
+                                                        <li>링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state st03">완료</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li class="comp">입장<br>안내</li>
+                                                        <li class="comp">링크<br>안내</li>
+                                                        <li>링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state st03">완료</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:00</td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li class="comp">입장<br>안내</li>
+                                                        <li>링크<br>안내</li>
+                                                        <li>링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state st02">진행</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>13:00</td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li class="comp">예약<br>완료</li>
+                                                        <li>입장<br>안내</li>
+                                                        <li>링크<br>안내</li>
+                                                        <li>링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state">대기</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>14:00</td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li>예약<br>완료</li>
+                                                        <li>입장<br>안내</li>
+                                                        <li>링크<br>안내</li>
+                                                        <li>링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state">대기</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>14:00</td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li>예약<br>완료</li>
+                                                        <li>입장<br>안내</li>
+                                                        <li>링크<br>안내</li>
+                                                        <li>링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state">대기</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>14:00</td>
+                                                <td>김한화</td>
+                                                <td>YYYY-MM-DD</td>
+                                                <td>hh:mm:ss</td>
+                                                <td>홈페이지</td>
+                                                <td>
+                                                    <ol class="state-reserve">
+                                                        <li>예약<br>완료</li>
+                                                        <li>입장<br>안내</li>
+                                                        <li>링크<br>안내</li>
+                                                        <li>링크<br>만료</li>
+                                                    </ol>
+                                                </td>
+                                                <td class="no-space"><span class="state">대기</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>                            
+                            </div>
+                            <!-- 주 -->
+                            <div class="area">
+                                <div class="tbl-fix week">
+                                    <table>
+                                        <colgroup>
+                                            <col span="6">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>시간</th>
+                                                <th>5 (월)</th>
+                                                <th class="today">6 (화)</th>
+                                                <th>7 (수)</th>
+                                                <th>8 (목)</th>
+                                                <th>9 (금)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>09:00~10:00</td>
+                                                <td></td>
+                                                <td><span>1 건</span></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:00~11:00</td>
+                                                <td></td>
+                                                <td><a href="">1 건</a></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>11:00~12:00</td>
+                                                <td></td>
+                                                <td><a href="">1 건</a></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="peak-time">
+                                                <td>12:00~13:00<br><span class="note">(혼잡시간)</span></td>
+                                                <td></td>
+                                                <td><a href="">1 건</a></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>13:00~14:00</td>
+                                                <td></td>
+                                                <td><a href="">1 건</a></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>14:00~15:00</td>
+                                                <td></td>
+                                                <td><a href="">1 건</a></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>15:00~16:00</td>
+                                                <td></td>
+                                                <td><a href="">1 건</a></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr class="peak-time">
+                                                <td>16:00~17:00<br><span class="note">(마감시간)</span></td>
+                                                <td></td>
+                                                <td><a href="">1 건</a></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <!-- 월 -->
+                            <div class="area">
+                                <div class="tbl-fix month">
+                                    <table> 
+                                        <colgroup> 
+                                            <col span="5"> 
+                                        </colgroup> 
+                                        <thead> 
+                                            <tr> 
+                                                <th><span>월</span></th> 
+                                                <th><span>화</span></th> 
+                                                <th><span>수</span></th> 
+                                                <th><span>목</span></th> 
+                                                <th><span>금</span></th> 
+                                            </tr> 
+                                        </thead> 
+                                        <tbody>
+                                            <tr>  
+                                                <td>
+                                                    <div>
+                                                        <div class="date"></div>
+                                                        <div class="link"></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date"></div>
+                                                        <div class="link"></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date"></div>
+                                                        <div class="link"></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td class="today">
+                                                    <div>
+                                                        <div class="date">1</div>
+                                                        <div class="link"><span>8 건</span></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">2</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>    
+                                            </tr>
+                                            <tr>  
+                                                <td>
+                                                    <div>
+                                                        <div class="date">5</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">6</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">7</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td class="holiday">
+                                                    <div>
+                                                        <div class="date">8</div>
+                                                        <div class="link"><span>공휴일</span></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">9</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>    
+                                            </tr>
+                                            <tr> 
+                                                <td>
+                                                    <div>
+                                                        <div class="date">12</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">13</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">14</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td class="holiday">
+                                                    <div>
+                                                        <div class="date">15</div>
+                                                        <div class="link"><span>공휴일</span></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">16</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>    
+                                            </tr>
+                                            <tr> 
+                                                <td>
+                                                    <div>
+                                                        <div class="date">19</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">20</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">21</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td class="holiday">
+                                                    <div>
+                                                        <div class="date">22</div>
+                                                        <div class="link"><span>공휴일</span></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">23</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>    
+                                            </tr>
+                                            <tr> 
+                                                <td>
+                                                    <div>
+                                                        <div class="date">26</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">27</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">28</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td class="holiday">
+                                                    <div>
+                                                        <div class="date">29</div>
+                                                        <div class="link"><span>공휴일</span></div>
+                                                    </div>
+                                                </td>                                     
+                                                <td>
+                                                    <div>
+                                                        <div class="date">30</div>
+                                                        <div class="link"><a href="">8 건</a></div>
+                                                    </div>
+                                                </td>    
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

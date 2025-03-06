@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap" class="main">
+        <div id="container">
+            <aside id="left-aside">
+                <div class="left-aside-wrap">
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <div class="profile">
+                        <div class="frame"><img src="../img/imsi.png" alt="상담사사진"></div>
+                        <div class="name">이생명<br><span class="num">(1000000)</span></div>
+                        <div class="switch">
+                            <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+                            <label for="week" class="switch-label switch-label-off">전체상담</label>
+                            <input type="radio" class="switch-input" name="view" value="month" id="month">
+                            <label for="month" class="switch-label switch-label-on">나중상담</label>
+                            <span class="switch-selection"></span>
+                        </div>
+                        <div class="select">
+                            <select id="select05">
+                                <option value="hide">상담중</option>
+                                <option value="v11">상담중</option>
+                                <option value="v12">상담대기</option>
+                                <option value="v13">사무업무</option>
+                                <option value="v14">자리비움(이석)</option>
+                                <option value="v15">자리비움(식사)</option>
+                                <option value="v16">자리비움(교육)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="has"><!-- 메뉴 오픈상태 : open 클래스 -->
+                                <button type="button" class="menu menu01"><span>상담관리</span></button>
+                                <ul>
+                                    <li><a href="">상담대기조회</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">상담진행조회</a></li>
+                                    <li><a href="">나중상담조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="menu menu02"><span>나의 상담이력</span></a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                            <li><a href="" class="menu menu03"><span>공지사항</span></a></li>
+                            <li><a href="" class="menu menu04"><span>공유 커뮤니티</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <button type="button" class="btn-logout"><span>로그아웃</span></button>
+            </aside>
+            <main> 
+                <div class="main-cont">
+                    <div class="title-area">
+                        <h2 class="title tit01">오늘의 상담현황</h2>
+                    </div>
+                    <div class="item-container">
+                        <div class="item-wrap">
+                            <div class="box01">
+                                <dl>
+                                    <dt>총 상담</dt>
+                                    <dd><span>100</span> 건</dd>
+                                </dl>
+                            </div>
+                            <div class="box02">
+                                <dl>
+                                    <dt>대기중</dt>
+                                    <dd><span>25</span> 건</dd>
+                                </dl>
+                                <dl>
+                                    <dt>콜백신청</dt>
+                                    <dd><span>20</span> 건</dd>
+                                </dl>
+                            </div>
+                            <div class="box03">
+                                <dl>
+                                    <dt>진행중</dt>
+                                    <dd><span>100</span> 건</dd>
+                                </dl>
+                                <dl>
+                                    <dt>완료</dt>
+                                    <dd><span>100</span> 건</dd>
+                                </dl>
+                                <dl>
+                                    <dt>미완료</dt>
+                                    <dd><span>100</span> 건</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="item-wrap02">                                
+                            <div class="item item2">
+                                <dl>
+                                    <dt>평균 대기시간</dt>
+                                    <dd><span>3</span>분 <span>15</span>초</dd>
+                                </dl>
+                            </div>
+                            <div class="item item3">                            
+                                <dl>
+                                    <dt>평균 상담시간</dt>
+                                    <dd><span>3</span>분 <span>15</span>초</dd>
+                                </dl>
+                            </div>
+                            <div class="item item4">                            
+                                <dl>
+                                    <dt>전체 응대율</dt>
+                                    <dd><span>3</span>%</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-cont">     
+                    <div class="title-area">
+                        <h2 class="title tit02">상담입장</h2>
+                    </div>
+                    <div class="flex-wrap">
+                        <div class="box-notice">
+                            <div class="title">
+                                <h2>오늘의 상담대기</h2>
+                                <a href="" class="btn-more"><span class="hide">더보기</span></a>
+                            </div>
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div class="name">김한화</div>
+                                        <div class="time">2023-10-24 13:50:23</div>
+                                        <button type="button">입장</button>
+                                    </li>
+                                    <li>
+                                        <div class="name">김한화</div>
+                                        <div class="time">2023-10-24 13:50:23</div>
+                                        <button type="button">입장</button>
+                                    </li>
+                                    <li>
+                                        <div class="name">김한화</div>
+                                        <div class="time">2023-10-24 13:50:23</div>
+                                        <button type="button">입장</button>
+                                    </li>
+                                    <li>
+                                        <div class="name">김한화</div>
+                                        <div class="time">2023-10-24 13:50:23</div>
+                                        <button type="button">입장</button>
+                                    </li>
+                                    <li>
+                                        <div class="name">김한화</div>
+                                        <div class="time">2023-10-24 13:50:23</div>
+                                        <button type="button">입장</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box-notice">
+                            <div class="title">
+                                <h2>나중상담</h2>
+                                <a href="" class="btn-more"><span class="hide">더보기</span></a>
+                            </div>
+                            <div class="cont">
+                                <ul>
+                                    <li>
+                                        <div class="name">김한화</div>
+                                        <div class="time">2023-10-24 13:50:23</div>
+                                        <button type="button">입장</button>
+                                    </li>
+                                    <li>
+                                        <div class="name">김한화</div>
+                                        <div class="time">2023-10-24 13:50:23</div>
+                                        <button type="button">입장</button>
+                                    </li>
+                                    <li>
+                                        <div class="name">김한화</div>
+                                        <div class="time">2023-10-24 13:50:23</div>
+                                        <button type="button">입장</button>
+                                    </li>
+                                    <li>
+                                        <div class="name">김한화</div>
+                                        <div class="time">2023-10-24 13:50:23</div>
+                                        <button type="button">입장</button>
+                                    </li>
+                                    <li>
+                                        <div class="name">김한화</div>
+                                        <div class="time">2023-10-24 13:50:23</div>
+                                        <button type="button">입장</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <aside id="right-aside">   
+                <div class="clock">
+                    <button type="button" class="btn-refresh"><span class="hide">새로고침</span></button>
+                    Date <span>2023-10-23 13:53:23</span>
+                </div>  
+                <div class="flex-wrap">                        
+                    <div class="box-notice type02">                        
+                        <div class="title">
+                            <h2>공지사항</h2>
+                            <a href="" class="btn-more"><span class="hide">더보기</span></a>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li class="new">
+                                    <a href="">
+                                        <div class="txt"><span>2024년 시작 시작</span></div>
+                                        <div class="date">2024.04.02 14:59</div>
+                                    </a>
+                                </li>
+                                <li class="new">
+                                    <a href="">
+                                        <div class="txt"><span>2024년 상담서비스상담서비스상담서비스상담서비스상담서비스상담서비스 시작 시작 시작 시작 시작</span></div>
+                                        <div class="date">2024.04.02 14:59</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="txt"><span>2024년 상담서비스상담서비스 시작 시작 시작 시작 시작</span></div>
+                                        <div class="date">2024.04.02 14:59</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box-notice type02 c02">                            
+                        <div class="title">
+                            <h2>공유 커뮤니티</h2>
+                            <a href="" class="btn-more"><span class="hide">더보기</span></a>
+                        </div>
+                        <div class="cont">
+                            <ul>
+                                <li class="new">
+                                    <a href="">
+                                        <div class="txt"><span>2024년  시작 시작</span></div>
+                                        <div class="date">2024.04.02 14:59</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="txt"><span>2024년 상담서비스상담서비스 시작 시작 시작 시작 시작</span></div>
+                                        <div class="date">2024.04.02 14:59</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <div class="txt"><span>2024년 상담서비스상담서비스 시작 시작 시작 시작 시작</span></div>
+                                        <div class="date">2024.04.02 14:59</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>

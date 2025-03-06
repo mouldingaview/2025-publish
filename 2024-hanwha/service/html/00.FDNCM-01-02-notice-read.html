@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>    
+    <script src="../js/ui02.js"></script>    
+</head>
+<body>
+    <div id="wrap">
+        <header>
+        <div id="container">
+            <aside id="left-aside">
+                <div class="left-aside-wrap">
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <div class="profile">
+                        <div class="frame"><img src="../img/imsi.png" alt="상담사사진"></div>
+                        <div class="name">이생명<br><span class="num">(1000000)</span></div>
+                        <div class="switch-wrap">
+                            <div class="switch">   
+                                <input type="radio" class="switch-input" name="view" value="false" id="screen-saver-off">
+                                <label for="screen-saver-off" class="switch-label switch-label-on"><span>스크린</span></label>                                
+                                <input type="radio" class="switch-input" name="view" value="true" id="screen-saver-on" checked>
+                                <label for="screen-saver-on" class="switch-label switch-label-off"><span>스크린</span></label>
+                                <span class="switch-selection"></span>
+                            </div>
+                            <div class="select">
+                                <select id="select01">
+                                    <option value="hide">상담대기</option>
+                                    <option value="v11">상담대기</option>
+                                    <option value="v12">상담중</option>
+                                    <option value="v13">자리비움</option>
+                                    <option value="v14">점심시간</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="" class="menu menu00"><span>HOME</span></a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                            <li><!-- 메뉴 오픈상태 : open 클래스 -->
+                                <button type="button" class="menu menu01"><span>상담관리</span></button>
+                                <ul>
+                                    <li><a href="">대기고객조회</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">진행상담조회</a></li>
+                                    <li><a href="">예약상담조회</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="menu menu02"><span>상담이력</span></a></li>
+                            <li class="sele"><a href="" class="menu menu03"><span>공지사항</span></a></li>
+                            <li><a href="" class="menu menu04"><span>커뮤니티</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <button type="button" class="btn-logout"><span>로그아웃</span></button>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">공지사항상세</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">공지사항</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents"> 
+                    <div class="board-read">       
+                        <div class="tbl-style02">
+                            <table>
+                                <colgroup>
+                                    <col style="width:11%">
+                                    <col>
+                                    <col style="width:11%">
+                                    <col>
+                                    <col style="width:11%">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>제목</th>
+                                        <td colspan="5">개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내</td>
+                                    </tr>
+                                    <tr>
+                                        <th>작성자</th>
+                                        <td>이상담</td>
+                                        <th>등록일자</th>
+                                        <td>2024-01-01</td>
+                                        <th>조회수</th>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>        
+                        <div class="scroll-area">
+                            <div class="board-cont">   
+                                <p><img src="../img/spsp.png" alt=""></p> 
+                            </div>
+                            <div class="tbl-style02">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 11%;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>첨부파일</th>
+                                            <td>
+                                                <div id="upload-area">
+                                                    <div class="upload-box">  
+                                                        <div class="filebox"> 
+                                                            <div class="list-file">
+                                                                <div class="tit">첨부파일 (총 <span>2 / 3</span>)</div>
+                                                                <ul>
+                                                                    <li>   
+                                                                        <a href="file://">Img.png <span>(25.5KB)</span></a>
+                                                                        <button type="button" class="btn-file-down"><span class="hide">파일다운</span></button>
+                                                                    </li>
+                                                                    <li>      
+                                                                        <a href="file://">신규서비스메뉴얼.pdf <span>(25.2KB)</span></a>   
+                                                                        <button type="button" class="btn-file-down"><span class="hide">파일다운</span></button>     
+                                                                    </li>
+                                                                </ul>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="no-result" style="display: none;">
+                                                            <p>첨부파일이 없습니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>    
+                                </table>                            
+                            </div>        
+                            <div class="btn-wrap">   
+                                <div class="left">
+                                    <a href="" class="btn"><span>목록</span></a>
+                                </div> 
+                            </div> 
+
+                            <div class="board-more">
+                                <dl>
+                                    <dt>이전</dt>
+                                    <dd>
+                                        <div class="txt">
+                                            <a href="">이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목</a></div>
+                                        <span>2024.06.03</span>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>다음</dt>
+                                    <dd>
+                                        <div class="txt">
+                                            <a href="">이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목이전글 공지사항 제목</a>
+                                        </div>
+                                        <span>2024.06.03</span>
+                                    </dd>
+                                </dl>
+                            </div>  
+                        </div> 
+                    </div> 
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

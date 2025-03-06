@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한화생명모바일 화상상담 관리자 시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/layer-pop.css"> 
+    <style>
+        .room-alert-component{position:static}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/ui02.js"></script>
+</head>
+<body>
+<style>
+    .layer-pop {display: none;}
+    #popup-alert{position: absolute;left: 0;top: 0;z-index: 120;padding: 10px;}
+    #popup-alert button{padding: 10px;border-radius: 10px;color: #FFF;background-color: #937B6E;}
+    #popup-alert button.active{background-color: #F37321;}
+    #popup-alert button em{font-size: 10px;}
+</style>
+<div id="popup-alert">
+    <button type="button" class="active">FD-01-02<br><em>로그인 5회 오류</em></button>
+    <button type="button">FD-A1-01<br><em>미완료 상담 처리 안내</em></button>
+    <button type="button">FD-A4-01<br><em>상담 대기 안내</em></button>
+    <button type="button">오디오</button>
+    <button type="button">비디오</button>    
+    <button type="button">상담자료열람1</button>
+    <button type="button">상담자료열람2</button>
+    <button type="button">상담자료열람3</button>
+</div>
+
+<!-- 팝업 레이아웃 -->
+<div class="dim active"> 
+    <div class="inner">
+        <!--FD-01-02-->
+        <div class="layer-pop wt480">
+            <div class="pop-top">
+                <div class="pop-title">로그인 5회 오류</div>
+                <div class="pop-cont">
+                    <div class="login-msg">
+                        <p>로그인 오류가 5회 초과되었습니다.<br><br>보험코어 또는 그룹웨어에서 비밀번호가 맞는 지 확인 후 다시 시도하시기 바랍니다. <br><br>계정 잠김 해제를 위해 “해제 신청” 버튼을 눌러주세요.<br>관리자가 신청자의 계정정보 확인 후 재로그인 가능하도록 승인합니다.</p>
+                    </div>
+                    <div class="dl-wrap">
+                        <dl>
+                            <dt><label for="">아이디(사번)</label></dt>
+                            <dd><input type="text" name="" id="" placeholder="아이디(사번) 입력"></dd>
+                        </dl>
+                        <dl>
+                            <dt>성명</dt>
+                            <dd><input type="text" name="" id="" placeholder="성명 입력"></dd>
+                        </dl>
+                    </div>
+                </div>     
+            </div>
+            <div class="pop-btn-wrap">
+                <button type="button" class="btn-pop bg02">취소</button>
+                <button type="button" class="btn-pop" disabled>해제 신청</button>
+            </div>      
+        </div>
+        
+        <!--FD-A1-01-->
+        <div class="layer-pop">
+            <div class="pop-top">
+                <div class="pop-title">미완료 상담 처리 안내</div>
+                <div class="pop-cont">
+                    <p>상담 미완료 처리 건이 있습니다.<br>업무를 완료해주세요.</p>
+                </div>    
+            </div>     
+            <div class="pop-btn-wrap">
+                <button type="button" class="btn-pop">확인</button>
+            </div>     
+        </div>
+        
+        <!--FD-A4-01-->
+        <div class="layer-pop">
+            <div class="pop-top">
+                <div class="pop-title">상담 대기 안내</div>
+                <div class="pop-cont">
+                    <p>고객이 상담 대기중입니다.<br>대기 목록을 확인해주세요.</p>
+                </div>      
+            </div>
+            <div class="pop-btn-wrap">
+                <button type="button" class="btn-pop bg02">취소</button>
+                <button type="button" class="btn-pop">확인</button>
+            </div> 
+        </div>
+
+        <!-- 오디오 -->
+        <div class="layer-pop wt480">
+            <div class="pop-top">
+                <div class="pop-title">
+                    <span>녹취 음성 다시듣기</span>
+                    <button type="button" class="btn-close"><span class="hide">닫기</span></button>
+                </div>
+                <div class="pop-cont">
+                    <audio src="" controls autoplay></audio>
+                </div>    
+            </div>
+            <div class="pop-btn-wrap">                
+                <div class="page">
+                    <button type="button" class="prev" disabled><span class="hide">이전</span></button>
+                    <div class="pres">
+                        <strong>1</strong> / <span>5</span>
+                    </div>
+                    <button type="button" class="next" disabled><span class="hide">다음</span></button>                
+                </div>
+            </div>
+            <button type="button" class="btn-pop-close"><span class="hide">팝업닫기</span></button>
+        </div>
+        
+        <!-- 비디오 -->
+        <div class="layer-pop" style="width:910px">
+            <div class="pop-top">
+                <div class="pop-title">
+                    <span>녹화 영상 다시보기</span>
+                    <button type="button" class="btn-close"><span class="hide">닫기</span></button>
+                </div>
+                <div class="pop-cont">
+                    <video src="" controls style="width:805px;height:450px;"></video>
+                </div>    
+            </div>            
+            <div class="pop-btn-wrap">      
+                <div class="page">
+                    <button type="button" class="prev" disabled><span class="hide">이전</span></button>
+                    <div class="pres">
+                        <strong>1</strong> / <span>5</span>
+                    </div>
+                    <button type="button" class="next" disabled><span class="hide">다음</span></button>                
+                </div>
+            </div>
+            <button type="button" class="btn-pop-close"><span class="hide">팝업닫기</span></button>
+        </div>        
+        <!-- 상담자료열람 팝업 -->
+        <div class="layer-pop">
+            <div class="pop-top">
+                <div class="pop-cont">
+                    <div class="txt-left">
+                        <p class="txt">녹화 파일 열람 사유를 입력해주세요.</p>
+                        <input type="text" name="" id="" readonly value="입력한 요청사유 노출">                        
+                        <select id="select01">
+                            <option value="hide">1</option>
+                            <option value="v11">1</option>
+                            <option value="v12">2</option>
+                            <option value="v14">3</option>
+                            <option value="v11">1</option>
+                            <option value="v12">2</option>
+                            <option value="v14">3</option>
+                            <option value="v11">1</option>
+                            <option value="v12">2</option>
+                            <option value="v14">3</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="pop-btn-wrap">
+                <button type="button" class="btn-pop bg02">취소</button>
+                <button type="button" class="btn-pop">열람신청</button>
+            </div>   
+            <button type="button" class="btn-pop-close"><span class="hide">팝업닫기</span></button>
+        </div>
+        <!-- 상담자료열람 팝업2 -->
+        <div class="layer-pop">
+            <div class="pop-top">
+                <div class="pop-cont">
+                    <p class="txt">녹화 파일 열람 신청이<br>완료되었습니다.</p>
+                </div>
+            </div>
+            <div class="pop-btn-wrap">
+                <button type="button" class="btn-pop">확인</button>
+            </div>   
+            <button type="button" class="btn-pop-close"><span class="hide">팝업닫기</span></button>
+        </div>
+        <!-- 상담자료열람 팝업3 -->
+        <div class="layer-pop">
+            <div class="pop-top">
+                <div class="pop-cont">
+                    <div class="txt-left">
+                        <p class="txt">열람 신청이 반려되었습니다.</p>
+                        <input type="text" name="" id="" readonly value="관리자 반려사유">
+                    </div>
+                </div>
+            </div>
+            <div class="pop-btn-wrap">
+                <button type="button" class="btn-pop bg02">확인</button>
+                <button type="button" class="btn-pop">열람재신청</button>
+            </div>   
+            <button type="button" class="btn-pop-close"><span class="hide">팝업닫기</span></button>
+        </div>
+
+    </div>
+</div>
+    <script>
+        // 이 화면만 임시사용
+        const layerPops = document.querySelectorAll('.layer-pop');
+        
+        layerPops.forEach((pop, index) => {
+            pop.style.display = index === 0 ? 'block' : 'none';
+        });
+        const popupAlertBtns = document.querySelectorAll('#popup-alert button');
+        popupAlertBtns.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                layerPops.forEach((pop) => {
+                    pop.style.display = 'none';
+                });
+                if (layerPops[index]) { 
+                    layerPops[index].style.display = 'block';
+                }
+                popupAlertBtns.forEach((btn) => {
+                    btn.classList.remove('active');
+                });
+
+                button.classList.add('active');
+            });
+        });
+
+
+    </script>
+</div>
+</body>

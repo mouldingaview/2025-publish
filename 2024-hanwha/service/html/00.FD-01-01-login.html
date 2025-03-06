@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">  
+</head>
+<body>
+    <div id="wrap">
+        <div class="login-wrap">      
+            <div class="box-login">   
+                <div class="login-logo">
+                    <img src="../img/img-login-logo.png" alt="한화생명">
+                </div>
+                <div class="txt">모바일 화상상담 업무 시스템</div>
+                <div class="form-wrap">
+                    <div class="form error">
+                        <input type="text" name="" id="login-id">
+                        <label for="login-id">아이디 또는 사번 입력</label>
+                        <button type="button" class="btn-input-clear"><span class="hide">지우기</span></button>
+                    </div>
+                    <div class="form">
+                        <input type="password" class="pw" name="" id="login-pw">
+                        <label for="login-pw">비밀번호 입력</label>
+                        <button type="button" class="btn-input-clear"><span class="hide">지우기</span></button>
+                    </div>
+                    <div class="login-error-wrap">
+                        <p class="login-error">로그인 오류가 5회 초과되었습니다.</p>
+                        <button type="button"><span>로그인 오류 해제</span></button>
+                    </div>
+                    <button type="button" class="btn-login"><span>로그인</span></button>
+                </div>
+            </div>       
+        </div>
+    </div>
+    <script>        
+        loginInput();
+        function loginInput() {
+            const loginForms = document.querySelectorAll('.box-login .form-wrap .form');
+            loginForms.forEach((loginForm) => {
+                const loginFormInput = loginForm.querySelector('input');
+                if (loginFormInput) {
+                    loginFormInput.addEventListener('input', (l) => {
+                        const closestForm = l.currentTarget.closest('.form');
+                        if (closestForm) {
+                            if (l.currentTarget.value) {
+                                closestForm.classList.add('value');
+                            } else {
+                                closestForm.classList.remove('value');
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        inputClear();
+        function inputClear() { 
+            const btnInputClears = document.querySelectorAll('.btn-input-clear');
+            btnInputClears.forEach((btnInputClear) => {
+                btnInputClear.addEventListener('click', (b) => {
+                    const input = b.currentTarget.previousElementSibling.previousElementSibling;
+                    console.log(input)
+                    if (input && input.tagName === 'INPUT') { 
+                        input.value = '';
+                        input.closest('.form').classList.remove('value')
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

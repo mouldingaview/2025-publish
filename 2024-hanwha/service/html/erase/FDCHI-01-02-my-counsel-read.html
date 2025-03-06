@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">
+                <div class="left-aside-wrap">
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <div class="profile">
+                        <div class="frame"><img src="../img/imsi.png" alt="상담사사진"></div>
+                        <div class="name">이생명<br><span class="num">(1000000)</span></div>
+                        <div class="switch">
+                            <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+                            <label for="week" class="switch-label switch-label-off">전체상담</label>
+                            <input type="radio" class="switch-input" name="view" value="month" id="month">
+                            <label for="month" class="switch-label switch-label-on">나중상담</label>
+                            <span class="switch-selection"></span>
+                        </div>
+                        <div class="select">
+                            <select id="select05">
+                                <option value="hide">상담중</option>
+                                <option value="v11">상담중</option>
+                                <option value="v12">상담대기</option>
+                                <option value="v13">사무업무</option>
+                                <option value="v14">자리비움(이석)</option>
+                                <option value="v15">자리비움(식사)</option>
+                                <option value="v16">자리비움(교육)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="has"><!-- 메뉴 오픈상태 : open 클래스 -->
+                                <button type="button" class="menu menu01"><span>상담관리</span></button>
+                                <ul>
+                                    <li><a href="">상담대기조회</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">상담진행조회</a></li>
+                                    <li><a href="">나중상담조회</a></li>
+                                </ul>
+                            </li>
+                            <li class="sele"><a href="" class="menu menu02"><span>나의 상담이력</span></a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                            <li><a href="" class="menu menu03"><span>공지사항</span></a></li>
+                            <li><a href="" class="menu menu04"><span>공유 커뮤니티</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <button type="button" class="btn-logout"><span>로그아웃</span></button>
+            </aside>
+            <main>
+                <div class="title-area">
+                    <div class="title tit04">나의 상담이력</div>
+                    <div class="bread-crumb">
+                        <ul>
+                            <li><a href=""><span class="hide">홈</span></a></li>
+                            <li><a href="">상담관리</a></li>
+                            <li><a href="">나의 상담이력</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <section>
+                    <div class="sec-title">
+                        <div class="tit">상담 정보</div>
+                    </div>
+                    <div class="dl-wrap">
+                        <div>            
+                            <div class="dl-tit">상담 현황</div>                
+                            <div class="dl-box">
+                                <dl>
+                                    <dt>고객명/ID</dt>
+                                    <dd>김*화 (1315172)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>인원수</dt>
+                                    <dd>3</dd>
+                                </dl>
+                                <dl>
+                                    <dt>고객명/ID</dt>
+                                    <dd>나중상담</dd>
+                                </dl>
+                                <dl>
+                                    <dt>상담결과</dt>
+                                    <dd>                               
+                                        <select id="select01">
+                                            <option value="hide">상담결과</option>
+                                            <option value="v1">진행중</option>
+                                            <option value="v2">미완료</option>
+                                            <option value="v3">완료</option>
+                                        </select> 
+                                    </dd>
+                                </dl>
+                            </div>   
+                        </div>
+                        <div>           
+                            <div class="dl-tit">상담 일시</div>                 
+                            <div class="dl-box">
+                                <dl>
+                                    <dt>요청일시</dt>
+                                    <dd>2023-10-24 13:50:23</dd>
+                                </dl>
+                                <dl>
+                                    <dt>시작일시</dt>
+                                    <dd>2023-10-24 13:50:23</dd>
+                                </dl>
+                                <dl>
+                                    <dt>종료일시</dt>
+                                    <dd>2023-10-24 13:50:23</dd>
+                                </dl>
+                                <dl>
+                                    <dt>상담시간</dt>
+                                    <dd>60분</dd>
+                                </dl>
+                            </div>   
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sec-title">
+                        <div class="tit">입퇴장 기록</div>
+                    </div>
+                    <div class="tbl-style01">
+                        <table>
+                            <colgroup>
+                                <col style="width:100px">
+                                <col span="4">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>고객명</th>
+                                    <th>고객ID</th>
+                                    <th>입장</th>
+                                    <th>퇴장</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>김한화</td>
+                                    <td>1234567</td>
+                                    <td>2023-10-20 13:50:23</td>
+                                    <td>2023-10-20 13:50:23</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>김한화</td>
+                                    <td>1234567</td>
+                                    <td>2023-10-20 13:50:23</td>
+                                    <td>2023-10-20 13:50:23</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>김한화</td>
+                                    <td>1234567</td>
+                                    <td>2023-10-20 13:50:23</td>
+                                    <td>2023-10-20 13:50:23</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>          
+                </section>
+                <section>
+                    <div class="sec-title">
+                        <div class="tit">상담 업무</div>
+                    </div>
+                    <div class="tbl-style01">
+                        <table>
+                            <colgroup>
+                                <col style="width:100px">
+                                <col>
+                                <col style="width:200px">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>업무명</th>
+                                    <th>접수No</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="tal"><a href="">수급방법 변경</a></td>
+                                    <td>1234567</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="tal"><a href="">수급방법 변경</a></td>
+                                    <td>1234567</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>          
+                </section>
+                <section>
+                    <div class="sec-title">
+                        <div class="tit">상담 메모</div>
+                        <div class="right">
+                            <button type="button" class="s-btn"><span>수정</span></button>
+                        </div>
+                    </div>
+                    <div class="textarea-wrap">
+                        <textarea name="" id="" cols="30" rows="10"  maxlength="2000" class="textarea" disabled placeholder="상담 메모를 입력하세요. (최대 2,000자)"></textarea>
+                        <span class="txt-count">(<span>0</span>/2000)</span>
+                    </div>
+                </section>
+                <div class="btn-wrap">    
+                    <a href="" class="btn style02"><span>목록</span></a>
+                </div>     
+            </main>
+        </div>
+    </div>
+</body>
+</html>
