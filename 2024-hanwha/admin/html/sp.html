@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+        <div class="dim full" style="display: block;">
+          <div class="inner">
+            <div class="modal-wrap">
+              <div class="modal-title">고객님께서 상담 대기 중입니다.</div>
+              <div class="customer-box">
+                <p class="name">
+                  user.nickName
+                </p>
+              </div>
+              <ul class="memo-list" v-if="sortedMemoList.length">
+                <li class="memo-item"                >
+                  <p class="date">dateFormat(memo.regDate)</p>
+                  <p>코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트코멘트</p>
+                </li>
+              </ul>
+              <div class="modal-bottom-wrap">
+                <!-- <button type="button" class="btn style01 bg01" @click="handleCancel">
+                  <span>보류</span>
+                </button> -->
+                <button type="button" class="acceptance-btn" @click="handleApprove">
+                  <span>상담 진행</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <style lang="scss" scoped>
+      .modal-wrap {
+        width: 480px;
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0px 0px 2px 0px #0000001f;
+        box-shadow: 0px 2px 4px 0px #00000024;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 36px 30px 90px;
+        position: relative;
+        .modal-title {
+          font-size: 22px;
+          font-weight: 400;
+        }
+        .customer-box {
+          height: 35px;
+          background: #000;
+          border-radius: 18px;
+          padding: 10px 34px;
+          margin-top: 15px;
+      
+          .name {
+            color: #fff;
+          }
+        }
+      
+        .memo-list {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          margin-top: 30px;
+          .memo-item {
+            width: 390px;
+            height: 60px;
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            font-weight: 400;
+            border-radius: 4px;
+            color: #1a1a1a;
+            font-size: 14px;
+            .date {
+              font-family: hanwhaGothic;
+              font-size: 13px;
+              color: #999;
+            }
+            &.caution {
+              background: #f3eeec;
+              border: 1px solid #b9b4b0;
+            }
+          }
+        }
+      
+        .modal-bottom-wrap {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 60px;
+          button {
+            font-size: 20px;
+            font-family: hanwhaGothic;
+            height: 100%;
+          }
+      
+          .acceptance-btn {
+            width: 100%;
+            background: #937b6e;
+            color: #fff;
+            border-radius: 0 0 16px 16px;
+          }
+        }
+      }
+      </style>
+      
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/ui02.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><!--span class="qa">QA</span--></a>
+                            </li>
+                            <li>
+                                <button class="menu menu02"><span>실시간현황</span></button>                                
+                                <ul>
+                                    <li><a href="">오늘상담현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">대기상담현황</a></li>
+                                    <li><a href="">진행상담현황</a></li>
+                                    <li><a href="">예약상담현황</a></li>
+                                    <li><a href="">종료상담현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu03"><span>통계현황</span></button>
+                                <ul>
+                                    <li><a href="">총상담통계</a></li>
+                                    <li><a href="">기간별현황</a></li>
+                                    <li><a href="">상담업무처리순위</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="sele open">
+                                <button type="button" class="menu menu04"><span>상담이력관리</span></button>
+                                <ul>
+                                    <li><a href="">상담이력관리</a></li>
+                                    <li><a href="">상담자료관리</a></li>
+                                    <li class="sele"><a href="">결재이력관리</a></li>
+                                    <li><a href="">관리자로그</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu05"><span>고객이력관리</span></button>
+                                <ul>
+                                    <li><a href="">고객이력관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu06"><span>게시판관리</span></button>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu07"><span>상담사관리</span></button>
+                                <ul>
+                                    <li><a href="">상담사관리</a></li>
+                                    <li><a href="">근태관리</a></li>
+                                    <li><a href="">상담사계정</a></li>
+                                    <li><a href="">근무지관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu08"><span>설문관리</span></button>
+                                <ul>
+                                    <li><a href="">설문관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu09"><span>설정관리</span></button>
+                                <ul>
+                                    <li><a href="">상담운영설정</a></li>
+                                    <li><a href="">장치제어</a></li>
+                                    <li><a href="">예약상담설정</a></li>
+                                    <li><a href="">메시지관리</a></li>
+                                    <li><a href="">대기음악설정</a></li>
+                                    <li><a href="">웰컴이미지</a></li>
+                                    <li><a href="">대기안내설정</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="img">
+                            <img src="../img/sp-img.png" alt="">
+                        </div>
+                        <div class="info">  
+                            <div class="project">모바일 화상상담 관리자</div>
+                            <div class="name">이생명 <br><span class="num">(1079905)</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">결재이력관리</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">상담이력관리</a></li>
+                                <li><a href="">결재이력관리</a></li>
+                            </ul>
+                        </div>
+                        <div class="alarm-wrap">
+                            <button type="button" id="alarm-btn" class="alarm-flag">
+                                <span>알림</span>  
+                                <span class="num">3</span>
+                            </button>
+                            <div class="alarm-cont" id="alarm-cont">
+                                <div class="title">알림 </div>
+                                <div class="cont">
+                                    <div class="no-result" style="display: none;">신규 알림이 없습니다.</div>
+                                    <ul>
+                                        <li class="new">
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents"> 
+                    <div class="wrap-search">
+                        <div class="row-search">
+                            <dl>
+                                <dt>검색조회</dt>
+                                <dd>   
+                                    <div class="chk-wrap">
+                                        <div>
+                                            <input type="radio" name="radio123" id="radio10" checked>
+                                            <label for="radio10">전체</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="radio123" id="radio11">
+                                            <label for="radio11">결재대기</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="radio123" id="radio12">
+                                            <label for="radio12">승인</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="radio123" id="radio13">
+                                            <label for="radio13">반려</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="row-search">
+                            <dl>
+                                <dt>결재요청일자</dt>
+                                <dd>
+                                    <div class="calendar-wrap">
+                                        <input type="date" name="" id="" class="calendar">
+                                        <span>~</span>
+                                        <input type="date" name="" id="" class="calendar">
+                                    </div>
+                                    <div class="chk-wrap">
+                                        <div>
+                                            <input type="radio" name="radio" id="radio1" checked>
+                                            <label for="radio0">당일</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="radio" id="radio1">
+                                            <label for="radio1">1주일</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="radio" id="radio2">
+                                            <label for="radio2">1개월</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="radio" id="radio3">
+                                            <label for="radio3">3개월</label>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="btn-search-wrap">
+                                <button type="button">검색</button>
+                                <button type="button" class="btn-search">검색초기화</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll-area type02">
+                        <section>
+                            <div class="tbl-top">
+                                <div class="left">
+                                    <div class="count"><span>총</span> <strong>12</strong> 건</div>
+                                </div>
+                                <div class="right">
+                                    <select id="select01">
+                                        <option value="hide">최신순</option>
+                                        <option value="v1">최신순</option>
+                                        <option value="v2">오래된 순</option>
+                                        <option value="v3">조회많은 순</option>
+                                        <option value="v4">조회적은 순</option>
+                                    </select> 
+                                </div>
+                            </div>
+                            <div class="tbl-style01">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:80px">
+                                        <col span="8">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>상담사</th>
+                                            <th>근무지</th>
+                                            <th>결재요청일자</th>
+                                            <th>고객명</th>
+                                            <th>상담요청일자</th>
+                                            <th>자료유형</th>
+                                            <th>결재요청</th>
+                                            <th>결재상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>53</td>
+                                            <td>김한화</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>2024-00-00</td>
+                                            <td>김고객</td>
+                                            <td>2024-00-00</td>
+                                            <td>녹화</td>
+                                            <td><button type="button" class="btn-tbl bg05"><span>결재</span></button></td>
+                                            <td>결재대기</td>
+                                        </tr>
+                                        <tr>
+                                            <td>53</td>
+                                            <td>김한화</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>2024-00-00</td>
+                                            <td>김고객</td>
+                                            <td>2024-00-00</td>
+                                            <td>녹화</td>
+                                            <td><button type="button" class="btn-tbl bg05" disabled><span>결재</span></button></td>
+                                            <td>
+                                                <div class="tooltip-wrap">
+                                                    <span>반려</span>
+                                                    <div class="tooltip">툴팁이최대20자툴팁최대20자최대20자</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>53</td>
+                                            <td>김한화</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>2024-00-00</td>
+                                            <td>김고객</td>
+                                            <td>2024-00-00</td>
+                                            <td>녹화</td>
+                                            <td><button type="button" class="btn-tbl bg05"><span>결재</span></button></td>
+                                            <td>결재대기</td>
+                                        </tr>
+                                        <tr>
+                                            <td>53</td>
+                                            <td>김한화</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>2024-00-00</td>
+                                            <td>김고객</td>
+                                            <td>2024-00-00</td>
+                                            <td>녹화</td>
+                                            <td><button type="button" class="btn-tbl bg05" disabled><span>결재</span></button></td>
+                                            <td>
+                                                <div class="tooltip-wrap">
+                                                    <span>반려</span>
+                                                    <div class="tooltip">툴팁이최대20자툴팁최대20자최대20자</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>53</td>
+                                            <td>김한화</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>2024-00-00</td>
+                                            <td>김고객</td>
+                                            <td>2024-00-00</td>
+                                            <td>녹화</td>
+                                            <td><button type="button" class="btn-tbl bg05"><span>결재</span></button></td>
+                                            <td>결재대기</td>
+                                        </tr>
+                                        <tr>
+                                            <td>53</td>
+                                            <td>김한화</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>2024-00-00</td>
+                                            <td>김고객</td>
+                                            <td>2024-00-00</td>
+                                            <td>녹화</td>
+                                            <td><button type="button" class="btn-tbl bg05" disabled><span>결재</span></button></td>
+                                            <td>
+                                                <div class="tooltip-wrap">
+                                                    <span>반려</span>
+                                                    <div class="tooltip">툴팁이최대20자툴팁최대20자최대20자</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>53</td>
+                                            <td>김한화</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>2024-00-00</td>
+                                            <td>김고객</td>
+                                            <td>2024-00-00</td>
+                                            <td>녹화</td>
+                                            <td><button type="button" class="btn-tbl bg05"><span>결재</span></button></td>
+                                            <td>결재대기</td>
+                                        </tr>
+                                        <tr>
+                                            <td>53</td>
+                                            <td>김한화</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>2024-00-00</td>
+                                            <td>김고객</td>
+                                            <td>2024-00-00</td>
+                                            <td>녹화</td>
+                                            <td><button type="button" class="btn-tbl bg05" disabled><span>결재</span></button></td>
+                                            <td>
+                                                <div class="tooltip-wrap">
+                                                    <span>반려</span>
+                                                    <div class="tooltip">툴팁이최대20자툴팁최대20자최대20자</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>53</td>
+                                            <td>김한화</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>2024-00-00</td>
+                                            <td>김고객</td>
+                                            <td>2024-00-00</td>
+                                            <td>녹화</td>
+                                            <td><button type="button" class="btn-tbl bg05"><span>결재</span></button></td>
+                                            <td>결재대기</td>
+                                        </tr>
+                                        <tr>
+                                            <td>53</td>
+                                            <td>김한화</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>2024-00-00</td>
+                                            <td>김고객</td>
+                                            <td>2024-00-00</td>
+                                            <td>녹화</td>
+                                            <td><button type="button" class="btn-tbl bg05"><span>결재</span></button></td>
+                                            <td>결재대기</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>          
+                            <div class="wrap-paging">
+                                <div class="paging">
+                                    <button type="button" class="first"><span class="hide">처음으로</span></button>
+                                    <button type="button" class="prev"><span class="hide">이전</span></button>
+                                    <button type="button" class="pres">1</button>
+                                    <button type="button">2</button>
+                                    <button type="button">3</button>
+                                    <button type="button">4</button>
+                                    <button type="button">5</button>
+                                    <button type="button">6</button>
+                                    <button type="button">7</button>
+                                    <button type="button">8</button>
+                                    <button type="button">9</button>
+                                    <button type="button">10</button>
+                                    <button type="button" class="next"><span class="hide">다음</span></button>
+                                    <button type="button" class="end"><span class="hide">끝으로</span></button>                    
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div> 
+            </main>
+        </div>
+    </div>
+</body>
+</html>

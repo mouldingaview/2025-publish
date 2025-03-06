@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <img src="../img/icon-survey-on.png" style="width: 18px; height: 20px;" id="imgStar1"/>
+<img src="../img/icon-survey-on.png" style="width: 18px; height: 20px;" id="imgStar2"/>
+<img src="../img/icon-survey-on.png" style="width: 18px; height: 20px;" id="imgStar3"/>
+<img src="../img/icon-survey-on.png" style="width: 18px; height: 20px;" id="imgStar4"/>
+<img src="../img/icon-survey-on.png" style="width: 18px; height: 20px;" id="imgStar5"/>
+<input type="hidden" id="imgStarCount"/>
+<script>
+    
+$(document).ready(function(){
+
+    $("#imgStar1").click(function(){StarOn("imgStar", 1);});
+    $("#imgStar2").click(function(){StarOn("imgStar", 2);});
+    $("#imgStar3").click(function(){StarOn("imgStar", 3);});
+    $("#imgStar4").click(function(){StarOn("imgStar", 4);});
+    $("#imgStar5").click(function(){StarOn("imgStar", 5);});
+
+});
+
+
+function StarOn(label, cnt){ 
+$("#"+label+"Count").val(cnt);
+    for (var i = 1; i < 6; i++) {
+    if(i<=cnt){
+    $("#"+label+i).attr("src", "../img/icon-survey-on.png");
+    }else{
+    $("#"+label+i).attr("src", "../img/icon-survey-off.png");
+    }
+    }
+} 
+</script>
+</body>
+</html>

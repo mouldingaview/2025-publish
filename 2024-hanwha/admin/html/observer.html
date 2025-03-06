@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul, li{list-style: none;}
+        ul{position: sticky;top:0;display: flex;background: #FFF;}
+        li{width: 25%;}
+        .active a{color:red}
+        .cont > div{height: 100vh;}
+        .cont > div:first-child{background-color: blue;}
+        .cont > div:nth-child(2){background-color: tomato;}
+        .cont > div:nth-child(3){background-color: magenta;}
+        .cont > div:last-child{background-color: yellowgreen;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="active"><a href="#cont01">1</a></li>
+        <li><a href="#cont02">2</a></li>
+        <li><a href="#cont03">3</a></li>
+        <li><a href="#cont04">4</a></li>
+    </ul>
+    <div class="cont">
+        <div id="cont01">cont1</div>
+        <div id="cont02">cont2</div>
+        <div id="cont03">cont3</div>
+        <div id="cont04">cont4</div>
+    </div>
+
+    <script>
+        const listItems = document.querySelectorAll('ul li');
+        const contentDivs = document.querySelectorAll('.cont > div');
+
+        function handleScroll() {
+            let activeIndex = -1;
+
+            contentDivs.forEach((div, index) => {
+                const rect = div.getBoundingClientRect();
+                if (rect.top <= 0 && rect.bottom > 0) {
+                    activeIndex = index;
+                }
+            });
+
+            listItems.forEach((li, index) => {
+                if (index === activeIndex) {
+                    li.classList.add('active');
+                } else {
+                    li.classList.remove('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+</html>

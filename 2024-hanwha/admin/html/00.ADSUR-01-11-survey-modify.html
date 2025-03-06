@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><!--span class="qa">QA</span--></a>
+                            </li>
+                            <li>
+                                <button class="menu menu02"><span>실시간현황</span></button>                                
+                                <ul>
+                                    <li><a href="">오늘상담현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">대기상담현황</a></li>
+                                    <li><a href="">진행상담현황</a></li>
+                                    <li><a href="">예약상담현황</a></li>
+                                    <li><a href="">종료상담현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu03"><span>통계현황</span></button>
+                                <ul>
+                                    <li><a href="">총상담통계</a></li>
+                                    <li><a href="">기간별현황</a></li>
+                                    <li><a href="">상담업무처리순위</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu04"><span>상담이력관리</span></button>
+                                <ul>
+                                    <li><a href="">상담이력관리</a></li>
+                                    <li><a href="">상담자료관리</a></li>
+                                    <li><a href="">결재이력관리</a></li>
+                                    <li><a href="">관리자로그</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu05"><span>고객이력관리</span></button>
+                                <ul>
+                                    <li><a href="">고객이력관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu06"><span>게시판관리</span></button>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu07"><span>상담사관리</span></button>
+                                <ul>
+                                    <li><a href="">상담사관리</a></li>
+                                    <li><a href="">근태관리</a></li>
+                                    <li><a href="">상담사계정</a></li>
+                                    <li><a href="">근무지관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="open sele">
+                                <button type="button" class="menu menu08"><span>설문관리</span></button>
+                                <ul>
+                                    <li class="sele"><a href="">설문관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu09"><span>설정관리</span></button>
+                                <ul>
+                                    <li><a href="">상담운영설정</a></li>
+                                    <li><a href="">장치제어</a></li>
+                                    <li><a href="">예약상담설정</a></li>
+                                    <li><a href="">메시지관리</a></li>
+                                    <li><a href="">대기음악설정</a></li>
+                                    <li><a href="">웰컴이미지</a></li>
+                                    <li><a href="">대기안내설정</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="img">
+                            <img src="../img/sp-img.png" alt="">
+                        </div>
+                        <div class="info">  
+                            <div class="project">모바일 화상상담 관리자</div>
+                            <div class="name">이생명 <br><span class="num">(1079905)</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">설문관리</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">설문관리</a></li>
+                                <li><a href="">설문관리</a></li>
+                            </ul>
+                        </div>
+                        <div class="alarm-wrap">
+                            <button type="button" id="alarm-btn" class="alarm-flag">
+                                <span>알림</span>  
+                                <span class="num">3</span>
+                            </button>
+                            <div class="alarm-cont" id="alarm-cont">
+                                <div class="title">알림 </div>
+                                <div class="cont">
+                                    <div class="no-result" style="display: none;">신규 알림이 없습니다.</div>
+                                    <ul>
+                                        <li class="new">
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">   
+                    <div class="scroll-area">
+                        <div class="wrap-survey copy modify"><!-- 수정 : copy + modify -->
+                            <div class="box">                              
+                                <div class="title">     
+                                    <div class="tooltip-wrap">설문수정
+                                        <div class="tooltip">설문을 복사하여 수정한 경우 기존 설문은 반드시 삭제해야 합니다.</div>
+                                    </div>
+                                </div>   
+                                <div class="cont">
+                                    <div class="survey-title">
+                                        <div class="input-wrap">
+                                            <input type="text" name="" id="" value="[사본] 2024년 상반기 설문 고객 만족도 조사" placeholder="설문 제목을 입력하세요.">
+                                        </div>
+                                        <div class="period">
+                                            <div class="calendar-wrap">
+                                                <input type="date" name="" id="" class="calendar" value="2024-10-10" disabled>
+                                                <span>~</span>
+                                                <input type="date" name="" id="" class="calendar" value="2024-10-10">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box template"><!-- 객관식 : template -->  
+                                <div class="cont">
+                                    <div class="survey-input"           >  
+                                        <select id="select00" disabled>
+                                            <option value="hide">객관식</option>
+                                            <option value="v0">객관식</option>        
+                                            <option value="v1">선형배율</option>
+                                            <option value="v2">주관식</option>
+                                        </select> 
+                                        <div class="input-wrap">
+                                            <input type="text" name="" id="" placeholder="1. 질문을 입력하세요." value="1. 비대면 채널로 보험에 가입하려는 이유는 무엇입니까?">
+                                        </div>
+                                        <!-- 오픈 후 설문 수정시에만 노출 -->
+                                        <div class="chk-wrap">
+                                            <div>
+                                                <input type="checkbox" name="radio" id="radio0">
+                                                <label for="radio0">덮어쓰기</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" name="radio" id="radio1">
+                                                <label for="radio1">추가하기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 객관식 -->
+                                    <div class="list-choice">
+                                        <ul>
+                                            <li>
+                                                <div class="option-input">
+                                                    <input type="text" name="" id="" placeholder="옵션1" value="시간과 장소에 구애 받지 않음">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="option-input">
+                                                    <input type="text" name="" id="" placeholder="옵션2" value="간편힌 절차">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="option-input">
+                                                    <input type="text" name="" id="" placeholder="옵션3" value="저렴한 가격">
+                                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="option-input">
+                                                    <input type="text" name="" id="" placeholder="옵션4" value="부담스럽지 않음">
+                                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="option-input">
+                                                    <input type="text" name="" id="" placeholder="기타">
+                                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="btns">
+                                            <button type="button" class="icon-btn-add" disabled><span>옵션추가</span></button>
+                                            <button type="button" class="icon-btn-add"><span>기타추가</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bot">                                   
+                                    <div class="chk-wrap">
+                                        <div>
+                                            <input type="checkbox" name="radio1" id="radio10" checked>
+                                            <label for="radio10">답변 필수</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="radio1" id="radio11">
+                                            <label for="radio11">복수 선택</label>
+                                        </div>
+                                    </div>
+                                    <div class="btns">
+                                        <button type="button" class="btn-tbl-icon copy"><span class="hide">복사</span></button>
+                                        <button type="button" class="btn-tbl-icon del"><span class="hide">휴지통</span></button>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- 선형배율 -->
+                            <div class="box">     
+                                <div class="cont">
+                                    <div class="survey-input">  
+                                        <select id="select01">
+                                            <option value="hide">선형배율</option>
+                                            <option value="v0">객관식</option>
+                                            <option value="v1">선형배율</option>
+                                            <option value="v2">주관식</option>
+                                        </select> 
+                                        <div class="input-wrap">
+                                            <input type="text" name="" id="" value="1. 화상상담 서비스 만족도를 선택해 주세요.">
+                                        </div>
+                                        <!-- 오픈 후 설문 수정시에만 노출 -->
+                                        <div class="chk-wrap">
+                                            <div>
+                                                <input type="checkbox" name="radio" id="radio0">
+                                                <label for="radio0">덮어쓰기</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" name="radio" id="radio1">
+                                                <label for="radio1">추가하기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="survey-radio-wrap">
+                                            <div class="survey-radio">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bot">                                   
+                                    <div class="chk-wrap">
+                                        <div>
+                                            <input type="checkbox" name="radio1" id="radio10" checked>
+                                            <label for="radio10">답변 필수</label>
+                                        </div>
+                                    </div>
+                                    <div class="btns">
+                                        <button type="button" class="btn-tbl-icon copy"><span class="hide">복사</span></button>
+                                        <button type="button" class="btn-tbl-icon del"><span class="hide">휴지통</span></button>
+                                    </div>
+                                </div> 
+                            </div>
+                            <!-- 주관식 -->
+                            <div class="box">     
+                                <div class="cont">
+                                    <div class="survey-input">  
+                                        <select id="select01">
+                                            <option value="hide">주관식</option>
+                                            <option value="v0">객관식</option>
+                                            <option value="v1">선형배율</option>
+                                            <option value="v2">주관식</option>
+                                        </select> 
+                                        <div class="input-wrap">
+                                            <input type="text" name="" id="" value="1. 화상상담 서비스의 개선이 필요한 점을 적어주세요.">
+                                        </div>
+                                        <!-- 오픈 후 설문 수정시에만 노출 -->
+                                        <div class="chk-wrap">
+                                            <div>
+                                                <input type="checkbox" name="radio" id="radio0">
+                                                <label for="radio0">덮어쓰기</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" name="radio" id="radio1">
+                                                <label for="radio1">추가하기</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="textarea-wrap">
+                                            <textarea name="" id="" disabled placeholder="고객 답변 입력"></textarea>
+                                            <span class="txt-count">(<span>0</span> / 50)</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="bot">                                   
+                                    <div class="chk-wrap">
+                                        <div>
+                                            <input type="checkbox" name="radio1" id="radio10" checked>
+                                            <label for="radio10">답변 필수</label>
+                                        </div>
+                                    </div>
+                                    <div class="btns">
+                                        <button type="button" class="btn-tbl-icon copy"><span class="hide">복사</span></button>
+                                        <button type="button" class="btn-tbl-icon del"><span class="hide">휴지통</span></button>
+                                    </div>
+                                </div> 
+                            </div>
+                            <button type="button" class="btn-template-add"><span class="hide">템플릿 추가</span></button>
+                            <div class="btn-wrap">
+                                <div class="right">                                
+                                    <button type="button" class="btn bg02"><span>취소</span></button>                   
+                                    <button type="button" class="btn"><span>등록</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

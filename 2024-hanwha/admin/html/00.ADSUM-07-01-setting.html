@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><!--span class="qa">QA</span--></a>
+                            </li>
+                            <li>
+                                <button class="menu menu02"><span>실시간현황</span></button>                                
+                                <ul>
+                                    <li><a href="">오늘상담현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">대기상담현황</a></li>
+                                    <li><a href="">진행상담현황</a></li>
+                                    <li><a href="">우선예약현황</a></li>
+                                    <li><a href="">종료상담현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu03"><span>통계현황</span></button>
+                                <ul>
+                                    <li><a href="">총상담통계</a></li>
+                                    <li><a href="">기간별현황</a></li>
+                                    <li><a href="">상담업무처리순위</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu04"><span>상담이력관리</span></button>
+                                <ul>
+                                    <li><a href="">상담이력관리</a></li>
+                                    <li><a href="">상담자료관리</a></li>
+                                    <li><a href="">결재이력관리</a></li>
+                                    <li><a href="">관리자로그</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu05"><span>고객이력관리</span></button>
+                                <ul>
+                                    <li><a href="">고객이력관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu06"><span>게시판관리</span></button>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu07"><span>상담사관리</span></button>
+                                <ul>
+                                    <li><a href="">상담사관리</a></li>
+                                    <li><a href="">근태관리</a></li>
+                                    <li><a href="">상담사계정</a></li>
+                                    <li><a href="">근무지관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu09"><span>설문관리</span></button>
+                                <ul>
+                                    <li><a href="">설문관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="open sele">
+                                <button type="button" class="menu menu08"><span>설정관리</span></button>
+                                <ul>
+                                    <li><a href="">상담운영설정</a></li>
+                                    <li><a href="">장치제어</a></li>
+                                    <li><a href="">예약상담설정</a></li>
+                                    <li><a href="">메시지관리</a></li>
+                                    <li class="sele"><a href="">대기음악설정</a></li>
+                                    <li><a href="">웰컴이미지</a></li>
+                                    <li><a href="">대기안내설정</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="img">
+                            <img src="../img/sp-img.png" alt="">
+                        </div>
+                        <div class="info">  
+                            <div class="project">모바일 화상상담 관리자</div>
+                            <div class="name">이생명 <br><span class="num">(1079905)</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">대기음악설정</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">설정관리</a></li>
+                                <li><a href="">대기음악설정</a></li>
+                            </ul>
+                        </div>
+                        <div class="alarm-wrap">
+                            <button type="button" id="alarm-btn" class="alarm-flag">
+                                <span>알림</span>  
+                                <span class="num">3</span>
+                            </button>
+                            <div class="alarm-cont" id="alarm-cont">
+                                <div class="">알림 <span class="num">3</span></div>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다. 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">      
+                    <section>
+                        <div class="tbl-top">
+                            <div class="left">
+                                 <div class="sec-title">음악목록</div>
+                            </div>
+                            <div class="right">                    
+                                <button type="button" class="s-btn icon music">
+                                    <span>음악 업로드</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tbl-style01">
+                            <table>
+                                <colgroup>
+                                    <col style="width:100px">
+                                    <col>
+                                    <col style="width:37%">
+                                    <col style="width: 12%;" span="2">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>음악제목</th>
+                                        <th>노출영역</th>
+                                        <th>미리듣기</th>
+                                        <th>삭제</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="tal">
+                                            <div class="input-modify">
+                                                <div class="ellipsis">차은우 멘트</div>
+                                                <input type="text" name="" id="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="chk-wrap">
+                                                <div>
+                                                    <input type="radio" name="radio" id="m1">
+                                                    <label for="m1">고객대기</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" name="radio" id="m2">
+                                                    <label for="m2">상담 중 대기</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn-tbl-icon bgm"><span class="hide">미리듣기</span></button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn-tbl-icon del"><span class="hide">휴지통</span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="tal">
+                                            <div class="input-modify">
+                                                <div class="ellipsis">차은우 멘트차은우 멘트차은우 멘트차은우 멘트차은우 멘트차은우 멘트차은우 멘트차은우 멘트차은우 멘트차은우 멘트차은우 멘트차은우 멘트</div><!--dbclick 하면 input-modify에 active 클래스 추가-->
+                                                <input type="text" name="" id="">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="chk-wrap">
+                                                <div>
+                                                    <input type="radio" name="radio" id="m1">
+                                                    <label for="m1">고객대기</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" name="radio" id="m2">
+                                                    <label for="m2">상담 중 대기</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn-tbl-icon bgm"><span class="hide">미리듣기</span></button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn-tbl-icon del"><span class="hide">휴지통</span></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>     
+                            
+                        <!-- 테이블 하단 버튼 영역 -->
+                        <div class="btn-wrap">
+                            <div class="right">
+                                <button type="button" class="btn"><span>저장</span></button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        const inputModifys = document.querySelectorAll('.input-modify')
+        inputModifys.forEach(inputModify => {
+            const inputModifyDiv = inputModify.querySelector('div')
+            const inputElement = inputModify.querySelector('input');
+            inputModifyDiv.addEventListener('dblclick', function(i) {
+                i.currentTarget.closest('.input-modify').classList.add('active');
+                inputElement.value = inputModifyDiv.textContent.trim();
+            });
+        })
+    </script>
+</body>
+</html>

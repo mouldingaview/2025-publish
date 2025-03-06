@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/ui02.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><!--span class="qa">QA</span--></a>
+                            </li>
+                            <li>
+                                <button class="menu menu02"><span>실시간현황</span></button>                                
+                                <ul>
+                                    <li><a href="">오늘상담현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">대기상담현황</a></li>
+                                    <li><a href="">진행상담현황</a></li>
+                                    <li><a href="">우선예약현황</a></li>
+                                    <li><a href="">종료상담현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu03"><span>통계현황</span></button>
+                                <ul>
+                                    <li><a href="">총상담통계</a></li>
+                                    <li><a href="">기간별현황</a></li>
+                                    <li><a href="">상담업무처리순위</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu04"><span>상담이력관리</span></button>
+                                <ul>
+                                    <li><a href="">상담이력관리</a></li>
+                                    <li><a href="">상담자료관리</a></li>
+                                    <li><a href="">결재이력관리</a></li>
+                                    <li><a href="">관리자로그</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu05"><span>고객이력관리</span></button>
+                                <ul>
+                                    <li><a href="">고객이력관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu06"><span>게시판관리</span></button>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu07"><span>상담사관리</span></button>
+                                <ul>
+                                    <li><a href="">상담사관리</a></li>
+                                    <li><a href="">근태관리</a></li>
+                                    <li><a href="">상담사계정</a></li>
+                                    <li><a href="">근무지관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu09"><span>설문관리</span></button>
+                                <ul>
+                                    <li><a href="">설문관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="open sele">
+                                <button type="button" class="menu menu08"><span>설정관리</span></button>
+                                <ul>
+                                    <li><a href="">상담운영설정</a></li>
+                                    <li><a href="">장치제어</a></li>
+                                    <li><a href="">예약상담설정</a></li>
+                                    <li><a href="">메시지관리</a></li>
+                                    <li><a href="">대기음악설정</a></li>
+                                    <li><a href="">웰컴이미지</a></li>
+                                    <li class="sele"><a href="">대기안내설정</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="img">
+                            <img src="../img/sp-img.png" alt="">
+                        </div>
+                        <div class="info">  
+                            <div class="project">모바일 화상상담 관리자</div>
+                            <div class="name">이생명 <br><span class="num">(1079905)</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">대기안내설정</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">설정관리</a></li>
+                                <li><a href="">대기안내설정</a></li>
+                            </ul>
+                        </div>
+                        <div class="alarm-wrap">
+                            <button type="button" id="alarm-btn" class="alarm-flag">
+                                <span>알림</span>  
+                                <span class="num">3</span>
+                            </button>
+                            <div class="alarm-cont" id="alarm-cont">
+                                <div class="">알림 <span class="num">3</span></div>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다. 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="tab-round">
+                        <button type="button" class="sele">혼잡안내</button>                        
+                        <button type="button">마감안내</button>
+                    </div>
+                    <div class="wrap-setting notice">
+                        <div class="box-section-wrap">
+                            <div class="box-section-wrap-inner">
+                                <div class="box-section">
+                                    <div class="box">
+                                        <div class="cont">
+                                            <div class="msg-wrap">
+                                                <p>상담시간 마감 시 대기가<br> 자동취소됩니다.</p>                                                    
+                                            </div>
+                                            <div class="balloon-wrap">
+                                                <button type="button" class="btn-more"><span class="hide">더보기</span></button>
+                                                <div class="balloon">
+                                                    <button type="button" class="cont-modify">수정</button>
+                                                    <button type="button" class="box-delete">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="bottom">
+                                            <button type="button" class="btn bg02 cont-cancel"><span>취소</span></button>
+                                            <button type="button" class="btn"><span>삭제</span></button>
+                                        </div> -->
+                                    </div>
+                                    <div class="switch-wrap">
+                                        <div class="box-note">
+                                            노출시간 : 11:30~13:00<br>
+                                            노출요일 : 월/화/수
+                                        </div>
+                                        <div class="switch">
+                                            <input type="radio" class="switch-input" name="comp" value="true" id="comp" checked>
+                                            <label for="comp" class="switch-label switch-label-off">사용</label>
+                                            <input type="radio" class="switch-input" name="comp" value="false" id="comp01">
+                                            <label for="comp01" class="switch-label switch-label-on">미사용</label>
+                                            <span class="switch-selection"></span>
+                                        </div>
+                                    </div>
+                                </div>                     
+                                <!-- 수정템플릿 --> 
+                                <div class="box-section modify">
+                                    <div class="box">
+                                        <div class="cont">
+                                            <div class="title">수정</div>
+                                            <div class="dl-wrap">
+                                                <dt class="required">안내문구</dt>
+                                                <dd> 
+                                                    <div class="textarea-wrap">
+                                                        <textarea name="" id="" placeholder="내용을 입력하세요." ></textarea>
+                                                        <span class="txt-count"><span>0</span> / 50</span>
+                                                    </div>   
+                                                </dd>
+                                            </div>    
+                                            <div class="dl-wrap">
+                                                <dt class="required">노출시간</dt>
+                                                <dd>
+                                                    <div class="select-wrap">
+                                                        <select id="select02">
+                                                            <option value="hide">09:00</option>
+                                                            <option value="v0">09:00</option>
+                                                            <option value="v1">09:30</option>
+                                                            <option value="v2">10:00</option>
+                                                        </select>     
+                                                        <span>~</span>
+                                                        <select id="select03">
+                                                            <option value="hide">09:30</option>
+                                                            <option value="v0">09:30</option>
+                                                            <option value="v1">10:00</option>
+                                                            <option value="v2">10:30</option>
+                                                        </select>     
+                                                    </div>
+                                                </dd>
+                                            </div> 
+                                            <div class="dl-wrap">
+                                                <dt class="required">노출요일</dt>
+                                                <dd>
+                                                    <div class="day-chk">
+                                                        <label><input type="checkbox" name="day" checked><span>월</span></label>
+                                                        <label><input type="checkbox" name="day"><span>화</span></label>
+                                                        <label><input type="checkbox" name="day"><span>수</span></label>
+                                                        <label><input type="checkbox" name="day"><span>목</span></label>
+                                                        <label><input type="checkbox" name="day"><span>금</span></label>
+                                                        <label><input type="checkbox" name="day"><span>토</span></label>
+                                                        <label><input type="checkbox" name="day"><span>일</span></label>
+                                                    </div>
+                                                </dd>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <div class="right">
+                                            <button type="button" class="btn bg02 cont-cancel"><span>취소</span></button>
+                                            <button type="button" class="btn"><span>저장</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-section-wrap-inner">
+                                <div class="box-section disabled">
+                                    <div class="box">
+                                        <div class="cont">
+                                            <div class="msg-wrap">
+                                                <p>상담시간 마감 시 대기가<br> 자동취소됩니다.</p>                                                    
+                                            </div>
+                                            <div class="balloon-wrap">
+                                                <button type="button" class="btn-more"><span class="hide">더보기</span></button>
+                                                <div class="balloon">
+                                                    <button type="button" class="cont-modify">수정</button>
+                                                    <button type="button" class="box-delete">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="switch-wrap">
+                                        <div class="box-note">
+                                            노출시간 : 11:30~13:00<br>
+                                            노출요일 : 월/화/수
+                                        </div>
+                                        <div class="switch">
+                                            <input type="radio" class="switch-input" name="comp02" value="true" id="comp02">
+                                            <label for="comp02" class="switch-label switch-label-off">사용</label>
+                                            <input type="radio" class="switch-input" name="comp02" value="false" id="comp02-1" checked>
+                                            <label for="comp02-1" class="switch-label switch-label-on">미사용</label>
+                                            <span class="switch-selection"></span>
+                                        </div>
+                                    </div>
+                                </div>                 
+                                <!-- 수정템플릿 --> 
+                                <div class="box-section modify">
+                                    <div class="box">
+                                        <div class="cont">
+                                            <div class="title">수정</div>
+                                            <div class="dl-wrap">
+                                                <dt class="required">안내문구</dt>
+                                                <dd> 
+                                                    <div class="textarea-wrap">
+                                                        <textarea name="" id="" placeholder="내용을 입력하세요." ></textarea>
+                                                        <span class="txt-count"><span>0</span> / 50</span>
+                                                    </div>   
+                                                </dd>
+                                            </div>    
+                                            <div class="dl-wrap">
+                                                <dt class="required">노출시간</dt>
+                                                <dd>
+                                                    <div class="select-wrap">
+                                                        <select id="select02">
+                                                            <option value="hide">09:00</option>
+                                                            <option value="v0">09:00</option>
+                                                            <option value="v1">09:30</option>
+                                                            <option value="v2">10:00</option>
+                                                        </select>     
+                                                        <span>~</span>
+                                                        <select id="select03">
+                                                            <option value="hide">09:30</option>
+                                                            <option value="v0">09:30</option>
+                                                            <option value="v1">10:00</option>
+                                                            <option value="v2">10:30</option>
+                                                        </select>     
+                                                    </div>
+                                                </dd>
+                                            </div> 
+                                            <div class="dl-wrap">
+                                                <dt class="required">노출요일</dt>
+                                                <dd>
+                                                    <div class="day-chk">
+                                                        <label><input type="checkbox" name="day" checked><span>월</span></label>
+                                                        <label><input type="checkbox" name="day"><span>화</span></label>
+                                                        <label><input type="checkbox" name="day"><span>수</span></label>
+                                                        <label><input type="checkbox" name="day"><span>목</span></label>
+                                                        <label><input type="checkbox" name="day"><span>금</span></label>
+                                                        <label><input type="checkbox" name="day"><span>토</span></label>
+                                                        <label><input type="checkbox" name="day"><span>일</span></label>
+                                                    </div>
+                                                </dd>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <div class="right">
+                                            <button type="button" class="btn bg02 cont-cancel"><span>취소</span></button>
+                                            <button type="button" class="btn"><span>저장</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="box-section-wrap-inner">
+                                <div class="box-section">
+                                    <div class="box">
+                                        <div class="cont">
+                                            <div class="msg-wrap">
+                                                <p>상담시간 마감 시 대기가<br> 자동취소됩니다.</p>                                                    
+                                            </div>
+                                            <div class="balloon-wrap">
+                                                <button type="button" class="btn-more"><span class="hide">더보기</span></button>
+                                                <div class="balloon">
+                                                    <button type="button" class="cont-modify">수정</button>
+                                                    <button type="button" class="box-delete">삭제</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="bottom">
+                                            <button type="button" class="btn bg02 cont-cancel"><span>취소</span></button>
+                                            <button type="button" class="btn"><span>삭제</span></button>
+                                        </div> -->
+                                    </div>
+                                    <div class="switch-wrap">
+                                        <div class="box-note">
+                                            노출시간 : 11:30~13:00<br>
+                                            노출요일 : 월/화/수
+                                        </div>
+                                        <div class="switch">
+                                            <input type="radio" class="switch-input" name="comp03" value="true" id="comp03" checked>
+                                            <label for="comp03" class="switch-label switch-label-off">사용</label>
+                                            <input type="radio" class="switch-input" name="comp03" value="false" id="comp03-1">
+                                            <label for="comp03-1" class="switch-label switch-label-on">미사용</label>
+                                            <span class="switch-selection"></span>
+                                        </div>
+                                    </div>
+                                </div>                 
+                                <!-- 수정템플릿 --> 
+                                <div class="box-section modify">
+                                    <div class="box">
+                                        <div class="cont">
+                                            <div class="title">수정</div>
+                                            <div class="dl-wrap">
+                                                <dt class="required">안내문구</dt>
+                                                <dd> 
+                                                    <div class="textarea-wrap">
+                                                        <textarea name="" id="" placeholder="내용을 입력하세요." ></textarea>
+                                                        <span class="txt-count"><span>0</span> / 50</span>
+                                                    </div>   
+                                                </dd>
+                                            </div>    
+                                            <div class="dl-wrap">
+                                                <dt class="required">노출시간</dt>
+                                                <dd>
+                                                    <div class="select-wrap">
+                                                        <select id="select02">
+                                                            <option value="hide">09:00</option>
+                                                            <option value="v0">09:00</option>
+                                                            <option value="v1">09:30</option>
+                                                            <option value="v2">10:00</option>
+                                                        </select>     
+                                                        <span>~</span>
+                                                        <select id="select03">
+                                                            <option value="hide">09:30</option>
+                                                            <option value="v0">09:30</option>
+                                                            <option value="v1">10:00</option>
+                                                            <option value="v2">10:30</option>
+                                                        </select>     
+                                                    </div>
+                                                </dd>
+                                            </div> 
+                                            <div class="dl-wrap">
+                                                <dt class="required">노출요일</dt>
+                                                <dd>
+                                                    <div class="day-chk">
+                                                        <label><input type="checkbox" name="day" checked><span>월</span></label>
+                                                        <label><input type="checkbox" name="day"><span>화</span></label>
+                                                        <label><input type="checkbox" name="day"><span>수</span></label>
+                                                        <label><input type="checkbox" name="day"><span>목</span></label>
+                                                        <label><input type="checkbox" name="day"><span>금</span></label>
+                                                        <label><input type="checkbox" name="day"><span>토</span></label>
+                                                        <label><input type="checkbox" name="day"><span>일</span></label>
+                                                    </div>
+                                                </dd>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <div class="right">
+                                            <button type="button" class="btn bg02 cont-cancel"><span>취소</span></button>
+                                            <button type="button" class="btn"><span>저장</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="box-section-wrap add">                        
+                            <!-- 등록템플릿 --> 
+                            <div class="box-section">
+                                <div class="box">
+                                    <div class="cont">
+                                        <div class="title">혼잡안내 등록</div><!-- 마감안내 선택시 마감안내 등록 으로 텍스트 변경 -->
+                                        <div class="dl-wrap">
+                                            <dt class="required">안내문구</dt>
+                                            <dd> 
+                                                <div class="textarea-wrap">
+                                                    <textarea name="" id="" placeholder="내용을 입력하세요." ></textarea>
+                                                    <span class="txt-count"><span>0</span> / 50</span>
+                                                </div>   
+                                            </dd>
+                                        </div>    
+                                        <div class="dl-wrap">
+                                            <dt class="required">노출시간</dt>
+                                            <dd>
+                                                <div class="select-wrap">
+                                                    <select id="select02">
+                                                        <option value="hide">09:00</option>
+                                                        <option value="v0">09:00</option>
+                                                        <option value="v1">09:30</option>
+                                                        <option value="v2">10:00</option>
+                                                        <option value="v0">09:00</option>
+                                                        <option value="v1">09:30</option>
+                                                        <option value="v2">10:00</option>
+                                                        <option value="v0">09:00</option>
+                                                        <option value="v1">09:30</option>
+                                                        <option value="v2">10:00</option>
+                                                        <option value="v0">09:00</option>
+                                                        <option value="v1">09:30</option>
+                                                        <option value="v2">10:00</option>
+                                                        <option value="v0">09:00</option>
+                                                        <option value="v1">09:30</option>
+                                                        <option value="v2">10:00</option>
+                                                        <option value="v0">09:00</option>
+                                                        <option value="v1">09:30</option>
+                                                        <option value="v2">10:00</option>
+                                                    </select>     
+                                                    <span>~</span>
+                                                    <select id="select03">
+                                                        <option value="hide">09:30</option>
+                                                        <option value="v0">09:30</option>
+                                                        <option value="v1">10:00</option>
+                                                        <option value="v2">10:30</option>
+                                                    </select>     
+                                                </div>
+                                            </dd>
+                                        </div> 
+                                        <div class="dl-wrap">
+                                            <dt class="required">노출요일</dt>
+                                            <dd>
+                                                <div class="day-chk">
+                                                    <label><input type="checkbox" name="day" checked><span>월</span></label>
+                                                    <label><input type="checkbox" name="day"><span>화</span></label>
+                                                    <label><input type="checkbox" name="day"><span>수</span></label>
+                                                    <label><input type="checkbox" name="day"><span>목</span></label>
+                                                    <label><input type="checkbox" name="day"><span>금</span></label>
+                                                    <label><input type="checkbox" name="day"><span>토</span></label>
+                                                    <label><input type="checkbox" name="day"><span>일</span></label>
+                                                </div>
+                                            </dd>
+                                        </div>   
+                                    </div>
+                                </div>
+                                <div class="btn-wrap">
+                                    <div class="right">
+                                        <button type="button" class="btn"><span>등록</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="msg-toast active"><!--active 클래스로 제어-->
+                    <span>1년 연장되었습니다.</span>                        
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        //수정, 삭제 클릭시 동작
+        const contModifys = document.querySelectorAll('.cont-modify')
+        const contCancels = document.querySelectorAll('.cont-cancel')
+        const boxDeletes = document.querySelectorAll('.box-delete')
+        
+        contModifys.forEach((contModify) => {
+            contModify.addEventListener('click', (c) =>{
+                const boxSectionInner = c.currentTarget.closest('.box-section-wrap-inner')
+                boxSectionInner.classList.add('modify')
+            })
+        })
+        contCancels.forEach((contCancel) => {
+            contCancel.addEventListener('click', (c) =>{
+                const boxSectionInner = c.currentTarget.closest('.box-section-wrap-inner')
+                boxSectionInner.classList.remove('modify')
+            })
+        })
+
+        boxDeletes.forEach((boxDelete) => {
+            boxDelete.addEventListener('click', (c) =>{
+                const boxSectionInner = c.currentTarget.closest('.box-section-wrap-inner')
+                boxSectionInner.remove();
+            })
+        })
+
+        //사용, 미사용 disabled 클래스 추가
+        const boxSections = document.querySelectorAll(".box-section");
+        boxSections.forEach(boxSection => {
+            const radios = boxSection.querySelectorAll(".switch-input");
+
+            if (radios.length >= 2) {
+                const radioUse = radios[0];
+                const radioNotUse = radios[1];
+
+                radioUse.addEventListener("change", function() {
+                    if (radioUse.checked) {
+                        boxSection.classList.remove("disabled");
+                    }
+                });
+                radioNotUse.addEventListener("change", function() {
+                    if (radioNotUse.checked) {
+                        boxSection.classList.add("disabled");
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

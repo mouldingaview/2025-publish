@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한화생명모바일 화상상담 관리자 시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap" class="main">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li class="sele"><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><span class="qa">QA</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="menu menu02"><span>실시간현황</span></a>
+                                <ul>
+                                    <li><a href="">상담대기현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <!--<li><a href="">나중상담현황</a></li>-->
+                                    <li><a href="">상담진행현황</a></li>
+                                    <li><a href="">상담결과현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="menu menu03"><span>통계현황</span></a>
+                                <ul>
+                                    <li><a href="">월, 일별 현황</a></li>
+                                    <li><a href="">시간별 현황</a></li>
+                                    <li><a href="">상담업무순위현황</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">상담취소이력</a></li>
+                                </ul></li>
+                            <li>
+                                <a href="" class="menu menu04"><span>상담이력관리</span></a>
+                                <ul>
+                                    <li><a href="">자료관리</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="menu menu05"><span>고객이력관리</span></a></li>
+                            <li>
+                                <a href="" class="menu menu06"><span>게시판관리</span></a>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="menu menu07"><span>상담사관리</span></a>
+                                <ul>
+                                    <li><a href="">근무 관리</a></li>
+                                    <li><a href="">상담사 계정</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="menu menu08"><span>설정관리</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="name">이생명 <span class="num">(1000000)</span></div>
+                    </div>
+                    <div class="project">모바일 화상상담 관리자</div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="main-cont">                        
+                    <div class="m-title-area">
+                        <div class="tit"><strong>총 상담자수 <span>10</span></strong> 명</div>
+                        <div class="state">
+                            <div>
+                                <span>On</span> <strong>10</strong> 명
+                            </div>
+                            <div>
+                                <span>OFF</span> <strong>1</strong> 명
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-container">
+                        <div class="item-wrap">
+                            <div class="item">
+                                <dl>
+                                    <dt>상담중</dt>
+                                    <dd><span>20</span> 명</dd>
+                                </dl>
+                            </div>
+                            <div class="item">
+                                <dl>
+                                    <dt>자리비움</dt>
+                                    <dd><span>100</span> 명</dd>
+                                </dl>
+                            </div>
+                            <div class="item">
+                                <dl>
+                                    <dt>상담대기</dt>
+                                    <dd><span>100</span> 명</dd>
+                                </dl>
+                            </div>
+                            <div class="item">
+                                <dl>
+                                    <dt>사무업무</dt>
+                                    <dd><span>0</span> 명</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-cont">    
+                    <div class="cont">
+                        <div class="m-title-area">
+                            <div class="tit"><strong>실시간현황 <span>100</span></strong> 건</div>
+                        </div>
+                        <div class="item-container">
+                            <div class="item-wrap type02">                                
+                                <div class="item">
+                                    <dl>
+                                        <dt>진입 소요시간</dt>
+                                        <dd><span>3</span> 분 <span>15</span> 초</dd>
+                                    </dl>
+                                </div>                                
+                                <div class="item">
+                                    <dl>
+                                        <dt>안내 대기시간</dt>
+                                        <dd><span>3</span> 분 <span>15</span> 초</dd>
+                                    </dl>
+                                </div>
+                                <div class="item">                            
+                                    <dl>
+                                        <dt>평균 상담시간</dt>
+                                        <dd><span>3</span> 분 <span>15</span> 초</dd>
+                                    </dl>
+                                </div>
+                                <div class="item">                            
+                                    <dl>
+                                        <dt>전체 응대율</dt>
+                                        <dd><span>3</span> %</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cont">
+                        <div class="table-wrap">
+                            <div>
+                                <div class="tbl-title">
+                                    <div class="count"><strong>일반상담 <span>9</span></strong> 건</div>
+                                    <a href="" class="btn-more">더보기</a>
+                                </div>
+                                <div class="tbl-style01">
+                                    <table>                                    
+                                        <colgroup>
+                                            <col style="width:100px">
+                                            <col style="width:20%">
+                                            <col >
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>고객명</th>
+                                                <th>요청일시</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>25</td>
+                                                <td>김한화</td>
+                                                <td>2023-10-24 13:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>25</td>
+                                                <td>김한화</td>
+                                                <td>2023-10-24 13:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>25</td>
+                                                <td>김한화</td>
+                                                <td>2023-10-24 13:50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tbl-title">
+                                    <div class="count"><strong>나중상담 <span>9</span></strong> 건</div>
+                                    <a href="" class="btn-more">더보기</a>
+                                </div>
+                                <div class="tbl-style01">                            
+                                    <table>                                    
+                                        <colgroup>
+                                            <col style="width:100px">
+                                            <col style="width:20%">
+                                            <col >
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>고객명</th>
+                                                <th>요청일시</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>25</td>
+                                                <td>김한화</td>
+                                                <td>2023-10-24 13:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>25</td>
+                                                <td>김한화</td>
+                                                <td>2023-10-24 13:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>25</td>
+                                                <td>김한화</td>
+                                                <td>2023-10-24 13:50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tbl-title">
+                                    <div class="count"><strong>상담결과 <span>9</span></strong> 건</div>
+                                    <a href="" class="btn-more">더보기</a>
+                                </div>
+                                <div class="tbl-style01">
+                                    <table>                                    
+                                        <colgroup>
+                                            <col style="width:100px">
+                                            <col span="3">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>고객명</th>
+                                                <th>상담사</th>
+                                                <th>상담결과</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>25</td>
+                                                <td>김한화</td>
+                                                <td>이상담</td>
+                                                <td>완료</td>
+                                            </tr>
+                                            <tr>
+                                                <td>25</td>
+                                                <td>김한화</td>
+                                                <td>이상담</td>
+                                                <td>완료</td>
+                                            </tr>
+                                            <tr>
+                                                <td>25</td>
+                                                <td>김한화</td>
+                                                <td>이상담</td>
+                                                <td>완료</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="cont">
+                        <div class="tbl-title">
+                            <div class="count"><strong>상담현황 <span>9</span></strong> 건</div>
+                            <a href="" class="btn-more">더보기</a>
+                        </div>
+                        <div class="tbl-style01">
+                            <table>
+                                <colgroup>
+                                    <col style="width:5%">
+                                    <col>
+                                    <col style="width:10%" span="9">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>상담사</th>
+                                        <th>상담사 ID</th>
+                                        <th>근무지</th>
+                                        <th>근무형태</th>
+                                        <th>근무상태</th>
+                                        <th>상담구분</th>
+                                        <th>고객명</th>
+                                        <th>성별</th>
+                                        <th>나이대</th>
+                                        <th>누적 상담 건</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>김상담</td>
+                                        <td>12345678</td>
+                                        <td>1팀</td>
+                                        <td>재택근무</td>
+                                        <td>상담대기</td>
+                                        <td>일반상담</td>
+                                        <td>김한화</td>
+                                        <td>여</td>
+                                        <td>40대</td>
+                                        <td>25건</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>김상담</td>
+                                        <td>12345678</td>
+                                        <td>1팀</td>
+                                        <td>재택근무</td>
+                                        <td>상담대기</td>
+                                        <td>일반상담</td>
+                                        <td>김한화</td>
+                                        <td>여</td>
+                                        <td>40대</td>
+                                        <td>25건</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>김상담</td>
+                                        <td>12345678</td>
+                                        <td>1팀</td>
+                                        <td>재택근무</td>
+                                        <td>상담대기</td>
+                                        <td>일반상담</td>
+                                        <td>김한화</td>
+                                        <td>여</td>
+                                        <td>40대</td>
+                                        <td>25건</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>김상담</td>
+                                        <td>12345678</td>
+                                        <td>1팀</td>
+                                        <td>재택근무</td>
+                                        <td>상담대기</td>
+                                        <td>일반상담</td>
+                                        <td>김한화</td>
+                                        <td>여</td>
+                                        <td>40대</td>
+                                        <td>25건</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>김상담</td>
+                                        <td>12345678</td>
+                                        <td>1팀</td>
+                                        <td>재택근무</td>
+                                        <td>상담대기</td>
+                                        <td>일반상담</td>
+                                        <td>김한화</td>
+                                        <td>여</td>
+                                        <td>40대</td>
+                                        <td>25건</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="cont main-box">                             
+                        <div class="m-title-area">
+                            <div class="tit"><strong>시간별 현황</strong></div>
+                        </div>
+                        <div style="height:210px;background-color: #B3B3B3;">그래프 영역</div>   
+                    </div>                  
+                </div>
+
+                <div class="main-cont">
+                    <div class="m-title-area type02">
+                        <div class="tit"><strong>주간 현황</strong></div>
+                        <div class="calendar">
+                            <button type="button" class="btn-notice"><span class="hide">설명</span><div class="tooltip">최대 5일까지 날짜 설정</div></button>
+                            <div class="input-wrap">    
+                                <input type="date" name="" id="">     
+                                <span>~</span>     
+                                <input type="date" name="" id=""> 
+                            </div>              
+                        </div>
+                    </div>   
+                    <div class="wrap-grid">
+                        <div>
+                            <div class="tit">
+                                <div>일별 현황</div>
+                                <div class="legend">
+                                    <div><span>응대율</span></div>
+                                    <div><span>접수건</span></div>
+                                    <div><span>응대건</span></div>
+                                </div>
+                            </div>
+                            <div style="height:210px;background-color: #B3B3B3;">그래프</div>
+                        </div>    
+
+                        <div>
+                            <div class="tit">
+                                <div>최다 상담업무</div>
+                                <a href="" class="btn-more">더보기</a>
+                            </div>
+                            <div class="tbl-style01 no-head">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:80px">
+                                        <col>
+                                        <col style="width:80px">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td class="num">1</td>
+                                            <td><div class="ellipsis">수급방법 변경</div></td>
+                                            <td><div class="count"><strong>134</strong> 건</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num">2</td>
+                                            <td><div class="ellipsis">수급방법 변경</div></td>
+                                            <td><div class="count"><strong>14</strong> 건</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num">3</td>
+                                            <td><div class="ellipsis">수급방법 변경</div></td>
+                                            <td><div class="count"><strong>10</strong> 건</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num">4</td>
+                                            <td><div class="ellipsis">수급방법수급방법수급방법수급방법수급방법수급방법수급방법수급방법수급방법수급방법수급방법수급방법수급방법 변경</div></td>
+                                            <td><div class="count"><strong>1</strong> 건</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="num">5</td>
+                                            <td><div class="ellipsis">수급방법 변경</div></td>
+                                            <td><div class="count"><strong>0</strong> 건</div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>   
+
+                        <div>
+                            <div class="tit">
+                                <div>상담사 업무현황</div>
+                                <a href="" class="btn-more">더보기</a>
+                            </div>
+                            <div class="tbl-style01">
+                                <table>
+                                    <colgroup>
+                                        <col span="4">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>상담사</th>
+                                            <th>누적 상담건</th>
+                                            <th>완료 처리율</th>
+                                            <th>평균 상담시간</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>이상담</td>
+                                            <td>30건</td>
+                                            <td>90.7%</td>
+                                            <td>20분 40초</td>
+                                        </tr>
+                                        <tr>
+                                            <td>이상담</td>
+                                            <td>30건</td>
+                                            <td>90.7%</td>
+                                            <td>20분 40초</td>
+                                        </tr>
+                                        <tr>
+                                            <td>이상담</td>
+                                            <td>30건</td>
+                                            <td>90.7%</td>
+                                            <td>20분 40초</td>
+                                        </tr>
+                                        <tr>
+                                            <td>이상담</td>
+                                            <td>30건</td>
+                                            <td>90.7%</td>
+                                            <td>20분 40초</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="tit">
+                                <div>유입경로</div>
+                                <a href="" class="btn-more">더보기</a>
+                            </div>
+                            <div style="height:210px;background-color: #B3B3B3;">그래프</div>
+                        </div>
+
+                        <div>
+                            <div class="tit">
+                                <div>OS 사용현황</div>
+                                <a href="" class="btn-more">더보기</a>
+                            </div>
+                            <div style="height:210px;background-color: #B3B3B3;">그래프</div>
+                        </div>
+
+                        <div>
+                            <div class="tit">
+                                <div>브라우저 사용현황</div>
+                                <a href="" class="btn-more">더보기</a>
+                            </div>
+                            <div style="height:210px;background-color: #B3B3B3;">그래프</div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>    
+</body>
+</html>

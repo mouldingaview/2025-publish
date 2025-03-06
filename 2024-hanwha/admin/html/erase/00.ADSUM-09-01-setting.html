@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><!--span class="qa">QA</span--></a>
+                            </li>
+                            <li>
+                                <button class="menu menu02"><span>실시간현황</span></button>                                
+                                <ul>
+                                    <li><a href="">오늘상담현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">대기상담현황</a></li>
+                                    <li><a href="">진행상담현황</a></li>
+                                    <li><a href="">우선예약현황</a></li>
+                                    <li><a href="">종료상담현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu03"><span>통계현황</span></button>
+                                <ul>
+                                    <li><a href="">총상담통계</a></li>
+                                    <li><a href="">기간별현황</a></li>
+                                    <li><a href="">상담업무처리순위</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu04"><span>상담이력관리</span></button>
+                                <ul>
+                                    <li><a href="">상담이력관리</a></li>
+                                    <li><a href="">상담자료관리</a></li>
+                                    <li><a href="">결재이력관리</a></li>
+                                    <li><a href="">관리자로그</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu05"><span>고객이력관리</span></button>
+                                <ul>
+                                    <li><a href="">고객이력관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu06"><span>게시판관리</span></button>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu07"><span>상담사관리</span></button>
+                                <ul>
+                                    <li><a href="">상담사관리</a></li>
+                                    <li><a href="">근태관리</a></li>
+                                    <li><a href="">상담사계정</a></li>
+                                    <li><a href="">근무지관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu09"><span>설문관리</span></button>
+                                <ul>
+                                    <li><a href="">설문관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="sele">
+                                <button type="button" class="menu menu08"><span>설정관리</span></button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="img">
+                            <img src="../img/sp-img.png" alt="">
+                        </div>
+                        <div class="info">  
+                            <div class="project">모바일 화상상담 관리자</div>
+                            <div class="name">이생명 <br><span class="num">(1079905)</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">설정관리</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">설정관리</a></li>
+                            </ul>
+                        </div>
+                        <div class="alarm-wrap">
+                            <button type="button" id="alarm-btn" class="alarm-flag">
+                                <span>알림</span>  
+                                <span class="num">3</span>
+                            </button>
+                            <div class="alarm-cont" id="alarm-cont">
+                                <div class="">알림 <span class="num">3</span></div>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다. 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">                
+                    <div class="tab-wrap setting">
+                        <ul class="tab-style01">
+                            <li><button type="button">상담운영 설정</button></li>
+                            <li><button type="button">예약상담설정</button></li>
+                            <li><button type="button">대기음악 설정</button></li>
+                            <li><button type="button">이미지 관리</button></li>
+                            <li class="sele"><button type="button">메시지 관리</button></li>
+                        </ul>
+                        <div class="tab-cont">
+                            <div class="tab-inner">    
+                                <div class="ankor-wrap">
+                                    <ul class="ankors">
+                                        <li class="sele"><a href="#ankor01">채팅 상용문구</a></li>
+                                        <li><a href="#ankor02">메모 상용문구</a></li>
+                                        <li><a href="#ankor03">롤링 메시지</a></li>
+                                        <li><a href="#ankor04">취소사유관리</a></li>
+                                    </ul>
+                                    <div class="ankor-cont">
+                                        <section id="ankor01">
+                                            <div class="sec-title">채팅 상용문구 관리</div>
+                                            <div class="tbl-style01">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width:80px" span="2">
+                                                        <col>
+                                                        <col style="width:140px">
+                                                        <col style="width:220px">
+                                                        <col style="width:100px">
+                                                        <col style="width:100px">
+                                                        <col style="width:130px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>코드명</th>
+                                                            <th>상용문구</th>
+                                                            <th>등록자</th>
+                                                            <th>등록일</th>
+                                                            <th>등록시간</th>
+                                                            <th>노출순위</th>
+                                                            <th>상태</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><button type="button" class="btn-del"><span class="hide">삭제</span></button></td>
+                                                            <td>C1</td>
+                                                            <td class="tal"><a href="">대기시간이 길어 상담을 취소합니다.</a></td>
+                                                            <td>홍길동</td>
+                                                            <td>2024-01-23</td>
+                                                            <td>16:24</td>
+                                                            <td>
+                                                                <select id="select">
+                                                                    <option value="hide">1</option>
+                                                                    <option value="v1">1</option>
+                                                                    <option value="v2">2</option>
+                                                                    <option value="v3">3</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select id="select02">
+                                                                    <option value="hide">노출</option>
+                                                                    <option value="v4">노출</option>
+                                                                    <option value="v5">비노출</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button type="button" class="btn-add"><span class="hide">추가</span></button></td>
+                                                            <td>C1</td>
+                                                            <td class="tal"><input type="text" placeholder="취소사유를 입력하세요."></td>
+                                                            <td>홍길동</td>
+                                                            <td>2024-01-23</td>
+                                                            <td>16:24</td>
+                                                            <td>
+                                                                <select id="select">
+                                                                    <option value="hide">1</option>
+                                                                    <option value="v1">1</option>
+                                                                    <option value="v2">2</option>
+                                                                    <option value="v3">3</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select id="select02">
+                                                                    <option value="hide">노출</option>
+                                                                    <option value="v4">노출</option>
+                                                                    <option value="v5">비노출</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>  
+                                        </section>  
+                                        
+                                        <section id="ankor02">
+                                            <div class="sec-title">메모 상용문구 관리</div>
+                                            <div class="tbl-style01">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width:80px" span="2">
+                                                        <col>
+                                                        <col style="width:140px">
+                                                        <col style="width:220px">
+                                                        <col style="width:100px">
+                                                        <col style="width:100px">
+                                                        <col style="width:130px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>코드명</th>
+                                                            <th>상용문구</th>
+                                                            <th>등록자</th>
+                                                            <th>등록일</th>
+                                                            <th>등록시간</th>
+                                                            <th>노출순위</th>
+                                                            <th>상태</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><button type="button" class="btn-del"><span class="hide">삭제</span></button></td>
+                                                            <td>C1</td>
+                                                            <td class="tal"><a href="">대기시간이 길어 상담을 취소합니다.</a></td>
+                                                            <td>홍길동</td>
+                                                            <td>2024-01-23</td>
+                                                            <td>16:24</td>
+                                                            <td>
+                                                                <select id="select">
+                                                                    <option value="hide">1</option>
+                                                                    <option value="v1">1</option>
+                                                                    <option value="v2">2</option>
+                                                                    <option value="v3">3</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select id="select02">
+                                                                    <option value="hide">노출</option>
+                                                                    <option value="v4">노출</option>
+                                                                    <option value="v5">비노출</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button type="button" class="btn-add"><span class="hide">추가</span></button></td>
+                                                            <td>C1</td>
+                                                            <td class="tal"><input type="text" placeholder="취소사유를 입력하세요."></td>
+                                                            <td>홍길동</td>
+                                                            <td>2024-01-23</td>
+                                                            <td>16:24</td>
+                                                            <td>
+                                                                <select id="select">
+                                                                    <option value="hide">1</option>
+                                                                    <option value="v1">1</option>
+                                                                    <option value="v2">2</option>
+                                                                    <option value="v3">3</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select id="select02">
+                                                                    <option value="hide">노출</option>
+                                                                    <option value="v4">노출</option>
+                                                                    <option value="v5">비노출</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>  
+                                        </section>  
+                                        
+                                        <section id="ankor03">
+                                            <div class="sec-title">롤링 메시지</div>
+                                            <div class="tbl-style01">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width:80px" span="2">
+                                                        <col>
+                                                        <col style="width:140px">
+                                                        <col style="width:220px">
+                                                        <col style="width:100px">
+                                                        <col style="width:100px">
+                                                        <col style="width:130px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>코드명</th>
+                                                            <th>상용문구</th>
+                                                            <th>등록자</th>
+                                                            <th>등록일</th>
+                                                            <th>등록시간</th>
+                                                            <th>노출순위</th>
+                                                            <th>상태</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><button type="button" class="btn-del"><span class="hide">삭제</span></button></td>
+                                                            <td>C1</td>
+                                                            <td class="tal"><a href="">대기시간이 길어 상담을 취소합니다.</a></td>
+                                                            <td>홍길동</td>
+                                                            <td>2024-01-23</td>
+                                                            <td>16:24</td>
+                                                            <td>
+                                                                <select id="select">
+                                                                    <option value="hide">1</option>
+                                                                    <option value="v1">1</option>
+                                                                    <option value="v2">2</option>
+                                                                    <option value="v3">3</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select id="select02">
+                                                                    <option value="hide">노출</option>
+                                                                    <option value="v4">노출</option>
+                                                                    <option value="v5">비노출</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button type="button" class="btn-add"><span class="hide">추가</span></button></td>
+                                                            <td>C1</td>
+                                                            <td class="tal"><input type="text" placeholder="취소사유를 입력하세요."></td>
+                                                            <td>홍길동</td>
+                                                            <td>2024-01-23</td>
+                                                            <td>16:24</td>
+                                                            <td>
+                                                                <select id="select">
+                                                                    <option value="hide">1</option>
+                                                                    <option value="v1">1</option>
+                                                                    <option value="v2">2</option>
+                                                                    <option value="v3">3</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select id="select02">
+                                                                    <option value="hide">노출</option>
+                                                                    <option value="v4">노출</option>
+                                                                    <option value="v5">비노출</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>  
+                                        </section>  
+                                        
+                                        <section id="ankor04">
+                                            <div class="sec-title">취소 메시지 관리</div>
+                                            <div class="tbl-style01">
+                                                <table>
+                                                    <colgroup>
+                                                        <col style="width:80px" span="2">
+                                                        <col>
+                                                        <col style="width:140px">
+                                                        <col style="width:220px">
+                                                        <col style="width:100px">
+                                                        <col style="width:100px">
+                                                        <col style="width:130px">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>코드명</th>
+                                                            <th>상용문구</th>
+                                                            <th>등록자</th>
+                                                            <th>등록일</th>
+                                                            <th>등록시간</th>
+                                                            <th>노출순위</th>
+                                                            <th>상태</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><button type="button" class="btn-del"><span class="hide">삭제</span></button></td>
+                                                            <td>C1</td>
+                                                            <td class="tal"><a href="">대기시간이 길어 상담을 취소합니다.</a></td>
+                                                            <td>홍길동</td>
+                                                            <td>2024-01-23</td>
+                                                            <td>16:24</td>
+                                                            <td>
+                                                                <select id="select">
+                                                                    <option value="hide">1</option>
+                                                                    <option value="v1">1</option>
+                                                                    <option value="v2">2</option>
+                                                                    <option value="v3">3</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select id="select02">
+                                                                    <option value="hide">노출</option>
+                                                                    <option value="v4">노출</option>
+                                                                    <option value="v5">비노출</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><button type="button" class="btn-add"><span class="hide">추가</span></button></td>
+                                                            <td>C1</td>
+                                                            <td class="tal"><input type="text" placeholder="취소사유를 입력하세요."></td>
+                                                            <td>홍길동</td>
+                                                            <td>2024-01-23</td>
+                                                            <td>16:24</td>
+                                                            <td>
+                                                                <select id="select">
+                                                                    <option value="hide">1</option>
+                                                                    <option value="v1">1</option>
+                                                                    <option value="v2">2</option>
+                                                                    <option value="v3">3</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select id="select02">
+                                                                    <option value="hide">노출</option>
+                                                                    <option value="v4">노출</option>
+                                                                    <option value="v5">비노출</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>  
+                                        </section>  
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

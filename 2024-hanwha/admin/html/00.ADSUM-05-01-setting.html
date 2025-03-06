@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><!--span class="qa">QA</span--></a>
+                            </li>
+                            <li>
+                                <button class="menu menu02"><span>실시간현황</span></button>                                
+                                <ul>
+                                    <li><a href="">오늘상담현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">대기상담현황</a></li>
+                                    <li><a href="">진행상담현황</a></li>
+                                    <li><a href="">우선예약현황</a></li>
+                                    <li><a href="">종료상담현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu03"><span>통계현황</span></button>
+                                <ul>
+                                    <li><a href="">총상담통계</a></li>
+                                    <li><a href="">기간별현황</a></li>
+                                    <li><a href="">상담업무처리순위</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu04"><span>상담이력관리</span></button>
+                                <ul>
+                                    <li><a href="">상담이력관리</a></li>
+                                    <li><a href="">상담자료관리</a></li>
+                                    <li><a href="">결재이력관리</a></li>
+                                    <li><a href="">관리자로그</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu05"><span>고객이력관리</span></button>
+                                <ul>
+                                    <li><a href="">고객이력관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu06"><span>게시판관리</span></button>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu07"><span>상담사관리</span></button>
+                                <ul>
+                                    <li><a href="">상담사관리</a></li>
+                                    <li><a href="">근태관리</a></li>
+                                    <li><a href="">상담사계정</a></li>
+                                    <li><a href="">근무지관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu09"><span>설문관리</span></button>
+                                <ul>
+                                    <li><a href="">설문관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="open sele">
+                                <button type="button" class="menu menu09"><span>설정관리</span></button>
+                                <ul>
+                                    <li class="sele"><a href="">상담운영설정</a></li>
+                                    <li><a href="">장치제어</a></li>
+                                    <li><a href="">예약상담설정</a></li>
+                                    <li><a href="">메시지관리</a></li>
+                                    <li><a href="">대기음악설정</a></li>
+                                    <li><a href="">웰컴이미지</a></li>
+                                    <li><a href="">대기안내설정</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="img">
+                            <img src="../img/sp-img.png" alt="">
+                        </div>
+                        <div class="info">  
+                            <div class="project">모바일 화상상담 관리자</div>
+                            <div class="name">이생명 <br><span class="num">(1079905)</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">상담운영설정</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">설정관리</a></li>
+                                <li><a href="">상담운영설정</a></li>
+                            </ul>
+                        </div>
+                        <div class="alarm-wrap">
+                            <button type="button" id="alarm-btn" class="alarm-flag">
+                                <span>알림</span>  
+                                <span class="num">3</span>
+                            </button>
+                            <div class="alarm-cont" id="alarm-cont">
+                                <div class="">알림 <span class="num">3</span></div>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다. 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">    
+                    <div class="setting-wrap">
+                        <div class="setting-cont">
+                            <div class="setting-cont">
+                                <!-- 고객 대기시간 설정 -->
+                                <div class="box-round box01">
+                                    <div class="title">
+                                        <div class="tit">고객대기시간</div>
+                                        <div class="switch-wrap">
+                                            <div class="switch">
+                                                <input type="radio" class="switch-input" name="handle" value="handle" id="handle" checked>
+                                                <label for="handle" class="switch-label switch-label-off">수동</label>
+                                                <input type="radio" class="switch-input" name="handle" value="handle02" id="handle02">
+                                                <label for="handle02" class="switch-label switch-label-on">자동</label>
+                                                <span class="switch-selection"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cont">
+                                        <div class="input-group">    
+                                            <div>
+                                                <label for="" class="label">1~10명</label>
+                                                <div>
+                                                    <input type="text" name="" id="">
+                                                    <span>분</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label for="" class="label">11~20명</label>
+                                                <div>
+                                                    <input type="text" name="" id="">
+                                                    <span>분</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label for="" class="label">21~30명</label>
+                                                <div>
+                                                    <input type="text" name="" id="">
+                                                    <span>분</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label for="" class="label">31~40명</label>
+                                                <div>
+                                                    <input type="text" name="" id="">
+                                                    <span>분</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label for="" class="label">41~50명</label>
+                                                <div>
+                                                    <input type="text" name="" id="">
+                                                    <span>분</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <label for="" class="label">51~60명</label>
+                                                <div>
+                                                    <input type="text" name="" id="">
+                                                    <span>분</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 상담시간 관리 -->
+                                <div class="box-round box02">
+                                    <div class="title"><div class="tit">상담시간관리</div></div>
+                                    <div class="cont">
+                                        <div class="input-group">    
+                                            <div>
+                                                <div class="day">
+                                                    <div class="label">월요일</div> 
+                                                    <label class="toggle-switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="time">                 
+                                                    <label for="" class="label">시작시간</label>
+                                                    <input type="text" name="" id="">
+                                                    <span>:</span>
+                                                    <input type="text" name="" id="">
+                                                    <span>~</span>              
+                                                    <label for="" class="label">마감시간</label>
+                                                    <input type="text" name="" id="">
+                                                    <span>:</span>
+                                                    <input type="text" name="" id="">              
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="day">
+                                                    <div class="label">화요일</div> 
+                                                    <label class="toggle-switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="time">                 
+                                                    <label for="" class="label">시작시간</label>
+                                                    <input type="text" name="" id="">
+                                                    <span>:</span>
+                                                    <input type="text" name="" id="">
+                                                    <span>~</span>              
+                                                    <label for="" class="label">마감시간</label>
+                                                    <input type="text" name="" id="">
+                                                    <span>:</span>
+                                                    <input type="text" name="" id="">              
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="day">
+                                                    <div class="label">수요일</div> 
+                                                    <label class="toggle-switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="time">                 
+                                                    <label for="" class="label">시작시간</label>
+                                                    <input type="text" name="" id="">
+                                                    <span>:</span>
+                                                    <input type="text" name="" id="">
+                                                    <span>~</span>              
+                                                    <label for="" class="label">마감시간</label>
+                                                    <input type="text" name="" id="">
+                                                    <span>:</span>
+                                                    <input type="text" name="" id="">              
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="day">
+                                                    <div class="label">목요일</div>
+                                                    <label class="toggle-switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="time">                 
+                                                    <label for="" class="label">시작시간</label>
+                                                    <input type="text" name="" id="">
+                                                    <span>:</span>
+                                                    <input type="text" name="" id="">
+                                                    <span>~</span>              
+                                                    <label for="" class="label">마감시간</label>
+                                                    <input type="text" name="" id="">
+                                                    <span>:</span>
+                                                    <input type="text" name="" id="">              
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="day">
+                                                    <div class="label">금요일</div>
+                                                    <label class="toggle-switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="time">                 
+                                                    <label for="" class="label">시작시간</label>
+                                                    <input type="text" name="" id="">
+                                                    <span>:</span>
+                                                    <input type="text" name="" id="">
+                                                    <span>~</span>              
+                                                    <label for="" class="label">마감시간</label>
+                                                    <input type="text" name="" id="">
+                                                    <span>:</span>
+                                                    <input type="text" name="" id="">              
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setting-cont">
+                                <!-- 링크만료시간 -->                     
+                                <div class="box-round box03">
+                                    <div class="title">
+                                        <div class="tit">링크만료시간</div>
+                                    </div>
+                                    <div class="cont">
+                                        <div class="tbl-style01">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width: 130px;">
+                                                    <col>
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>고객초대</th>
+                                                        <td>
+                                                            <div>
+                                                                <input type="text" name="" id="">
+                                                                <span>분</span>
+                                                            </div>
+                                                        </td>    
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tbl-style01">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width: 130px;">
+                                                    <col>
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>최초상담</th>
+                                                        <td>
+                                                            <div>
+                                                                <input type="text" name="" id="">
+                                                                <span>분</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tbl-style01">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width: 130px;">
+                                                    <col>
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>예약문자</th>
+                                                        <td>
+                                                            <div>
+                                                                <input type="text" name="" id="">
+                                                                <span>분</span>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 나중상담 마감 설정 
+                                <div class="box-round box04">
+                                    <div class="title">
+                                        <div class="tit">나중상담 마감 설정</div>
+                                    </div>   
+                                    <div class="cont">
+                                        <p>업무 시작 전 기존설정은 초기화됩니다.</p>
+                                        <div class="switch-wrap">
+                                            <div class="switch type02">
+                                                <input type="radio" class="switch-input" name="receipt" value="receipt" id="receipt" checked>
+                                                <label for="receipt" class="switch-label switch-label-off">접수마감</label>
+                                                <input type="radio" class="switch-input" name="receipt" value="receipt2" id="receipt2">
+                                                <label for="receipt2" class="switch-label switch-label-on">접수중</label>
+                                                <span class="switch-selection"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                        <div class="setting-cont">
+                            <!-- 휴무일 -->
+                            <div class="box-round box05">
+                                <div class="title">
+                                    <div class="tit">휴무일</div>
+                                    <button type="button" class="btn-data"><span>데이터 불러오기</span></button>
+                                </div>
+                                <div class="cont">
+                                    <div class="tbl-style01 sticky">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width:40%">
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>명칭</th>
+                                                    <th>휴무일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1월 1일</td>
+                                                    <td>2024-01-01(월)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>설날(연휴)</td>
+                                                    <td>2024-02-09(금) ~ 2024-02-11(일)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>대체공유일(설날)</td>  
+                                                    <td>2024-02-12(월)</td>
+                                                </tr>
+                                                <tr>   
+                                                    <td>3·1절</td>
+                                                    <td>2024-03-01(금)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>제22대국회의원선거</td>
+                                                    <td>2024-04-10(수)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>어린이날</td>
+                                                    <td>2024-05-05(일)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>대체공휴일(어린이날)</td>
+                                                    <td>2024-05-06(월)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>부처님오신날</td>
+                                                    <td>2024-05-15(수)</td>
+                                                </tr>     
+                                                <tr>
+                                                    <td>대체공유일(설날)</td>  
+                                                    <td>2024-02-12(월)</td>
+                                                </tr>
+                                                <tr>   
+                                                    <td>3·1절</td>
+                                                    <td>2024-03-01(금)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>제22대국회의원선거</td>
+                                                    <td>2024-04-10(수)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>어린이날</td>
+                                                    <td>2024-05-05(일)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>대체공휴일(어린이날)</td>
+                                                    <td>2024-05-06(월)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>부처님오신날</td>
+                                                    <td>2024-05-15(수)</td>
+                                                </tr>     
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="setting-cont">   
+                            <div class="box-round">
+                                <div class="title">
+                                    <div class="tit">상담음성제어</div>
+                                </div>
+                                <div class="tbl-style01">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:calc(100% / 6)" span="6">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>STT</th>
+                                                <td>
+                                                    <label class="toggle-switch">
+                                                      <input type="checkbox" checked>
+                                                      <span class="slider"></span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>고객 노이즈캔슬링</th>
+                                                <td>
+                                                    <label class="toggle-switch">
+                                                      <input type="checkbox" checked>
+                                                      <span class="slider"></span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>상담사 노이즈캔슬링</th>
+                                                <td>
+                                                    <label class="toggle-switch">
+                                                      <input type="checkbox" checked>
+                                                      <span class="slider"></span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>                   
+                    
+                    <div class="btn-wrap">
+                        <div class="right">
+                            <button type="button" class="btn"><span>저장</span></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

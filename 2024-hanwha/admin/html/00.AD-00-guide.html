@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/ui02.js"></script>
+    <style>
+        #wrap{width:1600px;padding:40px 60px;box-sizing:border-box;margin: 0 auto;}
+        .guide-title{padding:50px 0 10px;}
+        .guide-title>div{color: #FFF;background: #5AA5BB;padding: 10px;border-radius: 10px;}
+        .guide-title:first-of-type{margin-top: 10px;}
+        .guide-ankor-wrap{margin-top: 100px;}
+        .guide-ankor-wrap:first-of-type{margin-top: 0;}
+        .guide-ankors{position: sticky;top: 0;display: flex;justify-content: flex-start;z-index: 1;}
+        .guide-ankors li{background: #F15B47;color: #FFF;padding:15px 20px;border:1px solid #937B6E}
+        .guide-ankors li:first-child{border-radius: 10px 0 0 10px;}
+        .guide-ankors li:last-child{border-radius: 0 10px 10px 0;}
+        main .contents{height:auto;overflow-y: auto;}
+        .guide-sm-tit{margin: 30px 0 10px;padding:10px;border:1px solid #5AA5BB;border-radius: 20px;font-weight: bold;background-color: rgba(35,65,73,0.1);}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="guide-ankor-wrap">    
+            <ul class="guide-ankors">
+                <li class="sele"><a href="#search01">* 조회1</a></li>
+                <li><a href="#search02">* 조회2</a></li>
+                <li><a href="#search03">* 조회3</a></li>
+                <li><a href="#search03">* 조회4</a></li>
+                <li><a href="#search05">* 조회5</a></li>
+                <li><a href="#search06">* 조회6</a></li>
+                <li><a href="#search07">* 조회7</a></li>
+            </ul>
+
+            <div class="guide-title"><div>* 조회영역 - 고정영역</div></div>
+            <!-- 조회영역 1열 : 기간 & 라디오 + 버튼 -->
+            <div id="search01"></div>
+            <div class="wrap-search">
+                <div class="row-search">
+                    <dl>
+                        <dt>조회기간</dt>
+                        <dd>
+                            <div class="calendar-wrap">
+                                <input type="date" name="" id="" class="calendar">
+                                <span>~</span>
+                                <input type="date" name="" id="" class="calendar">
+                            </div>
+                            <div class="chk-wrap">
+                                <div>
+                                    <input type="radio" name="radio" id="radio1" checked>
+                                    <label for="radio1">1주일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio2">
+                                    <label for="radio2">1개월</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio3">
+                                    <label for="radio3">3개월</label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="btn-search-wrap">
+                        <button type="button">초기화</button>
+                        <button type="button" class="btn-search">조회</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 조회영역 1열 : 인풋 + 버튼 -->
+            <br><br id="search02">  
+            <div class="wrap-search">
+                <div class="row-search">
+                    <dl>
+                        <dt>고객명</dt>
+                        <dd> 
+                            <input type="text" name="" id="" placeholder="검색어를 입력하세요">
+                        </dd>
+                    </dl>
+                    <div class="btn-search-wrap">
+                        <button type="button">초기화</button>
+                        <button type="button" class="btn-search">조회</button>
+                    </div>
+                </div>
+            </div>
+                                    
+            <!-- 조회영역 2열 : select & 인풋 / 기간 & 라디오 + 버튼 -->   <br><br id="search03">                     
+            <div class="wrap-search">
+                <div class="row-search">
+                    <dl>
+                        <dt>검색조회</dt>
+                        <dd class="select-input">
+                            <select id="select01">
+                                <option value="hide">전체</option>
+                                <option value="v0">전체</option>
+                                <option value="v1">제목</option>
+                                <option value="v2">작성자</option>
+                            </select> 
+                            <input type="text" name="" id="" placeholder="검색어를 입력하세요.">
+                        </dd>
+                    </dl>
+                </div>
+                <div class="row-search">
+                    <dl>
+                        <dt>조회기간</dt>
+                        <dd>
+                            <div class="calendar-wrap">
+                                <input type="date" name="" id="" class="calendar">
+                                <span>~</span>
+                                <input type="date" name="" id="" class="calendar">
+                            </div>
+                            <div class="chk-wrap">
+                                <div>
+                                    <input type="radio" name="radio" id="radio1" checked>
+                                    <label for="radio0">당일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio1">
+                                    <label for="radio1">1주일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio2">
+                                    <label for="radio2">1개월</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio3">
+                                    <label for="radio3">3개월</label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="btn-search-wrap">
+                        <button type="button">초기화</button>
+                        <button type="button" class="btn-search">조회</button>
+                    </div>
+                </div>
+            </div>
+                            
+            <!-- 조회영역 2열 -->  
+            <br><br id="search04">
+            <div class="wrap-search">
+                <div class="row-search rate6-4">
+                    <dl>
+                        <dt>작업자</dt>
+                        <dd>
+                            <input type="text" name="" id="" placeholder="검색어를 입력하세요.">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>작업내용</dt>
+                        <dd>                              
+                            <select id="select04">
+                                <option value="hide">전체</option>
+                                <option value="v7">전체</option>
+                                <option value="v8">기간연장</option>
+                                <option value="v9">파일열람</option>
+                                <option value="v10">파일 다운로드</option>
+                            </select>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="row-search">
+                    <dl>
+                        <dt>작업일</dt>
+                        <dd>
+                            <div class="calendar-wrap">
+                                <input type="date" name="" id="" class="calendar">
+                                <span>~</span>
+                                <input type="date" name="" id="" class="calendar">
+                            </div>
+                            <div class="chk-wrap">
+                                <div>
+                                    <input type="radio" name="radio" id="radio1" checked>
+                                    <label for="radio0">당일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio1">
+                                    <label for="radio1">1주일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio2">
+                                    <label for="radio2">1개월</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio3">
+                                    <label for="radio3">3개월</label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="btn-search-wrap">
+                        <button type="button">초기화</button>
+                        <button type="button" class="btn-search">조회</button>
+                    </div>
+                </div>
+            </div>
+                    
+            <!-- 조회영역 2열 -->  
+            <br><br id="search05">
+            <div class="wrap-search">
+                <div class="row-search rate6-4">
+                    <dl>
+                        <dt>검색조회</dt>
+                        <dd>                                    
+                            <select id="select04">
+                                <option value="hide">전체</option>
+                                <option value="v7">전체</option>
+                                <option value="v8">고객명</option>
+                                <option value="v10">상담사</option>
+                                <option value="v12">상담업무</option>
+                            </select>
+                            <input type="text" name="" id="" placeholder="검색어를 입력하세요.">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>상담결과</dt>                                    
+                        <dd>
+                            <div class="chk-wrap">
+                                <div>
+                                    <input type="radio" name="radio" id="radio0" checked>
+                                    <label for="radio0">전체</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio1">
+                                    <label for="radio1">완료</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio2">
+                                    <label for="radio2">미완료</label>
+                                </div>
+                            </div>    
+                        </dd>
+                    </dl>
+                </div>
+                <div class="row-search">
+                    <dl>
+                        <dt>조회기간</dt>
+                        <dd>
+                            <div class="calendar-wrap">
+                                <input type="date" name="" id="" class="calendar">
+                                <span>~</span>
+                                <input type="date" name="" id="" class="calendar">
+                            </div>
+                            <div class="chk-wrap">
+                                <div>
+                                    <input type="radio" name="radioo" id="radioo1" checked>
+                                    <label for="radioo1">당일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radioo" id="radioo2">
+                                    <label for="radioo2">1주일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radioo" id="radioo3">
+                                    <label for="radioo3">1개월</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radioo" id="radioo4">
+                                    <label for="radioo4">3개월</label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="btn-search-wrap">
+                        <button type="button">초기화</button>
+                        <button type="button" class="btn-search">조회</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 조회영역 2열 -->  
+            <br><br id="search06">                    
+            <div class="wrap-search">
+                <div class="row-search rate6-4">
+                    <dl>
+                        <dt>검색조회</dt>
+                        <dd>                                    
+                            <select id="select04">
+                                <option value="hide">전체</option>
+                                <option value="v8">전체</option>
+                                <option value="v9">제목</option>
+                                <option value="v10">등록자</option>
+                            </select>
+                            <input type="text" name="" id="" placeholder="검색어를 입력하세요.">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>파일상태</dt>
+                        <dd>
+                            <div class="chk-wrap">
+                                <div>
+                                    <input type="radio" name="radio123" id="radio10" checked>
+                                    <label for="radio10">전체</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio123" id="radio11">
+                                    <label for="radio11">삭제예정</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio123" id="radio12">
+                                    <label for="radio12">삭제완료</label>
+                                </div>
+
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="row-search">
+                    <dl>
+                        <dt>조회기간</dt>
+                        <dd>                             
+                            <select id="select04">
+                                <option value="hide">상담요청일</option>
+                                <option value="v8">상담요청일</option>
+                                <option value="v9">파일만료일</option>
+                            </select>
+                            <div class="calendar-wrap">
+                                <input type="date" name="" id="" class="calendar">
+                                <span>~</span>
+                                <input type="date" name="" id="" class="calendar">
+                            </div>
+                            <div class="chk-wrap">
+                                <div>
+                                    <input type="radio" name="radio" id="radio1" checked>
+                                    <label for="radio0">당일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio1">
+                                    <label for="radio1">1주일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio2">
+                                    <label for="radio2">1개월</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio3">
+                                    <label for="radio3">3개월</label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="btn-search-wrap">
+                        <button type="button">초기화</button>
+                        <button type="button" class="btn-search">조회</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 조회영역 3열 -->  
+            <br><br id="search07">      
+            <div class="wrap-search">
+                <div class="row-search rate6-4">
+                    <dl>
+                        <dt>검색조회</dt>
+                        <dd>                                    
+                            <select id="select04">
+                                <option value="hide">전체</option>
+                                <option value="v8">전체</option>
+                                <option value="v9">제목</option>
+                                <option value="v10">등록자</option>
+                            </select>
+                            <input type="text" name="" id="" placeholder="검색어를 입력하세요.">
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>파일상태</dt>
+                        <dd>
+                            <div class="chk-wrap">
+                                <div>
+                                    <input type="radio" name="radio123" id="radio10" checked>
+                                    <label for="radio10">전체</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio123" id="radio11">
+                                    <label for="radio11">삭제예정</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio123" id="radio12">
+                                    <label for="radio12">삭제완료</label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="row-search">
+                    <dl>
+                        <dt>조회기간</dt>
+                        <dd>                             
+                            <select id="select04">
+                                <option value="hide">상담요청일</option>
+                                <option value="v8">상담요청일</option>
+                                <option value="v9">파일만료일</option>
+                            </select>
+                            <div class="calendar-wrap">
+                                <input type="date" name="" id="" class="calendar">
+                                <span>~</span>
+                                <input type="date" name="" id="" class="calendar">
+                            </div>
+                            <div class="chk-wrap">
+                                <div>
+                                    <input type="radio" name="radio" id="radio1" checked>
+                                    <label for="radio0">당일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio1">
+                                    <label for="radio1">1주일</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio2">
+                                    <label for="radio2">1개월</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="radio" id="radio3">
+                                    <label for="radio3">3개월</label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="row-search">
+                    <dl>
+                        <dt>파일보관</dt>
+                        <dd>
+                            <div class="chk-wrap">
+                                <div>
+                                    <input type="checkbox" name="checkbox" id="checkbox1">
+                                    <label for="checkbox1">전체</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="checkbox" id="checkbox2">
+                                    <label for="checkbox2">단기보관</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="checkbox" id="checkbox3">
+                                    <label for="checkbox3">장기보관 상</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="checkbox" id="checkbox4">
+                                    <label for="checkbox4">장기보관 중</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="checkbox" id="checkbox5">
+                                    <label for="checkbox5">장기보관 하</label>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    
+                    <div class="btn-search-wrap">
+                        <button type="button">초기화</button>
+                        <button type="button" class="btn-search">검색</button>
+                    </div>
+                </div>             
+            </div>
+        </div>
+
+        <div class="guide-ankor-wrap">
+            <ul class="guide-ankors">
+                <li class="sele"><a href="#ankor01">* 그리드 상단</a></li>
+                <li><a href="#ankor02">* 그리드</a></li>
+                <li><a href="#ankor03">* 그리드 하단 버튼영역</a></li>
+                <li><a href="#ankor04">* 그리드 하단 페이징</a></li>
+                <li><a href="#ankor05">* 테이블</a></li>
+            </ul>
+
+            <div class="guide-title" id="ankor01"><div>* 그리드 상단</div></div>
+
+            <!-- 그리드 상단 -->               
+            <div class="tbl-top">
+                <div class="left">
+                    <div class="count"><span>총</span> <strong>12</strong> 건</div>
+                </div>
+                <div class="right">                        
+                    <button type="button" class="s-btn icon excel">
+                        <span>엑셀 다운로드</span>
+                    </button>
+                    <select id="select01">
+                        <option value="hide">최신순</option>
+                        <option value="v1">최신순</option>
+                        <option value="v2">오래된 순</option>
+                    </select> 
+                </div>
+            </div>
+
+            <div class="tbl-top">
+                <div class="left">
+                    <div class="count"><span>총</span> <strong>12</strong> 건</div>
+                    <button class="btn-refresh"><span class="hide">새로고침</span></button>
+                    <div class="time">2023년 10월 30일 13시 50분 기준</div>
+                </div>
+                <div class="right">                  
+                    <button type="button" class="s-btn icon excel"><span>엑셀 다운로드</span></button>
+                    <select id="select05">
+                        <option value="hide">최신순</option>
+                        <option value="v51">최신순</option>
+                        <option value="v52">오래된 순</option>
+                    </select> 
+                </div>
+            </div>
+         
+            <div class="tbl-top">
+                <div class="left">
+                    <div class="sec-title">일별 통계</div>
+                </div>
+                <div class="right">                        
+                    <button type="button" class="s-btn icon excel"><span>엑셀자료 요청</span></button>
+                    <select id="select01">
+                        <option value="hide">최신순</option>
+                        <option value="v1">최신순</option>
+                        <option value="v2">오래된 순</option>
+                    </select> 
+                </div>
+            </div>
+            
+            <div class="tbl-top">
+                <div class="left">
+                    <div class="sec-title">고객인입현황</div>
+                    <div class="count"><span>총</span> <strong>10</strong> 건</div>
+                </div>
+                <div class="right">                        
+                    <button type="button" class="s-btn icon excel"><span>엑셀 다운로드</span></button>
+                    <select id="select01">
+                        <option value="hide">최신순</option>
+                        <option value="v1">최신순</option>
+                        <option value="v2">오래된 순</option>
+                    </select> 
+                </div>
+            </div>
+
+            
+            <div class="guide-title" id="ankor02"><div>* 그리드</div></div>
+            
+            <div class="tbl-style01">
+                <table>
+                    <colgroup>
+                        <col style="width:60px"><!-- 체크박스 -->
+                        <col style="width:80px"><!-- No : 항목 많은 그리드에서는 60px -->
+                        <col>
+                        <col style="width:8%" span="4">
+                        <col style="width:272px;"><!-- 진행단계 -->
+                        <col style="width:10%" span="3">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" name="" id=""></th>
+                            <th>No</th>
+                            <th>제목</th>
+                            <th>text-align:left</th>
+                            <th>날짜</th>
+                            <th>시간</th>
+                            <th>상담결과</th>
+                            <th>진행단계</th>
+                            <th>select</th>
+                            <th>스위치</th>
+                            <th>버튼</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td><span class="fix">공지</span></td>
+                            <td class="tal"><a href=""><span>한화생명금융서비스 설립에 따른 개인/법인 사업자 정보 이전 안내 생명금융서비스 설립에 따른 개인/법인 사업자 정보 이전 안내한화생명금융서비스 설립에 따른 개인/법인 사업자 정보 이전 안내</span></a></td>
+                            <td class="tal">길이가 다른 텍스트</td>
+                            <td>2023-01-31</td>
+                            <td>16:32:19</td>
+                            <td><span class="state comp">완료</span></td>
+                            <td>
+                                <ol class="list-process">
+                                    <li class="comp">1차인증</li>
+                                    <li>2차인증</li>
+                                    <li>첨부서류</li>
+                                    <li>전사서식</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <select id="select05">
+                                    <option value="hide">최신순</option>
+                                    <option value="v51">최신순</option>
+                                    <option value="v52">오래된 순</option>
+                                </select> 
+                            </td>
+                            <td>
+                                <!-- <button class="toggle-wrapper">
+                                    <span class="toggle-selector"></span>
+                                </button> -->
+                            </td>
+                            <td><button type="button" class="btn-tbl"><span>버튼</span></button></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id=""></td>
+                            <td>1</td>
+                            <td class="tal new"><a href=""><span>한화생명금융서비스 설립에 따른 개인/법인 사업자 정보 이전 안내 생명금융서비스 설립에 따른 개인/법인 사업자 정보 이전 안내한화생명금융서비스 설립에 따른 개인/법인 사업자 정보 이전 안내</span></a></td>
+                            <td class="tal">길이가 다른 텍스트</td>
+                            <td>2023-01-31</td>
+                            <td>16:32:19</td>
+                            <td><span class="state">미완료</span></td>
+                            <td>
+                                <ol class="list-process">
+                                    <li class="comp">1차인증</li>
+                                    <li>2차인증</li>
+                                    <li>첨부서류</li>
+                                    <li>전사서식</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <select id="select05">
+                                    <option value="hide">최신순</option>
+                                    <option value="v51">최신순</option>
+                                    <option value="v52">오래된 순</option>
+                                </select> 
+                            </td>
+                            <td>
+                                <!-- <button class="toggle-wrapper">
+                                    <span class="toggle-selector"></span>
+                                </button> -->
+                            </td>
+                            <td>
+                                <button type="button" class="btn-tbl bg02"><span>입장</span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="" id="" disabled></td>
+                            <td>1</td>
+                            <td class="tal file"><a href=""><span>한화생명금융서비스 설립에 따른 개인/법인 사업자 정보 이전 안내 생명금융서비스 설립에 따른 개인/법인 사업자 정보 이전 안내한화생명금융서비스 설립에 따른 개인/법인 사업자 정보 이전 안내</span></a></td>
+                            <td class="tal">길이가 다른 텍스트</td>
+                            <td>2023-01-31</td>
+                            <td>
+                                <div class="tooltip-wrap">
+                                    <span>툴팁</span>
+                                    <div class="tooltip">툴팁이최대20자툴팁최대20자최대20자</div>
+                                </div>
+                            </td>
+                            <td><span class="state">미완료</span></td>
+                            <td>
+                                <ol class="list-process">
+                                    <li class="comp">1차인증</li>
+                                    <li>2차인증</li>
+                                    <li>첨부서류</li>
+                                    <li>전사서식</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <select id="select05">
+                                    <option value="hide">최신순</option>
+                                    <option value="v51">최신순</option>
+                                    <option value="v52">오래된 순</option>
+                                </select> 
+                            </td>
+                            <td>    
+                                <div class="switch">
+                                    <input type="radio" class="switch-input" name="comp" value="true" id="comp" checked>
+                                    <label for="comp" class="switch-label switch-label-off">완료</label>
+                                    <input type="radio" class="switch-input" name="comp" value="false" id="comp02">
+                                    <label for="comp02" class="switch-label switch-label-on">미완료</label>
+                                    <span class="switch-selection"></span>
+                                </div>
+                            </td>
+                            <td><button type="button" class="btn-tbl bg03"><span>상세보기</span></button></td>
+                        </tr>
+                        <tr class="bottom-fix">
+                            <td></td>
+                            <td>하단고정</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="11">       
+                                <div class="no-result">조회된 데이터가 없습니다.</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>     
+            
+            <!-- 헤더가 두줄 -->
+            <br><br>
+            <div class="tbl-style01 type02">
+                <table>
+                    <colgroup>
+                        <col style="width:80px">
+                        <col span="10">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan="2">No</th>
+                            <th rowspan="2">상담요청일자</th>
+                            <th rowspan="2">상담건수</th>
+                            <th rowspan="2">1차인증</th>
+                            <th rowspan="2">2차인증</th>
+                            <th rowspan="2">전자서식작성</th>
+                            <th rowspan="2">근무인원</th>
+                            <th colspan="4">1인상담건수</th>
+                        </tr>
+                        <tr>
+                            <th>상담건수</th>
+                            <th>1차인증기준</th>
+                            <th>2차인증</th>
+                            <th>전자서식</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2024-07-11</td>
+                            <td>147</td>
+                            <td>123</td>
+                            <td>56</td>
+                            <td>45</td>
+                            <td>6</td>
+                            <td>17.5</td>
+                            <td>10.3</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>        
+
+            
+            <div class="guide-title" id="ankor03"><div>* 그리드 하단 버튼 영역</div></div>
+
+            <!-- 그리드 하단 버튼 영역 -->
+            <div class="btn-wrap">
+                <div class="left">
+                    <a href="" class="btn"><span>목록</span></a>
+                </div>
+                <div class="right">
+                    <button type="button" class="btn bg02"><span>취소</span></button>
+                    <button type="button" class="btn"><span>등록</span></button>
+                </div>
+            </div>                           
+            
+            <!-- 그리드 하단 버튼 영역 disabled --><br><br>
+            <div class="btn-wrap">
+                <div class="left">
+                    <a href="" class="btn disabled"><span>목록</span></a>
+                </div>
+                <div class="right">
+                    <button type="button" class="btn bg02" disabled><span>취소</span></button>
+                    <button type="button" class="btn" disabled><span>등록</span></button>
+                </div>
+            </div>                            
+
+
+            
+            <div class="guide-title" id="ankor04"><div>* 페이징</div></div>
+            
+            <!--페이징-->
+            <div class="wrap-paging">
+                <div class="paging">
+                    <button type="button" class="first"><span class="hide">처음으로</span></button>
+                    <button type="button" class="prev"><span class="hide">이전</span></button>
+                    <button type="button" class="pres">1</button>
+                    <button type="button">2</button>
+                    <button type="button">3</button>
+                    <button type="button">4</button>
+                    <button type="button">5</button>
+                    <button type="button">6</button>
+                    <button type="button">7</button>
+                    <button type="button">8</button>
+                    <button type="button">9</button>
+                    <button type="button">10</button>
+                    <button type="button" class="next"><span class="hide">다음</span></button>
+                    <button type="button" class="end"><span class="hide">끝으로</span></button>                    
+                </div>
+            </div>  
+            <div class="guide-title" id="ankor05"><div>* 각종 테이블</div></div>
+                
+            <div class="guide-sm-tit">tbl-style02</div>
+            <div class="tbl-style02">
+                <table>
+                    <colgroup>
+                        <col style="width:11%">
+                        <col>
+                        <col style="width:11%">
+                        <col>
+                        <col style="width:11%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>제목</th>
+                            <td colspan="5">개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내</td>
+                        </tr>
+                        <tr>
+                            <th>노출여부</th>
+                            <td >     
+                                <div class="chk-wrap">
+                                    <div>
+                                        <input type="radio" name="radio" id="radio1" checked>
+                                        <label for="radio1">노출</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="radio" id="radio2">
+                                        <label for="radio2">비노출</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>작성자</th>
+                            <td>이상담</td>
+                            <th>등록일</th>
+                            <td>2024-01-01 00:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="guide-sm-tit">tbl-style03</div>
+            <div class="tbl-style03">
+                <table>
+                    <colgroup>             
+                        <col style="width:calc(100% / 6)" span="6">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>상담진행 건 수</th>
+                            <th>상담완료 건 수</th>
+                            <th>상담미완료 건 수</th>
+                            <th>평균상담시간</th>
+                            <th>진입소요시간</th>
+                            <th>전체응대율</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td><strong>3</strong></td>
+                            <td><strong>12</strong></td>
+                            <td><strong>15분</strong></td>
+                            <td><strong>1분</strong></td>
+                            <td><strong>98%</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="guide-sm-tit">tbl-style04</div>            
+            <div class="tbl-style04">
+                <table>
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="width:30%">
+                        <col style="width:20%">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>대표고객명</th>
+                            <td>김고객</td>
+                            <th>고객ID</th>
+                            <td>2312222</td>
+                        </tr>
+                        <tr>
+                            <th>상담요청일자</th>
+                            <td>0000-00-00</td>
+                            <th>상담요청시간</th>
+                            <td>00:00:00</td>
+                        </tr>
+                        <tr>
+                            <th>예약신청일자</th>
+                            <td>0000-00-00</td>
+                            <th>예약신청시간</th>
+                            <td>00:00:00</td>
+                        </tr>
+                        <tr>
+                            <th>상담진입시간</th>
+                            <td>0000-00-00</td>
+                            <th>진입소요시간</th>
+                            <td>mm분</td>
+                        </tr>
+                        <tr>
+                            <th>대기시작시간</th>
+                            <td>hh:mm:ss</td>
+                            <th>대기시간</th>
+                            <td>mm분</td>
+                        </tr>
+                        <tr>
+                            <th>상담시작시간</th>
+                            <td>hh:mm:ss</td>
+                            <th>상담종료시간</th>
+                            <td>hh:mm:ss</td>
+                        </tr>
+                        <tr>
+                            <th>상담소요시간</th>
+                            <td>mm분</td>
+                            <th>유입경로</th>
+                            <td>직통전화</td>
+                        </tr>
+                        <tr>
+                            <th>상담유형</th>
+                            <td>일반상담</td>
+                            <th>상담업무</th>
+                            <td>서류명</td>
+                        </tr>
+                        <tr>
+                            <th>상담인원</th>
+                            <td>1명</td>
+                            <th>상담결과</th>
+                            <td>
+                                <div class="chk-wrap">
+                                    <div>
+                                        <input type="radio" name="radio" id="radio1" checked>
+                                        <label for="radio1">완료</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="radio" id="radio2">
+                                        <label for="radio2">미완료</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>     
+    </div> 
+</body>
+</html>

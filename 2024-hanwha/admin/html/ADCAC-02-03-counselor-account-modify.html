@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="dim">
+        <div class="inner">
+            <!--ADCAC-02-03-->
+            <div class="layer-pop" style="width:445px;padding:50px 20px 40px 20px">
+                <div>
+                    <div class="title">계정 수정</div>
+                    <div class="cont">
+                        <div class="dl-wrap02 type02">
+                            <dl>
+                                <dt>아이디(사번)</dt>
+                                <dd>
+                                    <div>
+                                        <input type="text" value="1234567" readonly>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>이름</dt>
+                                <dd>
+                                    <div>
+                                        <input type="text" value="김상담" readonly>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>근무지</dt>
+                                <dd>
+                                    <div>
+                                        <input type="text">
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>등록유형</dt>
+                                <dd>                                                                          
+                                    <select id="select01">
+                                        <option value="hide">상담사</option>
+                                        <option value="v1">상담사</option>
+                                        <option value="v2">최고관리자</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>계정상태</dt>
+                                <dd>                             
+                                    <select id="select011">
+                                        <option value="hide">활성</option>
+                                        <option value="v11">활성</option>
+                                        <option value="v12">비활성</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="btn-wrap" style="width:370px">
+                        <button type="button" class="btn style01 bg01">취소</button>
+                        <button type="button" class="btn style01">확인</button>
+                    </div>           
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

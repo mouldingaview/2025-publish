@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한화생명모바일 화상상담 관리자 시스템</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/ui02.js"></script>
+</head>
+<body>
+    <div id="wrap" class="main">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li class="sele"><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><!--span class="qa">QA</span--></a>
+                            </li>
+                            <li>
+                                <button class="menu menu02"><span>실시간현황</span></button>                                
+                                <ul>
+                                    <li><a href="">오늘상담현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">대기상담현황</a></li>
+                                    <li><a href="">진행상담현황</a></li>
+                                    <li><a href="">예약상담현황</a></li>
+                                    <!--<li><a href="">나중상담현황</a></li>-->
+                                    <li><a href="">종료상담현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu03"><span>통계현황</span></button>
+                                <ul>
+                                    <li><a href="">총상담통계</a></li>
+                                    <li><a href="">기간별현황</a></li>
+                                    <li><a href="">상담업무처리순위</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu04"><span>상담이력관리</span></button>
+                                <ul>
+                                    <li><a href="">상담이력관리</a></li>
+                                    <li><a href="">상담자료관리</a></li>
+                                    <li><a href="">결재이력관리</a></li>
+                                    <li><a href="">관리자로그</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu05"><span>고객이력관리</span></button>
+                                <ul>
+                                    <li><a href="">고객이력관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu07"><span>상담사관리</span></button>
+                                <ul>
+                                    <li><a href="">상담사관리</a></li>
+                                    <li><a href="">근태관리</a></li>
+                                    <li><a href="">상담사계정</a></li>
+                                    <li><a href="">근무지관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu06"><span>게시판관리</span></button>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu08"><span>설문관리</span></button>
+                                <ul>
+                                    <li><a href="">설문관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu09"><span>설정관리</span></button>
+                                <ul>
+                                    <li><a href="">상담운영설정</a></li>
+                                    <li><a href="">장치제어</a></li>
+                                    <li><a href="">예약상담설정</a></li>
+                                    <li><a href="">메시지관리</a></li>
+                                    <li><a href="">대기음악설정</a></li>
+                                    <li><a href="">웰컴이미지</a></li>
+                                    <li><a href="">대기안내설정</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <!-- index 에서는 빠짐 
+                     <div class="profile">
+                        <div class="img">
+                            <img src="../img/sp-img.png" alt="">
+                        </div>
+                        <div class="info">  
+                            <div class="project">모바일 화상상담 관리자</div>
+                            <div class="name">이생명 <br><span class="num">(1079905)</span></div>
+                        </div>
+                    </div>-->
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="main-cont-wrap">
+                    <div class="main-cont">
+                        <div class="title-wrap">
+                            <div class="title">상담사 상담현황
+                                <!--<div class="connect-status">
+                                    <div><span class="status">ON</span> <span class="num"><strong>37</strong> 명</span></div>
+                                    <div><span class="status">OFF</span> <span class="num"><strong>1</strong> 명</span></div>
+                                </div>-->
+                            </div>
+                            <div class="util">
+                                <div class="alarm-wrap">
+                                    <button type="button" id="alarm-btn" class="alarm-flag">
+                                        <span>알림</span>  
+                                        <span class="num">3</span>
+                                    </button>
+                                    <div class="alarm-cont" id="alarm-cont">
+                                        <div class="title">알림 </div>
+                                        <div class="cont">
+                                            <div class="no-result" style="display: none;">신규 알림이 없습니다.</div>
+                                            <ul>
+                                                <li class="new">
+                                                    <button type="button">
+                                                        <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                        <span class="date">2024-07-30-10:33</span>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button">
+                                                        <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                        <span class="date">2024-07-30-10:33</span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-container">
+                            <div class="item-wrap">
+                                <div class="item-total">
+                                    <dl>
+                                        <dt>재직중</dt>
+                                        <dd><span>38</span> 명</dd>
+                                    </dl>
+                                </div>
+                                <div class="item-box">
+                                    <div>
+                                        <dl>
+                                            <dt>ON</dt>
+                                            <dd><span>99</span> 명</dd>
+                                        </dl>
+                                    </div>
+                                    <div>
+                                        <dl>
+                                            <dt>상담중</dt>
+                                            <dd><span>25</span> 명</dd>
+                                        </dl>
+                                    </div>
+                                    <div>
+                                        <dl>
+                                            <dt>상담대기</dt>
+                                            <dd><span>0</span> 명</dd>
+                                        </dl>
+                                    </div>
+                                    <div>
+                                        <dl>
+                                            <dt>점심시간</dt>
+                                            <dd><span>0</span> 명</dd>
+                                        </dl>
+                                    </div>
+                                    <div>
+                                        <dl>
+                                            <dt>OFF</dt>
+                                            <dd><span>0</span> 명</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-wrap">     
+                                <div class="item-total">
+                                    <div class="title">대기정보</div>
+                                </div>
+                                <div class="item-dl-wrap">    
+                                    <dl>
+                                        <dt>진입소요시간</dt>
+                                        <dd>
+                                            <div><span>3</span>분 <span>15</span>초</div>
+                                        </dd>
+                                    </dl>                      
+                                    <dl>
+                                        <dt>평균대기시간</dt>
+                                        <dd>
+                                            <div><span>3</span>분 <span>15</span>초</div>
+                                        </dd>
+                                    </dl>                    
+                                    <dl>
+                                        <dt>최장대기시간</dt>
+                                        <dd>
+                                            <div><span>3</span>분</div>
+                                        </dd>
+                                    </dl>                   
+                                    <dl>
+                                        <dt>안내대기시간</dt>
+                                        <dd>
+                                            <div><span>3</span>분</div>
+                                        </dd>
+                                    </dl>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-cont">       
+                        <div class="flex-wrap">
+                            <div class="box-notice">
+                                <div class="title">
+                                    <h2>상담처리 현황</h2>
+                                </div>
+                                <div class="box-wrap">
+                                    <div class="box">
+                                        <dl>
+                                            <dt>총 상담건수</dt>
+                                            <dd>50건</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>완료</dt>
+                                            <dd>50건</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>미완료</dt>
+                                            <dd>50건</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="box">
+                                        <dl>
+                                            <dt>완료율</dt>
+                                            <dd>99%</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>전체 응대율</dt>
+                                            <dd>99%</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-notice">
+                                <div class="title">
+                                    <h2>프로세스 진행현황</h2>
+                                </div>
+                                <div class="box-wrap">
+                                    <div class="box type02">
+                                        <dl>
+                                            <dt>1차인증</dt>
+                                            <dd><span>50</span>건</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>2차인증</dt>
+                                            <dd><span>50</span>건</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>첨부서류</dt>
+                                            <dd><span>50</span>건</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>전자서식</dt>
+                                            <dd><span>50</span>건</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-notice">
+                                <div class="title">
+                                    <h2>상담현황 요약</h2>
+                                </div>
+                                <div class="tbl-style01">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 45%;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>대기상담</th>
+                                                <td><span>56</span>건</td>
+                                            </tr>
+                                            <tr>
+                                                <th>상담예약</th>
+                                                <td><span>56</span>건</td>
+                                            </tr>
+                                            <tr>
+                                                <th>진행상담</th>
+                                                <td><span>56</span>건</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-cont">
+                        <div class="box-notice">
+                            <div class="title">
+                                <h2>진행중 상담현황</h2>
+                                <a href="" class="btn-ad"><span>더보기</span></a>
+                            </div>
+                            <div class="tbl-style01">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:100px">
+                                        <col style="width:10%" span="3">
+                                        <col style="width:12%" span="2">
+                                        <col>
+                                        <col style="width:282px">
+                                        <col style="width:9%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>상담사</th>
+                                            <th>근무지</th>
+                                            <th>고객명</th>
+                                            <th>상담시작시간</th>
+                                            <th>상담소요시간</th>
+                                            <th>상담업무</th>
+                                            <th>진행단계</th>
+                                            <th>모니터링</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>김상담</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>김고객</td>
+                                            <td>00:00:11</td>
+                                            <td>20분</td>
+                                            <td>수급방법변경</td>
+                                            <td>
+                                                <ol class="list-process">
+                                                    <li class="comp">1차인증</li>
+                                                    <li>2차인증</li>
+                                                    <li>첨부서류</li>
+                                                    <li>전사서식</li>
+                                                </ol>
+                                            </td>
+                                            <td>  
+                                                <button type="button" class="btn-tbl bg02">입장</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>김상담</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>김고객</td>
+                                            <td>00:00:11</td>
+                                            <td>20분</td>
+                                            <td>수급방법변경</td>
+                                            <td>
+                                                <ol class="list-process">
+                                                    <li class="comp">1차인증</li>
+                                                    <li>2차인증</li>
+                                                    <li>첨부서류</li>
+                                                    <li>전사서식</li>
+                                                </ol>
+                                            </td>
+                                            <td>  
+                                                <button type="button" class="btn-tbl bg02" disabled>입장</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>김상담</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>김고객</td>
+                                            <td>00:00:11</td>
+                                            <td>20분</td>
+                                            <td>수급방법변경</td>
+                                            <td>
+                                                <ol class="list-process">
+                                                    <li class="comp">1차인증</li>
+                                                    <li>2차인증</li>
+                                                    <li>첨부서류</li>
+                                                    <li>전사서식</li>
+                                                </ol>
+                                            </td>
+                                            <td>  
+                                                <button type="button" class="btn-tbl bg02" disabled>입장</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>김상담</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>김고객</td>
+                                            <td>00:00:11</td>
+                                            <td>20분</td>
+                                            <td>수급방법변경</td>
+                                            <td>
+                                                <ol class="list-process">
+                                                    <li class="comp">1차인증</li>
+                                                    <li>2차인증</li>
+                                                    <li>첨부서류</li>
+                                                    <li>전사서식</li>
+                                                </ol>
+                                            </td>
+                                            <td>  
+                                                <button type="button" class="btn-tbl bg02" disabled>입장</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>김상담</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>김고객</td>
+                                            <td>00:00:11</td>
+                                            <td>20분</td>
+                                            <td>수급방법변경</td>
+                                            <td>
+                                                <ol class="list-process">
+                                                    <li class="comp">1차인증</li>
+                                                    <li>2차인증</li>
+                                                    <li>첨부서류</li>
+                                                    <li>전사서식</li>
+                                                </ol>
+                                            </td>
+                                            <td>  
+                                                <button type="button" class="btn-tbl bg02" disabled>입장</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>김상담</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>김고객</td>
+                                            <td>00:00:11</td>
+                                            <td>20분</td>
+                                            <td>수급방법변경</td>
+                                            <td>
+                                                <ol class="list-process">
+                                                    <li class="comp">1차인증</li>
+                                                    <li>2차인증</li>
+                                                    <li>첨부서류</li>
+                                                    <li>전사서식</li>
+                                                </ol>
+                                            </td>
+                                            <td>  
+                                                <button type="button" class="btn-tbl bg02" disabled>입장</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>김상담</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>김고객</td>
+                                            <td>00:00:11</td>
+                                            <td>20분</td>
+                                            <td>수급방법변경</td>
+                                            <td>
+                                                <ol class="list-process">
+                                                    <li class="comp">1차인증</li>
+                                                    <li>2차인증</li>
+                                                    <li>첨부서류</li>
+                                                    <li>전사서식</li>
+                                                </ol>
+                                            </td>
+                                            <td>  
+                                                <button type="button" class="btn-tbl bg02" disabled>입장</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>김상담</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>김고객</td>
+                                            <td>00:00:11</td>
+                                            <td>20분</td>
+                                            <td>수급방법변경</td>
+                                            <td>
+                                                <ol class="list-process">
+                                                    <li class="comp">1차인증</li>
+                                                    <li>2차인증</li>
+                                                    <li>첨부서류</li>
+                                                    <li>전사서식</li>
+                                                </ol>
+                                            </td>
+                                            <td>  
+                                                <button type="button" class="btn-tbl bg02" disabled>입장</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>김상담</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>김고객</td>
+                                            <td>00:00:11</td>
+                                            <td>20분</td>
+                                            <td>수급방법변경</td>
+                                            <td>
+                                                <ol class="list-process">
+                                                    <li class="comp">1차인증</li>
+                                                    <li>2차인증</li>
+                                                    <li>첨부서류</li>
+                                                    <li>전사서식</li>
+                                                </ol>
+                                            </td>
+                                            <td>  
+                                                <button type="button" class="btn-tbl bg02" disabled>입장</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>김상담</td>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>김고객</td>
+                                            <td>00:00:11</td>
+                                            <td>20분</td>
+                                            <td>수급방법변경</td>
+                                            <td>
+                                                <ol class="list-process">
+                                                    <li class="comp">1차인증</li>
+                                                    <li>2차인증</li>
+                                                    <li>첨부서류</li>
+                                                    <li>전사서식</li>
+                                                </ol>
+                                            </td>
+                                            <td>  
+                                                <button type="button" class="btn-tbl bg02" disabled>입장</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="main-cont">
+                        <div class="box-notice">
+                            <div class="title">
+                                <h2>근무지별 근무현황</h2>
+                                <a href="" class="btn-ad"><span>더보기</span></a>
+                            </div>
+                            <div class="tbl-style04">
+                                <table>
+                                    <colgroup>
+                                        <col span="4">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>근무지</th>
+                                            <th>총 상담건수</th>
+                                            <th>평균상담시간</th>
+                                            <th>완료율</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>모바일 1 고객센터</td>
+                                            <td>15</td>
+                                            <td>20분</td>
+                                            <td>90%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>모바일 2 고객센터</td>
+                                            <td>15</td>
+                                            <td>20분</td>
+                                            <td>90%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>모바일 3 고객센터</td>
+                                            <td>15</td>
+                                            <td>20분</td>
+                                            <td>90%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>    
+</body>
+</html>

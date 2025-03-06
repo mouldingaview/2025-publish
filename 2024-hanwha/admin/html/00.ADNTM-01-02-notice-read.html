@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/ui02.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><!--span class="qa">QA</span--></a>
+                            </li>
+                            <li>
+                                <button class="menu menu02"><span>실시간현황</span></button>                                
+                                <ul>
+                                    <li><a href="">오늘상담현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">대기상담현황</a></li>
+                                    <li><a href="">진행상담현황</a></li>
+                                    <li><a href="">예약상담현황</a></li>
+                                    <li><a href="">종료상담현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu03"><span>통계현황</span></button>
+                                <ul>
+                                    <li><a href="">총상담통계</a></li>
+                                    <li><a href="">기간별현황</a></li>
+                                    <li><a href="">상담업무처리순위</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu04"><span>상담이력관리</span></button>
+                                <ul>
+                                    <li><a href="">상담이력관리</a></li>
+                                    <li><a href="">상담자료관리</a></li>
+                                    <li><a href="">결재이력관리</a></li>
+                                    <li><a href="">관리자로그</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu05"><span>고객이력관리</span></button>
+                                <ul>
+                                    <li><a href="">고객이력관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="sele open">
+                                <button type="button" class="menu menu06"><span>게시판관리</span></button>
+                                <ul>
+                                    <li class="sele"><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu07"><span>상담사관리</span></button>
+                                <ul>
+                                    <li><a href="">상담사관리</a></li>
+                                    <li><a href="">근태관리</a></li>
+                                    <li><a href="">상담사계정</a></li>
+                                    <li><a href="">근무지관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu08"><span>설문관리</span></button>
+                                <ul>
+                                    <li><a href="">설문관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu09"><span>설정관리</span></button>
+                                <ul>
+                                    <li><a href="">상담운영설정</a></li>
+                                    <li><a href="">장치제어</a></li>
+                                    <li><a href="">예약상담설정</a></li>
+                                    <li><a href="">메시지관리</a></li>
+                                    <li><a href="">대기음악설정</a></li>
+                                    <li><a href="">웰컴이미지</a></li>
+                                    <li><a href="">대기안내설정</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="img">
+                            <img src="../img/sp-img.png" alt="">
+                        </div>
+                        <div class="info">  
+                            <div class="project">모바일 화상상담 관리자</div>
+                            <div class="name">이생명 <br><span class="num">(1079905)</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">공지사항상세</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">게시판관리</a></li>
+                                <li><a href="">공지사항</a></li>
+                            </ul>
+                        </div>
+                        <div class="alarm-wrap">
+                            <button type="button" id="alarm-btn" class="alarm-flag">
+                                <span>알림</span>  
+                                <span class="num">3</span>
+                            </button>
+                            <div class="alarm-cont" id="alarm-cont">
+                                <div class="title">알림 </div>
+                                <div class="cont">
+                                    <div class="no-result" style="display: none;">신규 알림이 없습니다.</div>
+                                    <ul>
+                                        <li class="new">
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">     
+                    <div class="board-read">                                       
+                        <div class="tbl-style02">
+                            <table>
+                                <colgroup>
+                                    <col style="width:11%">
+                                    <col>
+                                    <col style="width:11%">
+                                    <col>
+                                    <col style="width:11%">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <div><span class="required">제목</span></div>
+                                        </th>
+                                        <td colspan="5">개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내개인정보처리방침 변경안내</td>
+                                    </tr>
+                                    <tr>
+                                        <th>상단고정</th>
+                                        <td>                                            
+                                            <div class="chk-wrap">
+                                                <div><input type="checkbox" name="fix" id="fix"><label for="fix">상단고정</label></div>
+                                            </div>
+                                        </td>
+                                        <th>등록자</th>
+                                        <td>이상담</td>
+                                        <th>등록일자</th>
+                                        <td>2024-01-01</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>   
+                        <div class="scroll-area">
+                            <div class="board-cont">
+                                <p><img src="../img/spsp.png" alt=""></p>
+                            </div>
+                            <div class="tbl-style02">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 11%;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>첨부파일</th>
+                                            <td>
+                                                <div id="upload-area">
+                                                    <div class="upload-box">  
+                                                        <div class="filebox"> 
+                                                            <!--div>
+                                                                <label for="ex_filename" class="btn-upload">업로드할 파일을 선택 또는 파일을 끌어 놓기 (100MB 이하)  / 업로드 가능한 파일 (doc, docx, excel, hwp, hwpx, jpeg, jpg, pdf, png, ppt, pptx)</label> 
+                                                                <input type="file" id="ex_filename" class="upload-hidden">
+                                                            </div-->
+                                                            <div class="list-file">
+                                                                <div class="tit">첨부파일 (총 <span>2 / 3</span>)</div>
+                                                                <ul>
+                                                                    <li>   
+                                                                        <a href="file://">Img.png <span>(25.5KB)</span></a>
+                                                                        <button type="button" class="btn-file-down"><span class="hide">파일다운</span></button>
+                                                                    </li>
+                                                                    <li>      
+                                                                        <a href="file://">신규서비스메뉴얼.pdf <span>(25.2KB)</span></a>   
+                                                                        <button type="button" class="btn-file-down"><span class="hide">파일다운</span></button>     
+                                                                    </li>
+                                                                </ul>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>    
+                                </table>                            
+                            </div>
+                            <div class="btn-wrap">
+                                <div class="left">
+                                    <a href="" class="btn"><span>목록</span></a>
+                                </div>
+                                <div class="right">
+                                    <button type="button" class="btn bg02"><span>삭제</span></button>
+                                    <button type="button" class="btn"><span>수정</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        const btnFoldReplies = document.querySelectorAll('.btn-fold-reply');
+        btnFoldReplies.forEach((btnFoldReply) => {
+            btnFoldReply.addEventListener('click', (e) => {
+                e.currentTarget.parentNode.parentNode.classList.remove('show');
+            }) 
+        })
+    </script>
+</body>
+</html>

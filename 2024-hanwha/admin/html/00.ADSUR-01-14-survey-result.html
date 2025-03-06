@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/ui02.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><!--span class="qa">QA</span--></a>
+                            </li>
+                            <li>
+                                <button class="menu menu02"><span>실시간현황</span></button>                                
+                                <ul>
+                                    <li><a href="">오늘상담현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">대기상담현황</a></li>
+                                    <li><a href="">진행상담현황</a></li>
+                                    <li><a href="">예약상담현황</a></li>
+                                    <li><a href="">종료상담현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu03"><span>통계현황</span></button>
+                                <ul>
+                                    <li><a href="">총상담통계</a></li>
+                                    <li><a href="">기간별현황</a></li>
+                                    <li><a href="">상담업무처리순위</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu04"><span>상담이력관리</span></button>
+                                <ul>
+                                    <li><a href="">상담이력관리</a></li>
+                                    <li><a href="">상담자료관리</a></li>
+                                    <li><a href="">결재이력관리</a></li>
+                                    <li><a href="">관리자로그</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu05"><span>고객이력관리</span></button>
+                                <ul>
+                                    <li><a href="">고객이력관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu06"><span>게시판관리</span></button>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu07"><span>상담사관리</span></button>
+                                <ul>
+                                    <li><a href="">상담사관리</a></li>
+                                    <li><a href="">근태관리</a></li>
+                                    <li><a href="">상담사계정</a></li>
+                                    <li><a href="">근무지관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="open sele">
+                                <button type="button" class="menu menu08"><span>설문관리</span></button>
+                                <ul>
+                                    <li class="sele"><a href="">설문관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu09"><span>설정관리</span></button>
+                                <ul>
+                                    <li><a href="">상담운영설정</a></li>
+                                    <li><a href="">장치제어</a></li>
+                                    <li><a href="">예약상담설정</a></li>
+                                    <li><a href="">메시지관리</a></li>
+                                    <li><a href="">대기음악설정</a></li>
+                                    <li><a href="">웰컴이미지</a></li>
+                                    <li><a href="">대기안내설정</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="img">
+                            <img src="../img/sp-img.png" alt="">
+                        </div>
+                        <div class="info">  
+                            <div class="project">모바일 화상상담 관리자</div>
+                            <div class="name">이생명 <br><span class="num">(1079905)</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">설문관리</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">설문관리</a></li>
+                                <li><a href="">설문관리</a></li>
+                            </ul>
+                        </div>
+                        <div class="alarm-wrap">
+                            <button type="button" id="alarm-btn" class="alarm-flag">
+                                <span>알림</span>  
+                                <span class="num">3</span>
+                            </button>
+                            <div class="alarm-cont" id="alarm-cont">
+                                <div class="title">알림 </div>
+                                <div class="cont">
+                                    <div class="no-result" style="display: none;">신규 알림이 없습니다.</div>
+                                    <ul>
+                                        <li class="new">
+                                            <button type="button">
+                                                <span class="txt">툴팁 컨펌 진행중 (작업시 참고)</span>
+                                                <span class="date">2024-07-30-10:33</span>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">   
+                    <div class="scroll-area">
+                        <div class="wrap-survey">
+                            <div class="box">                            
+                                <div class="title">설문결과</div>  
+                                <div class="cont">
+                                    <div class="survey-result-top">
+                                        <div class="survey-result-type">
+                                            <div class="state">진행중</div>
+                                            <div class="info-wrap">
+                                                <div class="tit">2024년 상반기 설문 고객 만족도 조사</div>
+                                                <div class="info">
+                                                    <span class="period">22024-06-01 ~ 제한없음</span>
+                                                    <span class="num">총 참여 500</span>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="r-btn pdf"><span class="hide">pdf 다운로드</span></button>
+                                            <button type="button" class="r-btn download"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-wrap">
+                                <div class="tab-btn">
+                                    <button type="button">설문결과</button>
+                                    <button type="button">일자별 참여수</button>
+                                </div>
+                                <div class="tab-cont">
+                                    <!-- 설문결과 -->
+                                    <div class="tab-inner">
+                                        <div class="survey-top">총 질문 <span>1</span></div>
+                                        <!-- 객관식 -->
+                                        <div class="box"> 
+                                            <div class="cont">    
+                                                <div class="survey-result-top">
+                                                    <div class="survey-result-type">
+                                                        <div class="state">객관식</div>
+                                                        <button type="button" class="r-btn pdf"><span class="hide">pdf 다운로드</span></button>
+                                                    </div>
+                                                    <div class="survey-result-title">
+                                                        <div class="tit"><span class="num">2.</span> 비대면 채널로 보험에 가입하려는 이유는 무엇입니까?</div>
+                                                        <div class="info">답변 <span>500</span> / 미 답변 <span>0</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="survey-result-data">
+                                                    <div class="graph-area">
+                                                        <div class="graph" style="width:250px;height: 250px;"></div>
+                                                        <div class="legend">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="txt">시간과 장소에 구애 받지 않음시간과 장소에 구애 받지 않음시간과 장소에 구애 받지 않음시간과 장소에 구애 받지 않음시간과 장소에 구애 받지 않음시간과 장소에 구애 받지 않음</div>
+                                                                    <div class="info">250<span> (50%)</span></div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="txt">시간과 장소에 구애 받지 않음</div>
+                                                                    <div class="info">250<span> (50%)</span></div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="txt">시간과 장소에 구애 받지 않음</div>
+                                                                    <div class="info">250<span> (50%)</span></div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="txt">시간과 장소에 구애 받지 않음</div>
+                                                                    <div class="info">250<span> (50%)</span></div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="txt">시간과 장소에 구애 받지 않음</div>
+                                                                    <div class="info">250<span> (50%)</span></div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="txt">시간과 장소에 구애 받지 않음</div>
+                                                                    <div class="info">250<span> (50%)</span></div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="txt">시간과 장소에 구애 받지 않음</div>
+                                                                    <div class="info">250<span> (50%)</span></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 선형 배율형 -->
+                                        <div class="box"> 
+                                            <div class="cont">    
+                                                <div class="survey-result-top">
+                                                    <div class="survey-result-type">
+                                                        <div class="state">선형 배율형</div>
+                                                        <button type="button" class="r-btn pdf"><span class="hide">pdf 다운로드</span></button>
+                                                    </div>
+                                                    <div class="survey-result-title">
+                                                        <div class="tit"><span class="num">2.</span> 화상상담 서비스 만족도를 선택해주세요.</div>
+                                                        <div class="info">답변 <span>500</span> / 미 답변 <span>0</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="survey-result-data">
+                                                    <div class="tab-wrap02">
+                                                        <div class="survey-result-data-top">
+                                                            <div class="average">평균 <span>4.5</span></div>
+                                                            <div class="tab-btn02">
+                                                                <button type="button">항목순</button>
+                                                                <button type="button">답변 많은 순</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-cont02">
+                                                            <div class="tab-inner02">
+                                                                <div class="graph-area">항목순</div>
+                                                            </div>
+                                                            <div class="tab-inner02">
+                                                                <div class="graph-area">답변 많은 순</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 주관식 -->
+                                        <div class="box"> 
+                                            <div class="cont">    
+                                                <div class="survey-result-top">
+                                                    <div class="survey-result-type">
+                                                        <div class="state">주관식</div>
+                                                        <button type="button" class="r-btn pdf"><span class="hide">pdf 다운로드</span></button>
+                                                    </div>
+                                                    <div class="survey-result-title">
+                                                        <div class="tit"><span class="num">3.</span> 화상상담 서비스의 개선이 필요한 점을 적어주세요.</div>
+                                                        <div class="info">답변 <span>500</span> / 미 답변 <span>0</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="survey-result-data">
+                                                    <div class="accordion-wrap">
+                                                        <ul>
+                                                            <li>
+                                                                <div>개선할 점 없음</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점은 없고 집에서 상담사분의 얼굴을 보며 보험상담을 진행해서 더 편했습니다. 최대 50자</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점 없음</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점은 없고 집에서 상담사분의 얼굴을 보며 보험상담을 진행해서 더 편했습니다. 최대 50자</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점 없음</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점은 없고 집에서 상담사분의 얼굴을 보며 보험상담을 진행해서 더 편했습니다. 최대 50자</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점 없음</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점은 없고 집에서 상담사분의 얼굴을 보며 보험상담을 진행해서 더 편했습니다. 최대 50자</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점 없음</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점은 없고 집에서 상담사분의 얼굴을 보며 보험상담을 진행해서 더 편했습니다. 최대 50자</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점 없음</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점은 없고 집에서 상담사분의 얼굴을 보며 보험상담을 진행해서 더 편했습니다. 최대 50자</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점 없음</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점은 없고 집에서 상담사분의 얼굴을 보며 보험상담을 진행해서 더 편했습니다. 최대 50자</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점 없음</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점은 없고 집에서 상담사분의 얼굴을 보며 보험상담을 진행해서 더 편했습니다. 최대 50자</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점 없음</div>
+                                                            </li>
+                                                            <li>
+                                                                <div>개선할 점은 없고 집에서 상담사분의 얼굴을 보며 보험상담을 진행해서 더 편했습니다. 최대 50자</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="btn-wrap">
+                                                        <button type="button" class="bg-btn"><span>더보기</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>         
+                                    <div class="tab-inner">
+                                        <div class="box"> 
+                                            <div class="cont">
+                                                <div class="survey-result-top">
+                                                    <div class="survey-result-type">  
+                                                        <div class="tooltip-wrap">
+                                                            일간참여현황
+                                                            <div class="tooltip">현재 또는 설문 종료 시점을 기준으로 이전 30일간 데이터가 제공됩니다.</div>
+                                                        </div>
+                                                        <button type="button" class="r-btn pdf"><span class="hide">pdf 다운로드</span></button>
+                                                    </div>
+                                                </div>
+                                                <div class="graph-area"></div>
+                                            </div>
+                                        </div>
+                                    </div>                             
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

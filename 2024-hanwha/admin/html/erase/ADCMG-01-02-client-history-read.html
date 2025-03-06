@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span></a>
+                            </li>
+                            <li>
+                                <a href="#" onclick="" class="menu menu02"><span>실시간현황</span></a>
+                                <ul>
+                                    <li><a href="">상담대기현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <!--<li><a href="">나중상담현황</a></li>-->
+                                    <li><a href="">상담진행현황</a></li>
+                                    <li><a href="">상담결과현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="menu menu03"><span>통계현황</span></a>
+                                <ul>
+                                    <li><a href="">월, 일별 현황</a></li>
+                                    <li><a href="">시간별 현황</a></li>
+                                    <li><a href="">상담업무순위</a></li>
+                                    <li><a href="">상담사 업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                    <li><a href="">상담취소이력</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="menu menu04"><span>상담이력관리</span></a>
+                                <ul>
+                                    <li><a href="">자료관리</a></li>
+                                </ul>
+                            </li>
+                            <li class="sele"><a href="" class="menu menu05"><span>고객이력관리</span></a></li>
+                            <li>
+                                <a href="#" class="menu menu06"><span>게시판관리</span></a>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="menu menu07"><span>상담사관리</span></a>
+                                <ul>
+                                    <li><a href="">근무 관리</a></li>
+                                    <li><a href="">상담사 계정</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="menu menu08"><span>설정관리</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="name">이생명 <span class="num">(1000000)</span></div>
+                    </div>
+                    <div class="project">모바일 화상상담 관리자</div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="title-area">
+                    <div class="title">고객이력관리</div>
+                    <div class="bread-crumb">
+                        <ul>
+                            <li><a href=""><span class="hide">홈</span></a></li>
+                            <li><a href="">고객이력관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list-top">
+                    <div class="left">
+                        <div class="name">김한화 (<span>12345678</span>)</div>
+                    </div>                    
+                    <div class="right">
+                        <select id="select01">
+                            <option value="hide">최신순</option>
+                            <option value="v1">최신순</option>
+                            <option value="v2">오래된 순</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="list-history">
+                    <ul>
+                        <li>
+                            <div class="tit">일반보험금신청</div>
+                            <div class="cont">첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다.</div>
+                            <div class="info">
+                                <div class="date">2023-10-16</div>
+                                <div class="name">상담사1</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">일반보험금신청</div>
+                            <div class="cont">첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다.</div>
+                            <div class="info">
+                                <div class="date">2023-10-16</div>
+                                <div class="name">상담사1</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">일반보험금신청</div>
+                            <div class="cont">첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다. 첫 번재 상담 진행 시 상담을 완료하였다.</div>
+                            <div class="info">
+                                <div class="date">2023-10-16</div>
+                                <div class="name">상담사1</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>

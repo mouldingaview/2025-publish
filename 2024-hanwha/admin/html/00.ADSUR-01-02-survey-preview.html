@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <!-- 팝업 레이아웃 -->
+    <div class="dim active"> 
+        <div class="inner">     
+            <div class="layer-pop m-frame">
+                <button type="button" class="btn-pop-close"><span class="hide">팝업닫기</span></button>
+                <div class="frame">
+                    <div class="cont-wrap">  
+                        <h1><img src="../img/img-login-logo.png" alt="한화생명"></h1>
+                        <div class="contents">
+                            <div class="title-area">
+                                <!-- <p class="text">상담이 종료되었습니다.</p> -->
+                                <h2 class="title">2024년 상반기 설문 고객 만족도 조사</h2>
+                                <div class="notice">*필수 응답 문항</div>
+                            </div>
+                            <div class="m-wrap-survey">
+                                <div class="scroll-area">
+                                    <!-- 선형배율 -->
+                                    <div class="box"> 
+                                        <div class="cont">
+                                            <div class="m-survey-title"> 
+                                                <div class="tit required">
+                                                    <span class="num">1. </span>
+                                                    화상상담 서비스 만족도를 선택해주세요
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="survey-radio-wrap">
+                                                    <div class="survey-radio">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 주관식 -->
+                                    <div class="box">     
+                                        <div class="cont">
+                                            <div class="m-survey-title"> 
+                                                <div class="tit">
+                                                    <span class="num">2. </span> 위와 같이 평가하게 된 상담 경험을 말씀해주세요
+                                                </div>
+                                            </div>
+                                            <div class="m-textarea-wrap">
+                                                <textarea name="" id="" placeholder="고객 답변 입력"></textarea>
+                                                <span class="txt-count"><span>0</span> / 50</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 객관식 -->
+                                    <div class="box">     
+                                        <div class="cont">
+                                            <div class="m-survey-title"> 
+                                                <div class="tit">
+                                                    <span class="num">3. </span> 비대면 채널로 보험에 가입하려는 이유는 무엇입니까?
+                                                </div>
+                                            </div>
+                                            <div class="chk-wrap">
+                                                <div>
+                                                    <input type="checkbox" name="chk" id="chk01">
+                                                    <label for="chk01">시간과 장소에 구애 받지 않음시간과 장소에 구애 받지 않음시간과 장소에 구애 받지 않음시간과 장소에 구애 받지 않음</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" name="chk" id="chk02">
+                                                    <label for="chk02">간편힌 절차</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" name="chk" id="chk03">
+                                                    <label for="chk03">저렴한 가격</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" name="chk" id="chk04">
+                                                    <label for="chk04">부담스럽지 않음</label>
+                                                </div>
+                                                <div>
+                                                    <input type="checkbox" name="chk" id="etc"><label for="etc">기타</label>
+                                                </div>
+                                                <div class="m-textarea-wrap">
+                                                    <textarea name="" id="" placeholder="기타 내용을 입력하세요."></textarea>
+                                                    <span class="txt-count"><span>0</span> / 50</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>설문에 응답해 주셔서 감사합니다.</p>
+                            <div class="">        
+                                <button type="button" class="btn-submit">
+                                    <span>제출</span>
+                                </button>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    const etcCheckbox = document.getElementById('etc');
+    const textareaWrap = document.querySelector('.chk-wrap .m-textarea-wrap');
+    textareaWrap.style.display = 'none';
+    etcCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            textareaWrap.style.display = 'block';
+        } else {
+            textareaWrap.style.display = 'none';
+        }
+    });
+</script>
+</div>

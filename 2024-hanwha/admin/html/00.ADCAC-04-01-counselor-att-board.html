@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담운영관리</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <aside id="left-aside">    
+                <div class="left-aside-top">           
+                    <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                    <nav>
+                        <ul>
+                            <li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                <a href="" class="menu menu01"><span>HOME</span><!--span class="qa">QA</span--></a>
+                            </li>
+                            <li>
+                                <button class="menu menu02"><span>실시간현황</span></button>                                
+                                <ul>
+                                    <li><a href="">오늘상담현황</a></li><!-- 메뉴 선택상태 : sele 클래스 -->
+                                    <li><a href="">대기상담현황</a></li>
+                                    <li><a href="">진행상담현황</a></li>
+                                    <li><a href="">우선예약현황</a></li>
+                                    <li><a href="">종료상담현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu03"><span>통계현황</span></button>
+                                <ul>
+                                    <li><a href="">총상담통계</a></li>
+                                    <li><a href="">기간별현황</a></li>
+                                    <li><a href="">상담업무처리순위</a></li>
+                                    <li><a href="">상담사업무현황</a></li>
+                                    <li><a href="">고객인입현황</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu04"><span>상담이력관리</span></button>
+                                <ul>
+                                    <li><a href="">상담이력관리</a></li>
+                                    <li><a href="">상담자료관리</a></li>
+                                    <li><a href="">결재이력관리</a></li>
+                                    <li><a href="">관리자로그</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu05"><span>고객이력관리</span></button>
+                                <ul>
+                                    <li><a href="">고객이력관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu06"><span>게시판관리</span></button>
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">커뮤니티</a></li>
+                                </ul>
+                            </li>
+                            <li class="sele open">
+                                <button type="button" class="menu menu07"><span>상담사관리</span></button>
+                                <ul>
+                                    <li><a href="">상담사관리</a></li>
+                                    <li class="sele"><a href="">근태관리</a></li>
+                                    <li><a href="">상담사계정</a></li>
+                                    <li><a href="">근무지관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu09"><span>설문관리</span></button>
+                                <ul>
+                                    <li><a href="">설문관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button type="button" class="menu menu08"><span>설정관리</span></button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>   
+                <div class="bot">
+                    <div class="profile">
+                        <div class="img">
+                            <img src="../img/sp-img.png" alt="">
+                        </div>
+                        <div class="info">  
+                            <div class="project">모바일 화상상담 관리자</div>
+                            <div class="name">이생명 <br><span class="num">(1079905)</span></div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-logout"><span>로그아웃</span></button>                    
+                </div>
+            </aside>
+            <main>
+                <div class="title-wrap">
+                    <div class="title">근태관리</div>
+                    <div class="util">
+                        <div class="bread-crumb">
+                            <ul>
+                                <li><a href="">홈</a></li>
+                                <li><a href="">상담사관리</a></li>
+                                <li><a href="">근태관리</a></li>
+                            </ul>
+                        </div>
+                        <div class="alarm-wrap">
+                            <button type="button" id="alarm-btn" class="alarm-flag">
+                                <span>알림</span>  
+                                <span class="num">3</span>
+                            </button>
+                            <div class="alarm-cont" id="alarm-cont">
+                                <div class="">알림 <span class="num">3</span></div>
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다. 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                        <li>
+                                            <a href=""><span>김상담</span> 상담사가 파일 열람 승인을 요청했습니다.</a>
+                                            <span> 2024-07-30-10:33</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">
+                    <section>
+                        <div class="sec-title">상담사별 근태현황</div>
+                        <div class="att-wrap">
+                            <div class="att-cal-wrap">
+                                <div class="cal-header">
+                                    <button type="button" class="prev"><span class="hide">이전</span></button>
+                                    <span>2024년 8월</span>
+                                    <button type="button" class="next"><span class="hide">다음</span></button>
+                                </div>
+                                <div class="cal-body">     
+                                    <div class="tbl-att">
+                                        <table> 
+                                            <colgroup> 
+                                                <col span="5"> 
+                                            </colgroup> 
+                                            <thead> 
+                                                <tr> 
+                                                    <th><span>월</span></th> 
+                                                    <th><span>화</span></th> 
+                                                    <th><span>수</span></th> 
+                                                    <th><span>목</span></th> 
+                                                    <th><span>금</span></th> 
+                                                </tr> 
+                                            </thead> 
+                                            <tbody>
+                                                <tr>  
+                                                    <td class="other">
+                                                        <div>
+                                                            <button type="button" class="date" disabled>29</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td class="other">
+                                                        <div>
+                                                            <button type="button" class="date" disabled>30</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td class="other">
+                                                        <div>
+                                                            <button type="button" class="date" disabled>31</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">1</button>
+                                                            <div class="list">
+                                                                <div>
+                                                                    <span class="name">모바일 화상상담 외주직원</span>
+                                                                    <span class="state">오후반반차</span> 
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                        <span class="name">모바일 화상상담 외주직원</span>
+                                                                        <span class="state">오후반반차</span> 
+                                                                    </li>
+                                                                    <li>
+                                                                        <span class="name">이상담</span>
+                                                                        <span>연차</span>
+                                                                    </li>   
+                                                                    <li>
+                                                                        <span class="name">이상담</span>
+                                                                        <span class="state">연차</span>
+                                                                    </li> 
+                                                                    <li>
+                                                                        <span class="name">이상담</span>
+                                                                        <span class="state">연차</span>
+                                                                    </li> 
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">2</button>
+                                                            <div class="list">
+                                                                <div>
+                                                                    <span class="name">세글자</span>
+                                                                    <span class="state">연차</span> 
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                        <span class="name">세글자</span>
+                                                                        <span class="state">연차</span> 
+                                                                    </li>
+                                                                    <li>
+                                                                        <span class="name">이상담</span>
+                                                                        <span>연차</span>
+                                                                    </li>   
+                                                                    <li>
+                                                                        <span class="name">이상담</span>
+                                                                        <span class="state">연차</span>
+                                                                    </li> 
+                                                                    <li>
+                                                                        <span class="name">이상담</span>
+                                                                        <span class="state">연차</span>
+                                                                    </li> 
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>   
+                                                </tr>
+                                                <tr>  
+                                                    <td class="holiday">
+                                                        <div>
+                                                            <button type="button" class="date">5</button>
+                                                            <div class="list">
+                                                                <div>
+                                                                    <span class="name">세글자</span>
+                                                                    <span class="state">연차</span> 
+                                                                </div>
+                                                                <ul>
+                                                                    <li>
+                                                                        <span class="name">세글자</span>
+                                                                        <span class="state">연차</span> 
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td class="today">
+                                                        <div>
+                                                            <button type="button" class="date">6</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">7</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">8</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">9</button>
+                                                        </div>
+                                                    </td>     
+                                                </tr>
+                                                <tr>   
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">12</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">13</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">14</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">15</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">16</button>
+                                                        </div>
+                                                    </td>     
+                                                </tr>
+                                                <tr>    
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">19</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">20</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">21</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">22</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">23</button>
+                                                        </div>
+                                                    </td>    
+                                                </tr>
+                                                <tr>  
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">26</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">27</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">28</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td class="holiday">
+                                                        <div>
+                                                            <button type="button" class="date">29</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td>
+                                                        <div>
+                                                            <button type="button" class="date">30</button>
+                                                        </div>
+                                                    </td>    
+                                                </tr>
+                                                <tr>  
+                                                    <td class="other">
+                                                        <div>
+                                                            <button type="button" class="date" disabled>2</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td class="other">
+                                                        <div>
+                                                            <button type="button" class="date" disabled>3</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td class="other">
+                                                        <div>
+                                                            <button type="button" class="date" disabled>4</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td class="other">
+                                                        <div>
+                                                            <button type="button" class="date" disabled>5</button>
+                                                        </div>
+                                                    </td>                                     
+                                                    <td class="other">
+                                                        <div>
+                                                            <button type="button" class="date" disabled>6</button>
+                                                        </div>
+                                                    </td>   
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="att-detail active">
+                                <div class="tit">2024년 8월 8일 (목)</div>
+                                <div class="btns">           
+                                <button type="button" class="btn-tbl-icon write"><span class="hide">등록</span></button></div> 
+                                <div class="form">              
+                                    <select id="select04">
+                                        <option value="hide">김상담</option>
+                                        <option value="v7">모바일 외주직원 세글자 라는데</option>
+                                        <option value="v8">김상담2</option>
+                                        <option value="v9">김상담3</option>
+                                    </select>            
+                                    <select id="select05">
+                                        <option value="hide">연차</option>
+                                        <option value="v7">연차</option>
+                                        <option value="v8">오후 반차</option>
+                                        <option value="v9">오후 반반차</option>
+                                    </select>
+                                    <button type="button"><span>등록</span></button>
+                                </div>      
+                                <div class="scroll-area">
+                                    <ul>
+                                        <li>
+                                            김상담 연차
+                                            <div class="btns">
+                                                <button type="button" class="btn-tbl-icon modify"><span class="hide">수정</span></button>
+                                                <button type="button" class="btn-tbl-icon del"><span class="hide">삭제</span></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            김상담 연차
+                                            <div class="btns">
+                                                <button type="button" class="btn-tbl-icon modify"><span class="hide">수정</span></button>
+                                                <button type="button" class="btn-tbl-icon del"><span class="hide">삭제</span></button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- <button type="button" class="btn-close"><span class="hide">닫기</span></button> -->
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="sec-title">근무지별 근태현황</div>
+
+                        <div class="tbl-style04">
+                            <table>
+                                <colgroup>
+                                    <col style="width:12%;" span="2">
+                                    <col span="8">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>근무지</th>
+                                        <th>근무일자</th>
+                                        <th>총인원</th>
+                                        <th>근무인원</th>
+                                        <th>연차</th>
+                                        <th>오전반차</th>
+                                        <th>오전반반차</th>
+                                        <th>오후반차</th>
+                                        <th>오후반반차</th>
+                                        <th>교육</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>모바일 1 고객센터</td>
+                                        <td>2023-12-30</td>
+                                        <td>10</td>
+                                        <td>9</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>9</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>모바일 1 고객센터</td>
+                                        <td>2023-12-30</td>
+                                        <td>10</td>
+                                        <td>9</td>
+                                        <td>1</td>
+                                        <td>9</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>모바일 1 고객센터</td>
+                                        <td>2023-12-30</td>
+                                        <td>10</td>
+                                        <td>9</td>
+                                        <td>1</td>
+                                        <td>9</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>  
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        //근태현황 리스트 화면 닫기
+        // const btnClose = document.querySelector('.btn-close')
+        // btnClose.addEventListener('click', (b) =>{
+        //     b.currentTarget.closest('.att-detail').classList.remove('active')
+        // })
+
+        //근태현황 글쓰기
+        const btnWrite = document.querySelector('.btn-tbl-icon.write')
+        btnWrite.addEventListener('click', (b) =>{
+            const attDetail = b.currentTarget.closest('.att-detail')            
+            attDetail.querySelector('.form').classList.add('active')
+            attDetail.querySelector('.scroll-area').classList.add('short')
+        })
+
+        //근태현황 지우기
+        const btnDels = document.querySelectorAll('.btn-tbl-icon.del')
+        btnDels.forEach((btnDel) => {
+            btnDel.addEventListener('click', (b) =>{
+                const liElement = b.currentTarget.closest('li');
+                if (liElement) {
+                    liElement.remove(); 
+                } 
+            })
+        })
+
+
+        //근태현황 글쓰기 나왔을때 글쓰기 아래 리스트 스크롤 컨트롤
+        const btnModifys = document.querySelectorAll('.btn-tbl-icon.modify') 
+        btnModifys.forEach((btnModify) =>{
+            btnModify.addEventListener('click', (b) => {
+                const scrollArea = b.currentTarget.closest('.scroll-area')
+                const previousSibling = scrollArea.previousElementSibling;
+                if (previousSibling && previousSibling.classList.contains('form')) {
+                    previousSibling.classList.add('active');
+                    scrollArea.classList.add('short');
+                }                
+            })
+        })
+
+        //달력 휴가쓴 상담사 2명 이상일때 동작
+        const lists = document.querySelectorAll('.list');
+        lists.forEach((list) =>{
+            const listUl = list.querySelector('ul')
+            const liCount = listUl.querySelectorAll('li').length;
+            if (liCount >= 2) {
+                listUl.closest('.list').classList.add('more');
+            }
+            if (list.classList.contains('more')) {
+                list.addEventListener('mouseover', (e)=>{
+                    e.currentTarget.classList.add('active')
+                })
+                list.addEventListener('mouseout', (e)=>{
+                    e.currentTarget.classList.remove('active')
+                })
+            }
+        })
+
+    </script>
+</body>
+</html>
