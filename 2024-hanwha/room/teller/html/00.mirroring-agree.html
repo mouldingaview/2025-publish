@@ -1,0 +1,69 @@
+<!-- 전자증명서 동의 -->
+<div class="m-wrap active">
+    <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+    <div class="m-cont-wrap opacity">
+        <div class="m-cont">
+            <main class="agree-wrap">   
+                <div class="title-area">
+                    <div class="title">전자증명서</div>
+                </div>
+                <div class="cont-wrap"> 
+                    <div class="cont-mid">
+                        <div class="agree-name"><span>홍길동</span> 님</div>
+                        <div class="agree-button">
+                            <button type="button"><span>내보관함</span></button>
+                            <button type="button"><span>발급하기</span></button>
+                        </div>
+                        <div class="agree-section gray">
+                            <div class="title">
+                                <span>홍길동</span>님께서 <br>제출해야 할 증명서
+                            </div>
+                            <p>증명서 명</p>
+                        </div>
+                        <div class="agree-section">
+                            <div class="title">
+                                <span>필요한 전자증명서</span>를<br>간편하게 발급, 제출하세요!
+                            </div>
+                            <dl>
+                                <dt>내 증명서</dt>
+                                <dd>총 <span>0</span>개</dd>
+                            </dl>
+                            <dl>
+                                <dt>증명서 제출 내역</dt>
+                                <dd>총 <span>0</span>개</dd>
+                            </dl>
+                        </div>
+                        <p class="copy-right">Copyright &copy; 한화생명 All Rights Reserved.</p>
+                    </div>
+                </div>
+            </main>   
+        </div>
+    </div>
+    <div class="btn-wrap">        
+        <button type="button" class="btn style01">
+            <span>전자증명서 종료</span>
+        </button>  
+    </div>
+</div>
+<style>
+    .m-cont .agree-wrap .cont-mid{align-items: normal}
+    .agree-wrap{width: 100%;}
+    .agree-wrap .title-area .title{padding-top: 0;height: auto;}
+    .agree-name{font-size: 16px;}
+    .agree-name span{font-size: 18px;}
+    .agree-button{display: flex;padding: 20px 0 30px;gap:1px}
+    .agree-button button{display: flex;justify-content: center;align-items: center;gap:8px;flex:1;height: 46px;line-height: 46px;border-radius: 0 24px 24px 0;background-color: #fa6600;color: #FFF;font-size: 18px;}
+    .agree-button button:first-child{border-radius: 24px 0 0 24px;}                        
+    .agree-button button:before{content:"";display: block;width:16px;height:16px;background: url(../img/icon-agree01.png) no-repeat 0 0/contain;}           
+    .agree-button button:last-child:before{background-image: url(../img/icon-agree02.png);}
+    .agree-section{width: 100%;padding:25px 20px;}
+    .agree-section.gray{background-color: #f5f6f7;}
+    .agree-section.gray p{padding-top: 30px;text-align: center;color: #737c85;}
+    .agree-section .title{font-size: 20px;line-height: 1.5em;}
+    .agree-section .title span{color:#fa6600}
+    .agree-section dl{display: flex;justify-content: space-between;padding:30px 0;border-bottom: 1px solid #f0f0f0;}
+    .agree-section dt,                        
+    .agree-section dd{font-size: 16px;}
+    .agree-section dd span{color: #fa6600;}
+    .copy-right{text-align: center;font-size: 14px;color: #C1C7CF;}
+</style>

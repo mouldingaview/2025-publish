@@ -1,0 +1,44 @@
+<!--문자 인증 진행중-->
+<div class="m-wrap">
+    <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+    <div class="m-cont-wrap">
+        <div class="m-cont">
+            <main>   
+                <div class="title-area">
+                    <h2 class="title">문자인증</h2>
+                    <p class="sub-txt">인증번호를 문자로 전송하였습니다.<br>인증번호를 입력해주세요.</p>
+                </div>
+                <div class="cont-wrap">  
+                    <div class="form">                        
+                        <dl>
+                            <dt><label for="" class="label">인증번호</label></dt>
+                            <dd class="limit error comp"><!-- 일치시 : comp / 에러시 : error 클래스 추가-->
+                                <input type="text" class="input" placeholder="숫자 6자리 입력">
+                                <span class="time">2:59</span>
+                            </dd>
+                            <dd class="txt">인증번호가 일치합니다.</dd>
+                            <!-- <dd class="txt">인증번호가 일치하지 않습니다.</dd> -->
+                        </dl> 
+                    </div>
+                </div>        
+                <div class="area-graph">
+                    <div class="graph">
+                        <div class="tit">인증 유효 시간</div>
+                        <div class="time">04:37</div>
+                    </div>
+                    <button type="button" class="btn-cert"><span>인증번호 재전송</span></button>
+                </div>
+            </main>           
+            <div class="btn-wrap">        
+                <button type="button" class="btn style01" disabled>
+                    <span>인증요청</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="btn-wrap">        
+        <button type="button" class="btn style01"><span>문자인증 종료</span></button>     
+    </div>
+</div>
+
+

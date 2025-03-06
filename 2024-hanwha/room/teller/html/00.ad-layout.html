@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화상상담시스템</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!--<script src="../js/ui.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="aside-wrap">
+            <aside>
+                <h1><img src="../img/img-logo.png" alt="한화생명"></h1>
+                <nav>
+                    <ul>
+                        <li class="menu01"><button type="button">고객초대</button></li>
+                        <li class="menu02"><button type="button">고객관리</button></li>
+                        <li class="menu03"><button type="button">상담이력</button></li>
+                        <!--li class="menu04"><button type="button">상담중지</button></li-->
+                        <li class="menu05"><button type="button">업무추가<span>2</span></button></li>
+                        <li class="menu06"><button type="button">서식종료</button></li>
+                    </ul>
+                </nav>
+                <button type="button" class="btn-out">상담 종료</button>
+            </aside>
+            <div class="aside-ex">
+                <button type="button" class="btn-close-ex"><span class="hide">접기</span></button>
+                <div class="ex-cont">                  
+                    <!-- 사이드메뉴 컨텐츠영역 -->
+                    aadsfasdf
+                </div>
+                <!--사이드메뉴 레이어팝업-->
+            </div>
+        </div>
+        <main>
+            <!-- ad -->
+            <header>
+                <h1>화상상담시스템</h1>
+                <div class="notice"><span>고객</span>님이 입장하셨습니다.</div>
+                <div class="info">
+                    <div class="user"><span><span class="num">4</span>명</span></div>
+                    <div class="icon telerecord active"><span class="hide">녹화</span></div>
+                    <div class="icon record"><span class="hide">기록</span></div>
+                    <!--<div class="record">  녹화시 on 클래스 추가                     
+                        <div class="tooltip">
+                            <div>상담 진행 시 녹화를 시작해 주세요.</div>
+                            <button type="button"><span>녹화안내</span></button>
+                        </div>
+                        <div class="tooltip">
+                            <div>녹화가 중단되었습니다.<br>버튼을 누르면 녹화가 재시작 됩니다.</div>
+                            <button type="button"><span>녹화 재시작</span></button>
+                        </div>
+                    </div>-->
+                    <div class="state active"><!-- 상담중 on 클래스 추가 -->
+                        <strong class="time"><span>00:00:00</span></strong>
+                        <!-- <span class="txt">상담중</span> -->
+                    </div>
+                    <button type="button" class="btn-zoom"><span class="hide">전체보기</span></button>
+                </div>
+            </header>        
+            <!-- //ad -->
+            <div id="container">
+                <!--contents01-->
+                <div class="info-area">   
+                    <!--서류분류팝업-->
+                    <div class="step-area">
+                        <ol class="shortcut">
+                            <li class="comp"><span class="txt">여권</span></li>
+                            <li class="comp"><span class="txt">문자인증</span></li>
+                            <li class="ing"><span class="txt">첨부서류</span></li>
+                            <li><span class="txt">전자서식</span></li>
+                        </ol>
+                        <!-- <div class="state">3/4</div> -->
+                    </div>
+                    <div class="box-info">
+                        <div class="name"><span>김한화</span> 고객님</div>
+                        <div class="state">(<span class="age">60대</span><span class="gender">여성</span>)</div>
+                    </div>
+                    <div class="tab-wrap">
+                        <ul class="tab-style01">
+                            <li class="sele"><button type="button">계약목록 <span>2</span></button></li>
+                            <li><button type="button">계좌목록 <span>0</span></button></li>
+                            <li><button type="button">첨부서류</button></li>
+                            <li><button type="button">보안키패드</button></li>
+                            <li><button type="button">전자증명서</button></li>
+                        </ul>
+                        <div class="tab-cont">
+                            <!--탭컨텐츠 영역-->
+                        </div>
+                    </div>
+                    <!-- ad-변경 -->
+                    <div class="memo-area">
+                        <div class="title">상담메모</div>
+                        <input type="text" name="" id="" placeholder="메모를 남겨주세요.">
+                        <button type="button"><span>저장</span></button>                   
+
+                        <!-- <div> 
+                            <div class="title">
+                                <span class="tit">상담기록(STT)</span>
+                                <span class="flag">상담기록 중</span>
+                            </div>
+                            <div class="textarea">
+                                상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 상담기록 
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- //ad-변경 -->
+                    <!-- ad-채팅 -->
+                    <div class="chat-area">
+                        <button id="chat-toggle-button"><span class="hide">채팅</span></button>
+                        <div id="chat-container" class="chat-container hidden">
+                            <button id="btn-chat-close"><span class="hide">채팅창 닫기</span></button>
+                            <div id="chat-box" class="chat-box"></div>
+                            <div class="input-chat">
+                                <input type="text" id="message-input" placeholder="Type a message...">
+                                <button id="send-button"><span class="hide">전송</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //ad-채팅 -->
+                
+                </div>
+                <!--contents02-->
+                <div class="sheet-area">
+                    <style>
+                        button.imsi{opacity:0.7;background-color: #E2F4FA;padding:5px;margin: 3px;border-radius: 5px;font-size: 12px;color: #000;}
+                        button.imsi.active{background-color: #FF1C00;color: #FFF;}
+                        .m-wrap{display: none;}
+                        .m-wrap.active{display: flex;}
+                        .imsi-btn{position: absolute;z-index: 100;right: 0;top: 0;width:20px;height:20px;line-height: 20px;color: #FFF;background-color: #FF1C00;border-radius: 50%;}
+                        .imsi-btns{position: relative;width: 100%;}
+                        .imsi-btns.show > div{display: none;}
+                    </style>
+                    <div class="imsi-btns" style="position: absolute;top:0;left: 0;z-index: 100;">
+                        <div>
+                            <button type="button" class="imsi active">1.계약목록</button>
+                            <button type="button" class="imsi">2.계좌목록</button>
+                            <button type="button" class="imsi">3.첨부서류 제출</button>
+                            <button type="button" class="imsi">4.비밀번호</button>
+                            <button type="button" class="imsi">5.비밀번호 입력 완료</button>
+                            <button type="button" class="imsi">6.전자증명서 제출 동의</button>
+                            <button type="button" class="imsi">7.전자증명서 발급 진행 중</button>
+                            <button type="button" class="imsi">8.전자증명서 제출 완료</button>
+                            <button type="button" class="imsi">9.2차 인증 선택</button>
+                            <button type="button" class="imsi">10.문자인증</button>
+                            <button type="button" class="imsi">11.간편인증</button>
+                            <button type="button" class="imsi">12.소액계좌목록</button>
+                            <button type="button" class="imsi">13.소액계좌인증</button>
+                            <button type="button" class="imsi">14.신용카드인증</button>
+                            <button type="button" class="imsi">15.간편인증 진행중</button>
+                            <button type="button" class="imsi">16.2차 인증 완료</button>
+                        </div>
+                        <button class="imsi-btn">B</button>
+                    </div>
+                    
+                    <script>                    
+                        document.addEventListener("DOMContentLoaded", () => {
+                            const btnImsis = document.querySelectorAll('button.imsi')
+                            const mWraps = document.querySelectorAll('.m-wrap') 
+                            btnImsis.forEach((btnImsi, index) => {
+                                btnImsi.addEventListener('click', (b) =>{
+                                    btnImsis.forEach((button) => {
+                                        button.classList.remove('active');
+                                    });
+                                    b.currentTarget.classList.add('active')
+                                    mWraps.forEach((wrap) => {
+                                        wrap.classList.remove('active');
+                                    });
+                                    mWraps[index].classList.add('active')
+                                })    
+                            })
+                            const imsiBtn = document.querySelector('.imsi-btn')
+                            const imsiBtns = document.querySelector('.imsi-btns')
+                            imsiBtn.addEventListener('click', () => {
+                                imsiBtns.classList.toggle('show')
+                            })    
+                        });    
+                    </script>
+                    <!-- 1. 계약목록 -->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">
+                                <main>
+                                    <div class="title-area">
+                                        <h2 class="title">계약 목록</h2>   
+                                    </div> 
+                                    <div class="cont-wrap02">        
+                                        <div class="list-top">
+                                            총 <span>10</span>건
+                                        </div>
+                                        <ul class="list-style01">
+                                            <li class="sele">
+                                                <div>
+                                                    <div class="state">
+                                                        <span class="st01">유지(납입중)</span>
+                                                        <span class="st02">계좌이체</span>
+                                                    </div>
+                                                    <div class="title"><span class="product">e시그니처암보험무배당(올케어)</span></div>
+                                                    <div class="">
+                                                        <dl>
+                                                            <dt>증권번호</dt>
+                                                            <dd>12345678</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>보험기간</dt>
+                                                            <dd>2016.01.23~종신(20년납)</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>피보험자</dt>
+                                                            <dd>김한화</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>보험료</dt>
+                                                            <dd>50,000원</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>최종납월/회수</dt>
+                                                            <dd>2023.06/60</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <div class="state">
+                                                        <span class="st01">유지(납입중)</span>
+                                                        <span class="st02">계좌이체</span>
+                                                    </div>
+                                                    <div class="title"><span class="product">e시그니처암보험무배당(올케어)</span></div>
+                                                    <div class="">
+                                                        <dl>
+                                                            <dt>증권번호</dt>
+                                                            <dd>12345678</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>보험기간</dt>
+                                                            <dd>2016.01.23~종신(20년납)</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>피보험자</dt>
+                                                            <dd>김한화</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>보험료</dt>
+                                                            <dd>50,000원</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>최종납월/회수</dt>
+                                                            <dd>2023.06/60</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <div class="state">
+                                                        <span class="st01">유지(납입중)</span>
+                                                        <span class="st02">계좌이체</span>
+                                                    </div>
+                                                    <div class="title"><span class="product">e시그니처암보험무배당(올케어)</span></div>
+                                                    <div class="">
+                                                        <dl>
+                                                            <dt>증권번호</dt>
+                                                            <dd>12345678</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>보험기간</dt>
+                                                            <dd>2016.01.23~종신(20년납)</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>피보험자</dt>
+                                                            <dd>김한화</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>보험료</dt>
+                                                            <dd>50,000원</dd>
+                                                        </dl>
+                                                        <dl>
+                                                            <dt>최종납월/회수</dt>
+                                                            <dd>2023.06/60</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </main>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>계약 목록 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!-- 2. 계좌목록 -->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">
+                                <main>
+                                    <div class="title-area">
+                                        <h2 class="title">고객 계좌 목록</h2>    
+                                    </div>
+                                    <div class="cont-wrap02">        
+                                        <div class="list-top">
+                                            총 <span>10</span>건
+                                        </div>
+                                        <ul class="list-style01">
+                                            <li class="sele">
+                                                <div>
+                                                    <div class="title">KDB산업은행 KDB산업은행 KDB산업은행 KDB산업은행 (2024-11-11)</div>
+                                                    <dl>
+                                                        <dt>계좌번호</dt>
+                                                        <dd>1002-222-333333</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>예금주명</dt>
+                                                        <dd>이생명</dd>
+                                                    </dl>                                    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <div class="title">우리은행 (2024-11-11)</div>
+                                                    <dl>
+                                                        <dt>계좌번호</dt>
+                                                        <dd>1002-222-333333</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>예금주명</dt>
+                                                        <dd>이생명</dd>
+                                                    </dl>                                    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <div class="title">카카오뱅크 (2024-11-11)</div>
+                                                    <dl>
+                                                        <dt>계좌번호</dt>
+                                                        <dd>1002-222-333333</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>예금주명</dt>
+                                                        <dd>이생명</dd>
+                                                    </dl>                                    
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </main>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>계약 목록 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!--3. 첨부서류 제출-->  
+                    <div class="m-wrap">   
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap">
+                            <div class="m-cont">      
+                                <div class="opacity">
+                                    <div class="title-area">
+                                        <h2 class="title">첨부서류 제출</h2>
+                                        <p class="sub-txt">제출할 서류의 사진을 등록해주세요.</p>
+                                    </div>
+                                    <div class="area-btn">
+                                        <button type="button" class="camera"><span>사진 촬영</span></button>
+                                        <button type="button" class="copy"><span>사진 불러오기</span></button>
+                                    </div>
+                                </div>
+                                <div class="box-file-count">
+                                    <div class="count">
+                                        <div class="result">총 <span>10</span> 장</div>
+                                        <div>성공 <span>3</span> / 실패 <span>2</span></div>
+                                    </div>
+                                    <p>고객님이 서류를 전송하고 있습니다.</p>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>첨부서류 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!-- 4. 비밀번호 -->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">            
+                                <main>
+                                    <div class="cont-mid">
+                                        <div class="cont">
+                                            <div class="title">비밀번호 입력</div>
+                                            <div class="pw-area">
+                                                <span class="comp"></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <!--<p class="txt">새로운 비밀번호를 입력해 주세요.</p>-->
+                                            <p class="txt">비밀번호 확인을 위해<br> 한번 더 입력해 주세요.</p>
+                                            <!--<p class="txt error">비밀번호가 일치하지 않습니다.</p>-->
+                                        </div>
+                                    </div>
+                                </main>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>보안캐피드 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!--5. 비밀번호 입력 완료-->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">   
+                                <!-- 모바일 bottom 팝업이라 ui 다름 -->
+                                <main>
+                                    <div class="cont-wrap">
+                                        <div class="cont-mid">
+                                            <div class="notice-wrap comp">
+                                                <p class="txt01">비밀번호 입력이 완료<br>되었습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </main>
+                            </div>     
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>보안키패드 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!-- 6. 전자증명서 제출 동의 -->                  
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">
+                                <main>
+                                    <div class="cont-mid">
+                                        <div class="cont">
+                                            <div class="title">전자증명서 제출 동의</div>
+                                            <p>공공기관 서류 제출을 위한 동의를 진행합니다.<br><br>한화생명에서 개인정보를 열람하는 것에 동의하십니까? 미동의 시에는 상담 진행에 제약이 있을 수 있습니다.</p>
+                                        </div>
+                                    </div>
+                                </main>
+                                <div class="btn-wrap">     
+                                    <button type="button" class="btn style01 bg01">
+                                        <span>미동의</span>
+                                    </button>  
+                                    <button type="button" class="btn style01">
+                                        <span>동의</span>
+                                    </button>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>전자증명서 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!--7. 전자증명서 발급 진행중-->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">   
+                                <main>
+                                    <div class="cont-wrap">
+                                        <div class="cont-mid">
+                                            <h2 class="title">전자증명서 발급 진행 중</h2>
+                                            <div class="notice-wrap icon02">
+                                                <p class="txt01">고객님의 전자증명서를 발급하고<br>있습니다.</p>
+                                                <p class="txt02">잠시만 기다려 주세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </main>
+                                <div class="btn-wrap">     
+                                    <button type="button" class="btn style01">
+                                        <span>전자증명서 제출 완료</span>
+                                    </button>
+                                </div>
+                            </div>     
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>전자증명서 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!--8. 전자증명서 제출 완료-->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">   
+                                <!-- 모바일 bottom 팝업이라 ui 다름 -->
+                                <main>
+                                    <div class="cont-wrap">
+                                        <div class="cont-mid">
+                                            <div class="notice-wrap comp">
+                                                <p class="txt01">전자증명서 제출을 완료<br>하였습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </main>
+                            </div>     
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>전자증명서 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!--9. 2차 인증-->
+                    <div class="m-wrap">
+                        <div class="m-cont-wrap">
+                            <div class="m-cont">   
+                                <div class="title-area">
+                                    <h2 class="title">2차 인증 선택</h2>
+                                    <p class="sub-txt">인증 방법을 선택해 주세요.</p>
+                                </div>
+                                <div class="cont-wrap">         
+                                    <div class="s-cert">
+                                        <button type="button" class="cert01 sele">
+                                            <div class="s-cert-cont">
+                                                <div class="tit">인증번호 문자전송</div>
+                                                <div class="txt">한화생명에 등록된 휴대폰번호를 통해<br>인증을 진행합니다.</div>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="cert02">
+                                            <div class="s-cert-cont">
+                                                <div class="tit">통합모바일 간편인증</div>
+                                                <div class="txt">각 인증사에서 발급된 인증서를 통해<br>인증을 진행합니다.</div>
+                                                <ul>
+                                                    <li class="cert02"><span class="hide">카카오</span></li>
+                                                    <li class="cert01"><span class="hide">네이버</span></li>
+                                                    <li class="cert03"><span class="hide">PASS</span></li>
+                                                    <li class="cert04"><span class="hide">Toss</span></li>
+                                                    <li class="cert05"><span class="hide">PAYCO</span></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="cert03">
+                                            <div class="s-cert-cont">
+                                                <div class="tit">연결계좌 소액계좌인증</div>
+                                                <div class="txt">한화생명에 연결된 계좌번호를 통해<br>인증을 진행합니다.</div>
+                                            </div>
+                                        </button>
+                                        <button type="button" class="cert04">
+                                            <div class="s-cert-cont">
+                                                <div class="tit">보유 신용카드인증</div>
+                                                <div class="txt">보유하고 있는 신용카드정보를 통해<br>인증을 진행합니다.</div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>     
+                                <div class="btn-wrap type02">      
+                                    <button type="button" class="btn style01 bg01">
+                                        <span>취소</span>
+                                    </button>       
+                                    <button type="button" class="btn style01">
+                                        <span>확인</span>
+                                    </button>
+                                </div>  
+                            </div>      
+                        </div>
+                    </div>
+                    <!--10.문자 인증 진행중-->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap">
+                            <div class="m-cont">
+                                <main>   
+                                    <div class="opacity">
+                                        <div class="title-area">
+                                            <h2 class="title">문자인증</h2>
+                                            <p class="sub-txt">인증번호를 문자로 전송하였습니다.<br>인증번호를 입력해주세요.</p>
+                                        </div>
+                                        <div class="cont-wrap">  
+                                            <div class="form">                        
+                                                <dl>
+                                                    <dt><label for="" class="label">인증번호</label></dt>
+                                                    <dd class="limit error comp"><!-- 일치시 : comp / 에러시 : error 클래스 추가-->
+                                                        <input type="text" class="input" placeholder="숫자 6자리 입력">
+                                                        <span class="time">2:59</span>
+                                                    </dd>
+                                                    <dd class="txt">인증번호가 일치합니다.</dd>
+                                                    <!-- <dd class="txt">인증번호가 일치하지 않습니다.</dd> -->
+                                                </dl> 
+                                            </div>
+                                        </div>       
+                                    </div> 
+                                    <div class="area-graph">
+                                        <div class="graph">
+                                            <div class="tit">인증 유효 시간</div>
+                                            <div class="time">04:37</div>
+                                        </div>
+                                        <button type="button" class="btn-cert"><span>인증번호 재전송</span></button>
+                                    </div>
+                                </main>           
+                                <div class="btn-wrap">        
+                                    <button type="button" class="btn style01" disabled>
+                                        <span>인증요청</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01"><span>문자인증 종료</span></button>     
+                        </div>
+                    </div>
+                    <!--11.간편인증-->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">  
+                                <div class="title-area">
+                                    <h2 class="title">간편인증</h2>
+                                </div>
+                                <div class="cont-wrap">  
+                                    <div class="form">
+                                        <dl>
+                                            <dt><label for="" class="label es">이름</label></dt>
+                                            <dd>
+                                                <input type="text" class="input" placeholder="이름 입력">                        
+                                            </dd>
+                                        </dl>  
+                                        <dl>
+                                            <dt><label for="" class="label es">휴대폰 번호</label></dt>
+                                            <dd>
+                                                <input type="text" class="input" placeholder="'-'  없이 숫자만 입력">                        
+                                            </dd>
+                                        </dl>  
+                                        <dl>
+                                            <dt><label for="" class="label es">주민등록번호</label></dt>
+                                            <dd class="id-num">
+                                                <input type="text" class="input" placeholder="앞 6자리">
+                                                <span>-</span>           
+                                                <input type="text" class="input" style="width: 50px;">      
+                                                <span>******</span>       
+                                            </dd>
+                                        </dl> 
+                                        <dl>
+                                            <dt><div class="label">본인인증 수단</div></dt>
+                                            <dd>                           
+                                                <ul class="list-bank cert">
+                                                    <li class="kakao">
+                                                        <button type="button">카카오 인증서</button>
+                                                    </li>
+                                                    <li class="naver">
+                                                        <button type="button">네이버 인증서</button>
+                                                    </li>
+                                                    <li class="pass">
+                                                        <button type="button">PASS 인증서</button>
+                                                    </li>
+                                                    <li class="toss">
+                                                        <button type="button">토스 인증서</button>
+                                                    </li>
+                                                    <li class="payco">
+                                                        <button type="button">PAYCO 인증서</button>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-wrap">        
+                                <button type="button" class="btn style01">
+                                    <span>다음</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01 bg04">
+                                <span>간편인증 종료</span>
+                            </button>
+                        </div>
+                    </div>           
+                    <!-- 12. 소액계좌목록 -->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">
+                                <main>
+                                    <div class="title-area">
+                                        <h2 class="title">소액계좌인증 계좌목록</h2>    
+                                    </div>
+                                    <div class="cont-wrap02">        
+                                        <div class="list-top">
+                                            총 <span>10</span>건
+                                        </div>
+                                        <ul class="list-style01">
+                                            <li class="sele">
+                                                <div>
+                                                    <div class="title">KDB산업은행</div>
+                                                    <dl>
+                                                        <dt>계좌번호</dt>
+                                                        <dd>1002-222-333333</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>예금주명</dt>
+                                                        <dd>이생명</dd>
+                                                    </dl>                                    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <div class="title">우리은행 (2024-11-11)</div>
+                                                    <dl>
+                                                        <dt>계좌번호</dt>
+                                                        <dd>1002-222-333333</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>예금주명</dt>
+                                                        <dd>이생명</dd>
+                                                    </dl>                                    
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <div class="title">카카오뱅크 (2024-11-11)</div>
+                                                    <dl>
+                                                        <dt>계좌번호</dt>
+                                                        <dd>1002-222-333333</dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt>예금주명</dt>
+                                                        <dd>이생명</dd>
+                                                    </dl>                                    
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="btn-wrap type02">        
+                                            <button type="button" class="btn style01 bg01">
+                                                <span>취소</span>
+                                            </button>     
+                                            <button type="button" class="btn style01">
+                                                <span>전송</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </main>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>간편인증 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!-- 13.소액계좌인증 -->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">
+                                <main>   
+                                    <div class="title-area">
+                                        <div class="title">소액계좌인증</div>
+                                    </div>
+                                    <div class="cont-wrap"> 
+                                        <div class="cont-mid">
+                                            <div class="area-deposit">  
+                                                <div class="info">
+                                                    <p>등록된 계좌로 1원이 입금되었습니다.<br>입금 내역에 표시된</p>
+                                                    <p><span>4자리 숫자</span>를 입력해 주세요.</p>  
+                                                </div>       
+                                                <div class="box">
+                                                    <div class="title">입금</div>
+                                                    <div class="deposit-pw">
+                                                        <div>
+                                                            <span>1</span>
+                                                            <span>*</span>
+                                                            <span>*</span>
+                                                            <span>*</span>
+                                                        </div>
+                                                        <div class="won">1원</div>
+                                                    </div>
+                                                </div>                     
+                                            </div>
+                                        </div>
+                                    </div>
+                                </main>   
+                            </div>
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>소액계좌인증 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!-- 14.신용카드인증 -->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">                                
+                                <main>   
+                                    <div class="title-area">
+                                        <h2 class="title">신용카드인증</h2>
+                                    </div>
+                                    <div class="cont-wrap">  
+                                        <div class="form credit">
+                                            <dl>
+                                                <dt><span class="label es">약관동의</span></dt>
+                                                <dd>
+                                                    <div class="wrap-agree">
+                                                        <div class="agree-box">
+                                                            <div class="chk-wrap">
+                                                                <div>
+                                                                    <input type="checkbox" name="agree01" id="agree01">
+                                                                    <label for="agree01">(필수) 개인(신용)정보 제공 동의</label>
+                                                                </div>
+                                                            </div>
+                                                            <button class="btn-fold " type="button"><span class="hide">접기</span></button>
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><label for="" class="label es">카드사</label></dt>
+                                                <dd>
+                                                    <select name="" id="">
+                                                        <option value="">선택하세요</option>
+                                                        <option value="">신한카드</option>
+                                                        <option value="">삼성카드</option>
+                                                        <option value="">현대카드</option>
+                                                    </select>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><label for="" class="label es">카드번호</label></dt>
+                                                <dd>
+                                                    <div class="credit-form-wrap">
+                                                        <div class="credit-form">
+                                                            <div>   
+                                                                <input type="text" class="input" placeholder="●●●●">
+                                                                <span>-</span>           
+                                                                <input type="text" class="input" placeholder="●●●●">
+                                                                <span>-</span>           
+                                                                <input type="text" class="input" placeholder="●●●●">
+                                                                <span>-</span>           
+                                                                <input type="text" class="input" placeholder="●●●●">
+                                                            </div>     
+                                                        </div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt><label for="" class="label es">ARS 인증 휴대폰 번호</label></dt>
+                                                <dd>
+                                                    <div class="input-wrap num">
+                                                        <div class="time-wrap">
+                                                            <input type="tel" class="input" placeholder="'-'없이 숫자만 입력 ">                      
+                                                            <span class="time">2:59</span>
+                                                        </div>  
+                                                        <button type="button">요청</button>
+                                                    </div>
+                                                </dd>
+                                            </dl>  
+                                        </div>
+                                    </div>
+                                </main>           
+                                <div class="btn-wrap type02">        
+                                    <button type="button" class="btn style01 bg01">
+                                        <span>취소</span>
+                                    </button>  
+                                    <button type="button" class="btn style01">
+                                        <span>인증완료</span>
+                                    </button>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>신용카드인증 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!-- 15.간편인증 진행중 -->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">
+                                <div class="title-area">
+                                    <h2 class="title">간편 인증 진행 중</h2>
+                                    <p class="sub-txt">간편인증을 시작했습니다.</p>
+                                </div>
+                                <div class="cont-wrap">                    
+                                    <div class="cont-mid">
+                                        <div class="sec-cert">
+                                            <div class="txt">고객님의 인증을 확인하고 <br>있습니다.<br><br><span>잠시만 기다려 주세요.</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>       
+                            
+                            <div class="btn-wrap">        
+                                <button type="button" class="btn style01 bg01">
+                                    <span>취소</span>
+                                </button>     
+                            </div>
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>간편인증 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                    <!-- 16. 2차 인증 완료 -->
+                    <div class="m-wrap">
+                        <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+                        <div class="m-cont-wrap opacity">
+                            <div class="m-cont">   
+                                <!-- 모바일 bottom 팝업이라 ui 다름 -->
+                                <main>
+                                    <div class="cont-wrap">
+                                        <div class="cont-mid">
+                                            <div class="notice-wrap comp">
+                                                <p class="txt01">2차 인증이 완료<br>되었습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </main>
+                            </div>     
+                        </div>
+                        <div class="btn-wrap">        
+                            <button type="button" class="btn style01">
+                                <span>2차 본인인증 종료</span>
+                            </button>  
+                        </div>
+                    </div>
+                </div>
+                <!--contents03 영상영역-->
+                <div class="video-area">
+                    <div class="counselling-call">
+                        <div class="video-main">
+                            <div class="video-box">  
+                                <div class="replace"></div>     
+                                <!-- 일시중지 -->
+                                <div class="counsel-pause">
+                                    <div class="pause-wrap">
+                                        <div class="cont">
+                                            <p class="tit">잠시만<br>기다려주세요</p>
+                                            <p class="txt01">업무 확인중입니다.</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="customer">
+                                    <div class="name">5글자 말줄임</div>
+                                </div>                    
+                                <div class="msg-toast">
+                                    <span>토스트 메세지</span>                        
+                                </div>
+                                <div class="sound off"><!--off 제거하면 움직임-->
+                                    <span class="playing-bar playing-bar1"></span>
+                                    <span class="playing-bar playing-bar2"></span>
+                                    <span class="playing-bar playing-bar3"></span>
+                                </div>
+                                <div class="guide-line" style="position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);aspect-ratio: 163/301;height:100%;border:1px solid #F37321;border-top: none;border-bottom: none;"></div>
+                            </div>
+                            <div class="control-box">                        
+                                <div class="btn-area">
+                                    <div>
+                                        <button type="button" class="icon-btn camera"><span class="hide">카메라</span></button>
+                                        <div class="option-wrap">
+                                            <div class="option">
+                                                <button type="button" class="icon-btn camera"><span class="hide">카메라 켜기</span></button>
+                                                <button type="button"class="icon-btn camera off"><span class="hide">카메라 끄기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                    <div>
+                                        <button type="button" class="icon-btn mic"><span class="hide">마이크</span></button>
+                                        <div class="option-wrap">
+                                            <div class="option">
+                                                <button type="button" class="icon-btn mic"><span class="hide">마이크 켜기</span></button>
+                                                <button type="button"class="icon-btn mic off"><span class="hide">마이크 끄기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="icon-btn volume"><span class="hide">볼륨</span></button>
+                                        <div class="option-wrap">
+                                            <div class="option">
+                                                <button type="button" class="icon-btn volume"><span class="hide">볼륨 켜기</span></button>
+                                                <button type="button"class="icon-btn volume off"><span class="hide">볼륨 끄기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>   
+                                    <div>
+                                        <button type="button" class="icon-btn setting"><span class="hide">설정</span></button>
+                                    </div>   
+                                    <div>
+                                        <button type="button" class="icon-btn bgm"><span class="hide">배경음악</span></button>
+                                        <div class="option-wrap">
+                                            <div class="option">
+                                                <button type="button" class="icon-btn bgm"><span class="hide">배경음악 켜기</span></button>
+                                                <button type="button"class="icon-btn bgm off"><span class="hide">배경음악 끄기</span></button>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-sub">                    
+                            <div class="grid-item item02 main"><!--주고객 main 클래스 추가-->
+                                <div class="video-box">     
+                                    <div class="replace"></div>    
+                                    <!-- 일시중지 -->
+                                    <div class="counsel-pause">
+                                        <div class="pause-wrap">
+                                            <div class="cont">
+                                                <p class="tit">잠시만<br>기다려주세요</p>
+                                                <p class="txt01">업무 확인중입니다.</p>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="customer">
+                                        <div class="name">이생명생명</div>
+                                        <div class="os android">Android</div>
+                                    </div>                  
+                                    <div class="msg-toast">
+                                        <span>토스트 메세지</span>                        
+                                    </div>       
+                                    <div class="video-state"><span class="state">인증시작</span></div>
+                                    <div class="sound off"><!--off 제거하면 움직임-->
+                                        <span class="playing-bar playing-bar1"></span>
+                                        <span class="playing-bar playing-bar2"></span>
+                                        <span class="playing-bar playing-bar3"></span>
+                                    </div>
+                                    <button type="button" class="btn-face"><span class="hide">얼굴 대조</span></button>
+                                    <!-- ai대조 -->
+                                    <div class="ai-comp">
+                                        <span>99%</span>
+                                    </div>
+                                </div>           
+                                <div class="control-box">  
+                                    <!-- <div>
+                                        <button type="button" class="icon-btn plus"><span class="hide">더보기</span></button>
+                                    </div>             -->
+                                    <div class="cert-area">
+                                        <ol>
+                                            <li>
+                                                <div class="order">1</div>
+                                                <div class="step">
+                                                    <div>외국인등록증</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="order">2</div>
+                                                <div class="step">
+                                                    <div>소액계좌인증</div>
+                                                    <div>문자인증</div>
+                                                </div>
+                                            </li>
+                                            <li class="sheet">
+                                                <button type="button" class="order"><span class="hide">서류 제출</span></button>
+                                            </li>
+                                        </ol>
+                                    </div>             
+                                    <div class="btn-area">
+                                        <div>
+                                            <button type="button" class="icon-btn camera front"><span class="hide">카메라</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn camera front"><span class="hide">전면카메라</span></button>
+                                                    <button type="button" class="icon-btn camera rear"><span class="hide">후면카메라</span></button>
+                                                    <button type="button"class="icon-btn instead"><span class="hide">카메라 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>                                     
+                                        <div>
+                                            <button type="button" class="icon-btn mic"><span class="hide">마이크</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn mic"><span class="hide">마이크 켜기</span></button>
+                                                    <button type="button"class="icon-btn mic off"><span class="hide">마이크 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="icon-btn refresh"><span class="hide">회전</span></button>
+                                        </div>  
+                                        <div>
+                                            <button type="button" class="icon-btn setting"><span class="hide">설정</span></button>
+                                        </div>                                     
+                                        <div>
+                                            <button type="button" class="icon-btn view"><span class="hide">스크린</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn view"><span class="hide">스크린 켜기</span></button>
+                                                    <button type="button"class="icon-btn view off"><span class="hide">스크린 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>     
+                                </div>   
+                            </div>
+                            <div class="grid-item item03 speaker"><!--말하는 사람 speaker 클래스 추가-->
+                                <div class="video-box">        
+                                    <div class="customer">
+                                        <div class="name">이생명</div>
+                                        <div class="os ios">IOS</div>
+                                    </div>    
+                                    <div class="video-state"><span class="state comp">인증완료</span></div>                             
+                                    <div class="sound off"><!--off 제거하면 움직임-->
+                                        <span class="playing-bar playing-bar1"></span>
+                                        <span class="playing-bar playing-bar2"></span>
+                                        <span class="playing-bar playing-bar3"></span>
+                                    </div>
+                                    <button type="button" class="btn-face"><span class="hide">얼굴 대조</span></button>
+                                    <!-- ai대조 -->
+                                    <div class="ai-comp error">
+                                        <span>0%</span>
+                                    </div>
+                                </div>        
+                                <div class="control-box">  
+                                    <!-- <div>
+                                        <button type="button" class="icon-btn plus"><span class="hide">더보기</span></button>
+                                    </div>               -->
+                                    <div class="cert-area">
+                                        <ol>
+                                            <li class="comp">
+                                                <div class="order">1</div>
+                                                <div class="step">
+                                                    <div>외국인등록증</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="order">2</div>
+                                                <div class="step">
+                                                    <div>소액계좌인증</div>
+                                                    <div>문자인증</div>
+                                                </div>
+                                            </li>
+                                            <li class="sheet">
+                                                <button type="button" class="order"><span class="hide">서류 제출</span></button>
+                                            </li>
+                                        </ol>
+                                    </div>             
+                                    <div class="btn-area">
+                                        <div>
+                                            <button type="button" class="icon-btn camera front"><span class="hide">카메라</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn camera front"><span class="hide">전면카메라</span></button>
+                                                    <button type="button" class="icon-btn camera rear"><span class="hide">후면카메라</span></button>
+                                                    <button type="button"class="icon-btn instead"><span class="hide">카메라 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>                                     
+                                        <div>
+                                            <button type="button" class="icon-btn mic"><span class="hide">마이크</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn mic"><span class="hide">마이크 켜기</span></button>
+                                                    <button type="button"class="icon-btn mic off"><span class="hide">마이크 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="icon-btn refresh"><span class="hide">회전</span></button>
+                                        </div>  
+                                        <div>
+                                            <button type="button" class="icon-btn setting"><span class="hide">설정</span></button>
+                                        </div>                                   
+                                        <div>
+                                            <button type="button" class="icon-btn view"><span class="hide">스크린</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn view"><span class="hide">스크린 켜기</span></button>
+                                                    <button type="button"class="icon-btn view off"><span class="hide">스크린 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                        
+                                </div>     
+                            </div>
+                            <div class="grid-item item04">
+                                <div class="video-box">        
+                                    <div class="customer">
+                                        <div class="name">이생명생명</div>
+                                        <div class="os android">Android</div>
+                                    </div>    
+                                    <div class="video-state"><span class="state">1차 인증 중</span></div>
+                                    <div class="sound off"><!--off 제거하면 움직임-->
+                                        <span class="playing-bar playing-bar1"></span>
+                                        <span class="playing-bar playing-bar2"></span>
+                                        <span class="playing-bar playing-bar3"></span>
+                                    </div>
+                                </div>       
+                                <div class="control-box">  
+                                    <!-- <div>
+                                        <button type="button" class="icon-btn plus"><span class="hide">더보기</span></button>
+                                    </div>               -->
+                                    <div class="cert-area">
+                                        <ol>
+                                            <li class="comp">
+                                                <div class="order">1</div>
+                                                <div class="step">
+                                                    <div>외국인등록증</div>
+                                                </div>
+                                            </li>
+                                            <li class="comp">
+                                                <div class="order">2</div>
+                                                <div class="step">
+                                                    <div>소액계좌인증</div>
+                                                    <div>문자인증</div>
+                                                </div>
+                                            </li>
+                                            <li class="sheet">
+                                                <button type="button" class="order"><span class="hide">서류 제출</span></button>
+                                            </li>
+                                        </ol>
+                                    </div>           
+                                    <div class="btn-area">
+                                        <div>
+                                            <button type="button" class="icon-btn camera front"><span class="hide">카메라</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn camera front"><span class="hide">전면카메라</span></button>
+                                                    <button type="button" class="icon-btn camera rear"><span class="hide">후면카메라</span></button>
+                                                    <button type="button"class="icon-btn instead"><span class="hide">카메라 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>                                     
+                                        <div>
+                                            <button type="button" class="icon-btn mic"><span class="hide">마이크</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn mic"><span class="hide">마이크 켜기</span></button>
+                                                    <button type="button"class="icon-btn mic off"><span class="hide">마이크 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="icon-btn refresh"><span class="hide">회전</span></button>
+                                        </div>  
+                                        <div>
+                                            <button type="button" class="icon-btn setting"><span class="hide">설정</span></button>
+                                        </div>                                    
+                                        <div>
+                                            <button type="button" class="icon-btn view"><span class="hide">스크린</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn view"><span class="hide">스크린 켜기</span></button>
+                                                    <button type="button"class="icon-btn view off"><span class="hide">스크린 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                        
+                                </div>       
+                            </div>
+                            <div class="grid-item item05">
+                                <div class="video-box">          
+                                    <div class="customer">
+                                        <div class="name">이생명생명</div>
+                                        <div class="os android">Android</div>
+                                    </div>     
+                                    <div class="video-state"><span class="state">인증시작</span></div>
+                                    <div class="sound off"><!--off 제거하면 움직임-->
+                                        <span class="playing-bar playing-bar1"></span>
+                                        <span class="playing-bar playing-bar2"></span>
+                                        <span class="playing-bar playing-bar3"></span>
+                                    </div>
+                                </div>         
+                                <div class="control-box">  
+                                    <!-- <div>
+                                        <button type="button" class="icon-btn plus"><span class="hide">더보기</span></button>
+                                    </div>             -->
+                                    <div class="cert-area">
+                                        <ol>
+                                            <li class="comp">
+                                                <div class="order">1</div>
+                                                <div class="step">
+                                                    <div>외국인등록증</div>
+                                                </div>
+                                            </li>
+                                            <li class="comp">
+                                                <div class="order">2</div>
+                                                <div class="step">
+                                                    <div>소액계좌인증</div>
+                                                    <div>문자인증</div>
+                                                </div>
+                                            </li>
+                                            <li class="sheet">
+                                                <button type="button" class="order"><span class="hide">서류 제출</span></button>
+                                            </li>
+                                        </ol>
+                                    </div>             
+                                    <div class="btn-area">
+                                        <div>
+                                            <button type="button" class="icon-btn camera front"><span class="hide">카메라</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn camera front"><span class="hide">전면카메라</span></button>
+                                                    <button type="button" class="icon-btn camera rear"><span class="hide">후면카메라</span></button>
+                                                    <button type="button"class="icon-btn instead"><span class="hide">카메라 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>                                     
+                                        <div>
+                                            <button type="button" class="icon-btn mic"><span class="hide">마이크</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn mic"><span class="hide">마이크 켜기</span></button>
+                                                    <button type="button"class="icon-btn mic off"><span class="hide">마이크 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="icon-btn refresh"><span class="hide">회전</span></button>
+                                        </div>   
+                                        <div>
+                                            <button type="button" class="icon-btn setting"><span class="hide">설정</span></button>
+                                        </div>                                   
+                                        <div>
+                                            <button type="button" class="icon-btn view"><span class="hide">스크린</span></button>
+                                            <div class="option-wrap">
+                                                <div class="option">
+                                                    <button type="button" class="icon-btn view"><span class="hide">스크린 켜기</span></button>
+                                                    <button type="button"class="icon-btn view off"><span class="hide">스크린 끄기</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                      
+                                </div>       
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>             
+        </main>
+    </div>
+    <script src="../js/pubui.js"></script>     
+</body>
+</html>

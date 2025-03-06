@@ -1,0 +1,118 @@
+<!--4. 공유노트-->
+<div class="tab-inner">
+    <!--4-1 공유노트 목록-->
+    <div class="list-wrap">    
+        <div class="list-top">
+            <div class="count">목록 <span>3</span></div>
+            <div class="right">
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button"><span>작성</span></button>        
+                    <div class="dropdown-menu">
+                        <button type="button" class="dropdown-item"><span>연락처</span></button>
+                        <button type="button" class="dropdown-item"><span>주소</span></button>
+                        <button type="button" class="dropdown-item"><span>이메일</span></button>
+                        <button type="button" class="dropdown-item"><span>계좌</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-box">
+            <ul class="list-style01 type02">
+                <li>
+                    <div class="box">
+                        <div class="title">
+                            <div class="name">김한화</div>
+                            <div>     
+                                <button type="button" class="s-btn style02"><span>삭제</span></button>   
+                                <button type="button" class="s-btn style02"><span>수정</span></button>       
+                            </div>
+                        </div>
+                        <div class="dl-wrap">
+                            <dl>
+                                <dt>연락처</dt>
+                                <dd>010-1234-5678</dd>
+                            </dl>
+                        </div>
+                        <div class="time">2023-10-16 15:00</dd>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="title">
+                            <div class="name">김한화</div>
+                            <div>     
+                                <button type="button" class="s-btn style02"><span>삭제</span></button>   
+                                <button type="button" class="s-btn style02"><span>수정</span></button>       
+                            </div>
+                        </div>
+                        <div class="dl-wrap">
+                            <dl>
+                                <dt>연락처</dt>
+                                <dd>010-1234-5678</dd>
+                            </dl>
+                        </div>
+                        <div class="time">2023-10-16 15:00</dd>
+                    </div>
+                </li>
+            </ul>                        
+        </div>
+    </div>
+    <!--4-2-->
+    <div>
+        <div class="list-top">
+            <div class="left"><button type="button" class="s-btn list"><span>목록</span></button></div>
+            <div class="right">
+                <button type="button" class="s-btn style02 size02" disabled><span>저장</span></button>
+                <button type="button" class="btn-share"><span>공유 시작</span></button><!--  공유 종료시 button 에 end 클래스 추가 -->
+            </div>
+        </div>
+        <div class="form-wrap">
+            <dl>
+                <dt>고객 선택</dt>
+                <dd>
+                    <select id="select01" style="width:240px;">
+                        <option value="hide">고객을 선택해 주세요</option>
+                        <option value="v1">김한화</option>
+                    </select> 
+                </dd>
+            </dl>
+            <dl>
+                <dt>연락처</dt>
+                <dd>
+                    <div class="input-tel" style="width:328px;">
+                        <input type="text" name="" id="" maxlength="3">
+                        <span>-</span>
+                        <input type="text" name="" id="" maxlength="4" minlength="3">
+                        <span>-</span>
+                        <input type="text" name="" id="" maxlength="4">
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>주소</dt>
+                <dd>
+                    <div class="address-wrap">
+                        <button type="button" class="btn style02"><span>우편번호 검색</span></button>
+                        <input type="text" id="" class="wid100" value="서울 강남구 가로수길 59 (신사동)" readonly />
+                        <input type="text" name="" id=""  class="wid100" placeholder="상세 주소 입력">
+                    </div>
+                </dd>
+            </dl>
+            <dl>
+                <dt>이메일</dt>
+                <dd><input type="email" name="" id="" style="width:300px"></dd>
+            </dl>
+            <dl>
+                <dt>은행 선택</dt>
+                <dd><button type="button" class="btn style02"><span>은행 선택</span></button></dd>
+            </dl>
+            <dl>
+                <dt>계좌 번호 입력</dt>                    
+                <dd>
+                    <input type="text" name="" id="" style="width:200px;" value="KB 국민은행" readonly>
+                    <input type="text" name="" id="" style="width:300px" placeholder="계좌번호를 입력하세요">
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>

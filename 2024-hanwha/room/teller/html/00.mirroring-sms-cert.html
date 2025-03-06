@@ -1,0 +1,71 @@
+<!--간편인증-->
+<div class="m-wrap">
+    <div class="mirroring-note">고객이 보고 있는 화면입니다.</div> 
+    <div class="m-cont-wrap">
+        <main>   
+            <div class="title-area">
+                <h2 class="title">간편인증</h2>
+            </div>
+            <div class="cont-wrap">  
+                <div class="form">
+                    <dl><!--에러시 error 클래스 추가-->
+                        <dt><label for="" class="label es">이름</label></dt>
+                        <dd>
+                            <input type="text" class="input" placeholder="이름 입력">                        
+                        </dd>
+                        <dd class="txt">필수 입력 항목입니다.</dd>
+                    </dl>  
+                    <dl class="error">
+                        <dt><label for="" class="label es">휴대폰 번호</label></dt>
+                        <dd>
+                            <input type="text" class="input" placeholder="‘-’ 없이 숫자만 입력">                        
+                        </dd>
+                        <dd class="txt">필수 입력 항목입니다.</dd>
+                    </dl>  
+                    <dl>
+                        <dt><label for="" class="label es">주민등록번호</label></dt>
+                        <dd class="id-num">
+                            <input type="text" class="input" placeholder="앞 6자리">
+                            <span>-</span>           
+                            <input type="text" class="input" style="width: 50px;">      
+                            <span>******</span>       
+                        </dd>
+                        <dd class="txt">필수 입력 항목입니다.</dd>
+                    </dl> 
+                    <dl>
+                        <dt><div class="label">본인인증 수단</div></dt>
+                        <dd>                           
+                            <ul class="list-bank cert">
+                                <li class="kakao">
+                                    <button type="button">카카오</button>
+                                </li>
+                                <li class="naver sele">
+                                    <button type="button">네이버</button>
+                                </li>
+                                <li class="pass">
+                                    <button type="button">PASS</button>
+                                </li>
+                                <li class="toss">
+                                    <button type="button">토스</button>
+                                </li>
+                                <li class="payco">
+                                    <button type="button">PAYCO </button>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </main>           
+        <div class="btn-wrap">        
+            <button type="button" class="btn style01">
+                <span>다음</span>
+            </button>
+        </div>  
+    </div>
+    <div class="btn-wrap">        
+        <button type="button" class="btn style01">
+            <span>간편인증 종료</span>
+        </button>     
+    </div>
+</div>  
