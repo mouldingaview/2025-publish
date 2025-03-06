@@ -1,8 +1,8 @@
 /*
 Hoisting
 */
-console.log('Hello')
-console.log('Word')
+console.log('Hello');
+console.log('Word');
 
-const name = '니이름'
-console.log(name)
+console.log(name);
+var name = '니이름';
