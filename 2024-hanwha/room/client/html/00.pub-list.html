@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>한화생명 화상상담 퍼블리싱 리스트</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        h1{text-align: center;padding: 20px;}
+        #frame-wrap{display: flex;flex-direction: column;height: 100vh;}
+        .frame-wrap{flex:1;min-height:0;overflow-y: auto;display: flex;justify-content: space-between;align-items: center;gap:20px;padding:0 20px;}
+        .frame{width:400px}
+        .scroll-box{flex:1;min-height:0;overflow-y: auto;height: calc(100vh - 43px);}
+        table{border-collapse: collapse;table-layout: fixed;}
+        .tbl_style01 {width:100%;border-top: 1px solid #c1bfbf;}
+        .tbl_style01 th {padding: 0 3px;height: 24px;font-size: 15px;text-align: center;border: none;border-left: 1px solid #c1bfbf;border-bottom: 1px solid #c1bfbf;background: #eaeaea;word-break: break-all;word-wrap: break-word;}
+        .tbl_style01 th:first-child {border-left: none;}
+        .tbl_style01 td {padding: 0 3px;height: 24px;line-height: 1.3em;color: #666;border: none;border-left: 1px solid #c1bfbf;border-bottom: 1px solid #c1bfbf;word-break: break-all;word-wrap: break-word;}
+        
+        .tbl_style01 td:first-child{font-weight: bold;text-align: center;}
+        .tbl_style01 td a {color: #666;text-decoration: underline;}
+        .tbl_style01 td a:visited{color: green;}
+        .tbl_style01 td a:hover{color: blue;}
+        .tbl_style01 td a:active{color: red;}
+        .tal{text-align: left !important}
+        
+        ::-webkit-scrollbar{height: 6px;width: 6px;background: transparent;}
+        ::-webkit-scrollbar-thumb{background: #F0F0F0;border-radius:3px}
+        ::-webkit-scrollbar-corner {background: rgba(0,0,0,0.2);}
+        .tbl_style01 .ad th{background:#000;color:#FFF}
+        .tbl_style01 .ad td{background-color:silver;}
+        .tbl_style01 tr.comp{background: #F37321;}
+        .tbl_style01 tr.comp02{background: #ddbba9;}
+        .tbl_style01 tr.comp03{background: rgb(224, 252, 168);}
+        .tbl_style01 tr.comp04{background: #80dbbd;}
+        .tbl_style01 tr.comp05{background: #e59fee;}
+        .tbl_style01 tr.comp06{background: #9fbbee;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.tbl_style01 a').click(function(event){
+                event.preventDefault();
+                var clickLink = $(this).attr('href');
+                $('.frame').find('iframe').attr('src', clickLink);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="frame-wrap">
+        <h1>한화생명 모바일 화상상담 서비스 퍼블리싱 리스트</h1>
+        <div class="frame-wrap">
+            <div class="scroll-box">
+                <div class="tbl_style01">
+                    <table>
+                        <colgroup>
+                            <col style="width:60px">
+                            <col style="width:14%">
+                            <col style="width:18%">
+                            <col>
+                            <col style="width: 12%;">
+                            <col style="width: 18%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>PPT</th>
+                                <th>2depth</th>
+                                <th>3depth</th>
+                                <th>화면아이디</th>
+                                <th>완료일</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>4</td>
+                                <td></td>
+                                <td>웰컴페이지</td>
+                                <td>
+                                    <!-- <a href="CSISC-01-01-01-welcome.html" target="_blank">CSISC-01-01-01</a><br> -->
+                                    <a href="CSISC-01-01-01-welcome-img.html" target="_blank">CSISC-01-01-01-img</a>
+                                </td>
+                                <td>20241008</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td></td>
+                                <td>장치 설정 안내 / 장치 허용 팝업</td>
+                                <td><a href="CSDVT-02-01-01-setting-dim.html" target="_blank">CSDVT-02-01-01</a></td>
+                                <td>20241014</td>
+                                <td>Dim 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td></td>
+                                <td>장치 테스트</td>
+                                <td><a href="CSDVT-03-01-01-test-camera.html">CSDVT-03-01-01</a></td>
+                                <td>202409</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td></td>
+                                <td>이용 약관 동의</td>
+                                <td><a href="CSSUA-01-01-01-terms-agree.html">CSSUA-01-01-01</a></td>
+                                <td>20241008</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td></td>
+                                <td>유의사항 안내</td>
+                                <td><a href="CSSUA-02-01-01-note-bot-popup.html">CSSUA-02-01-01</a></td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td></td>
+                                <td>유의사항 안내</td>
+                                <td><a href="CSSUA-02-03-01-note-bot-popup.html">CSSUA-02-03-01</a></td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr class="comp03">
+                                <td>10</td>
+                                <td></td>
+                                <td>상담대기</td>
+                                <td><a href="CSETW-01-02-01-counsel-waiting.html">CSETW-01-01-01</a></td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td></td>
+                                <td>상담대기</td>
+                                <td><a href="CSETW-01-01-02-bot-popup.html">CSETW-01-01-02</a></td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr class="comp03">
+                                <td>12</td>
+                                <td></td>
+                                <td>상담대기</td>
+                                <td><a href="CSETW-01-02-01-counsel-waiting.html">CSETW-01-01-03</a></td>
+                                <td>20241014</td>
+                                <td>CSETW-01-01-01</td>
+                            </tr>
+                            <tr class="comp04">
+                                <td>13</td>
+                                <td></td>
+                                <td>사전신분증촬영</td>
+                                <td><a href="CSETW-05-01-01-photo-idcard.html">CSETW-05-01-01</a></td>
+                                <td>20241010</td>
+                                <td></td>
+                            </tr>
+                            <tr class="comp04">
+                                <td>14</td>
+                                <td></td>
+                                <td>사전신분증촬영</td>
+                                <td><a href="CSETW-05-01-01-photo-idcard.html">CSETW-05-01-02</a></td>
+                                <td>20241010</td>
+                                <td>CSETW-05-01-01에 포함</td>
+                            </tr>
+                            <tr class="comp04">
+                                <td>15</td>
+                                <td></td>
+                                <td>사전신분증촬영</td>
+                                <td><a href="CSETW-05-01-01-photo-idcard.html">CSETW-05-01-03</a></td>
+                                <td>20241010</td>
+                                <td>CSETW-05-01-01에 포함</td>
+                            </tr>
+                            <tr class="comp03">
+                                <td>16</td>
+                                <td>우선예약</td>
+                                <td>예약신청</td>
+                                <td>
+                                    <a href="CSETW-01-02-01-counsel-waiting.html">CSETW-06-01-01</a>
+                                </td>
+                                <td>20241014</td>
+                                <td>CSETW-01-01-01</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>우선예약</td>
+                                <td>예약신청</td>
+                                <td>
+                                    <a href="CSETW-06-01-01-bot-popup.html">CSETW-06-01-01</a>
+                                </td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td> 18</td>
+                                <td>우선예약</td>
+                                <td>예약신청(날짜, 시간선택)</td>
+                                <td><a href="CSETW-06-01-02-reserve-sele.html">CSETW-06-01-02</a></td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr class="comp05">
+                                <td>19</td>
+                                <td>우선예약</td>
+                                <td>예약신청</td>
+                                <td><a href="CSETW-06-01-04-reserve.html">CSETW-06-01-04</a></td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>우선예약</td>
+                                <td>예약안내(신청완료)</td>
+                                <td><a href="CSETW-06-02-01-reserve-comp.html">CSETW-06-02-01</a></td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr class="comp02">
+                                <td>21~23</td>
+                                <td>우선예약</td>
+                                <td>카카오톡안내</td>
+                                <td>X - CSETW-06-03-01</td>
+                                <td>작업대상 X</td>
+                                <td></td>
+                            </tr>
+                            <tr class="comp05">
+                                <td>24</td>
+                                <td>우선예약</td>
+                                <td>예약취소</td>
+                                <td><a href="CSETW-06-04-01-reserve-cancel.html">CSETW-06-04-01</a></td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>우선예약</td>
+                                <td>예약취소</td>
+                                <td><a href="CSETW-06-04-02-reserve-cancel.html">CSETW-06-04-02</a></td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr class="comp02">
+                                <td>26</td>
+                                <td>우선예약</td>
+                                <td>카카오톡안내</td>
+                                <td>X - CSETW-06-03-04</td>
+                                <td>작업대상 X</td>
+                                <td></td>
+                            </tr>
+                            <!--<tr class="comp03">
+                                <td>27</td>
+                                <td>나중상담</td>
+                                <td>나중상담</td>
+                                <td><a href="CSETW-01-02-01-counsel-waiting.html">CSETW-02-01-01</a></td>
+                                <td>20241014</td>
+                                <td>CSETW-01-01-01</td>
+                            </tr>
+                            <tr>
+                                <td>28</td>
+                                <td>나중상담</td>
+                                <td>나중상담 안내팝업</td>
+                                <td><a href="CSETW-02-02-01-counsel-waiting-bot-popup02.html">CSETW-02-02-01</a></td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>-->
+                            <tr>
+                                <td>27</td>
+                                <td>나중상담</td>
+                                <td>상담예약상담시작</td>
+                                <td><a href="CSETW-04-02-01-dim-popup.html">CSETW-04-02-01</a></td>
+                                <td>20241010</td>
+                                <td>Dim 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>28</td>
+                                <td>나중상담</td>
+                                <td>상담예약상담시작</td>
+                                <td><a href="CSETW-04-02-02-layer-popup.html">CSETW-04-02-02</a></td>
+                                <td>20241010</td>
+                                <td>Layer 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>29, 30</td>
+                                <td>나중상담</td>
+                                <td>상담예약상담시작</td>
+                                <td><a href="CSETW-04-02-03-dim-popup.html">CSETW-04-02-03</a></td>
+                                <td>20241010</td>
+                                <td>Dim 팝업</td>
+                            </tr>
+                            <tr class="comp03">
+                                <td>31</td>
+                                <td>나중상담</td>
+                                <td>대기안내</td>
+                                <td><a href="CSETW-01-02-01-counsel-waiting.html">CSETW-01-02-01</a></td>
+                                <td>20241015</td>
+                                <td>CSETW-01-01-01</td>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td>나중상담</td>
+                                <td>상담시작</td>
+                                <td>
+                                    <a href="CSETW-04-01-01-counsel-start.html">CSETW-04-01-01</a>
+                                </td>
+                                <td>20241016</td>
+                                <td></td>
+                            </tr>
+                            <!--tr>
+                                <td>34</td>
+                                <td>나중상담</td>
+                                <td>상담시작</td>
+                                <td>
+                                    <a href="CSETW-04-01-01-layer-popup.html">CSETW-04-01-01 - 나가기</a>
+                                </td>
+                                <td>20241010</td>
+                                <td>Layer 팝업</td>
+                            </tr-->
+                            <tr class="comp02">
+                                <td>33</td>
+                                <td>나중상담</td>
+                                <td>채팅</td>
+                                <td>CSMCC-07-01-01</td>
+                                <td>작업대상 X - 신규</td>
+                                <td></td>
+                            </tr>
+                            <tr class="comp04">
+                                <td>34</td>
+                                <td>나중상담</td>
+                                <td>1차 인증 본인 화면</td>
+                                <td>
+                                    <a href="CSETW-05-01-01-photo-idcard.html">CSMCC-02-01-01</a>
+                                </td>
+                                <td>20241014</td>
+                                <td>CSETW-05-01-01 과 동일</td>
+                            </tr>
+                            <tr>
+                                <td>35</td>
+                                <td>나중상담</td>
+                                <td>신분증 팝업</td>
+                                <td>
+                                    <a href="CSMCC-02-02-01-idconfirm-bot-popup.html">CSMCC-02-02-01</a>
+                                </td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>나중상담</td>
+                                <td>신분증 팝업</td>
+                                <td>
+                                    <a href="CSMCC-02-03-01-idconfirm-bot-popup.html">CSMCC-02-03-01</a>
+                                </td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>37</td>
+                                <td>나중상담</td>
+                                <td>신분증 팝업</td>
+                                <td>
+                                    <a href="CSMCC-02-04-01-idconfirm-bot-popup.html">CSMCC-02-04-01</a>
+                                </td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>나중상담</td>
+                                <td>신분증 확인 - 주민증록증</td>
+                                <td>
+                                    <a href="CSMCC-02-05-01-veri-auth.html">CSMCC-02-05-01</a>
+                                </td>
+                                <td>20241010</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>39</td>
+                                <td>나중상담</td>
+                                <td>신분증 확인 - 자동차운전면허증</td>
+                                <td>
+                                    <a href="CSMCC-02-05-02-veri-auth.html">CSMCC-02-05-02</a>
+                                </td>
+                                <td>20241010</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>나중상담</td>
+                                <td>신분증 확인 - 여권</td>
+                                <td>
+                                    <a href="CSMCC-02-05-03-veri-auth.html">CSMCC-02-05-03</a>
+                                </td>
+                                <td>20241010</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>41</td>
+                                <td>나중상담</td>
+                                <td>신분증 확인 - 외국인등록증</td>
+                                <td>
+                                    <a href="CSMCC-02-05-04-veri-auth.html">CSMCC-02-05-04</a>
+                                </td>
+                                <td>20241010</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>나중상담</td>
+                                <td>계약 목록 확인</td>
+                                <td>
+                                    <a href="CSMCC-03-01-01-insurance-list.html">CSMCC-03-0-01</a>
+                                </td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>43</td>
+                                <td>나중상담</td>
+                                <td>계좌 목록 확인</td>
+                                <td>
+                                    <a href="CSMCC-08-01-01-bank-account-list.html">CSMCC-08-0-01</a>
+                                </td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr class="comp06">
+                                <td>44</td>
+                                <td>나중상담</td>
+                                <td>첨부서류</td>
+                                <td>
+                                    <a href="CSMCC-05-01-01-file-attach.html">CSMCC-05-01-01</a>
+                                </td>
+                                <td>20241015</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>45</td>
+                                <td>나중상담</td>
+                                <td>첨부서류(촬영)</td>
+                                <td>
+                                    <a href="CSMCC-05-02-01-photo-sheet.html">CSMCC-05-02-01</a>
+                                </td>
+                                <td>20241015</td>
+                                <td></td>
+                            </tr>
+                            <tr class="comp02">
+                                <td>46</td>
+                                <td>첨부서류</td>
+                                <td>첨부서류</td>
+                                <td>CSMCC-05-03-01</td>
+                                <td>작업대상 X</td>
+                                <td></td>
+                            </tr>
+                            <tr class="comp06">
+                                <td>47</td>
+                                <td>나중상담</td>
+                                <td>첨부자확인</td>
+                                <td>
+                                    <a href="CSMCC-05-01-01-file-attach.html">CSMCC-05-04-01</a>
+                                </td>
+                                <td>20241015</td>
+                                <td>CSMCC-05-01-01에 포함</td>
+                            </tr>
+                            <tr>
+                                <td>48</td>
+                                <td>나중상담</td>
+                                <td>첨부자 전송</td>
+                                <td>
+                                    <a href="CSMCC-05-04-02-file-bot-popup.html">CSMCC-05-04-02</a>
+                                </td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>49</td>
+                                <td>나중상담</td>
+                                <td>첨부자 완료</td>
+                                <td>
+                                    <a href="CSMCC-05-04-03-file-bot-popup.html">CSMCC-05-04-03</a>
+                                </td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>50-52</td>
+                                <td>나중상담</td>
+                                <td>비밀번호</td>
+                                <td>
+                                    <a href="CSMCC-09-01-01-pw.html">CSMCC-09-01-01, CSMCC-09-01-02</a>
+                                </td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>53</td>
+                                <td>소액계좌인증</td>
+                                <td></td>
+                                <td>
+                                    <a href="CSMCC-06-04-03-bot-popup.html">CSMCC-06-04-03</a>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>54</td>
+                                <td>나중상담</td>
+                                <td>문자인증</td>
+                                <td>
+                                    <a href="CSMCC-06-02-01-sms-auth.html">CSMCC-06-02-01</a>
+                                </td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>55</td>
+                                <td></td>
+                                <td>간편인증</td>
+                                <td>
+                                    <a href="CSMCC-06-03-01-easy-auth.html">CSMCC-06-03-01</a>
+                                </td>
+                                <td>20241014</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td></td>
+                                <td>간편인증</td>
+                                <td>
+                                    <a href="CSMCC-06-03-02-easy-auth.html">CSMCC-06-03-02</a>
+                                </td>
+                                <td>20241015</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>57</td>
+                                <td></td>
+                                <td>소액계좌인증 계좌목록</td>
+                                <td><a href="CSMCC-06-04-01-bank-account-list.html">CSMCC-06-04-01</a></td>
+                                <td>20241017</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>58-60</td>
+                                <td></td>
+                                <td>소액계좌인증</td>
+                                <td>
+                                    <a href="CSMCC-06-04-02-account-auth.html">CSMCC-06-04-02<br>CSMCC-06-04-03<br>CSMCC-06-04-04</a>
+                                </td>
+                                <td>20241015</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>61</td>
+                                <td></td>
+                                <td>2차인증 실패</td>
+                                <td><a href="CSMCC-06-02-03-2ndfail-bot-popup.html">CSMCC-06-02-03</a>
+                                </td>
+                                <td>20241118</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>62-63</td>
+                                <td></td>
+                                <td>신용카드인증</td>
+                                <td>
+                                    <a href="CSMCC-06-05-01-credit-auth.html">CSMCC-06-05-01</a>
+                                </td>
+                                <td>20241017</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>64</td>
+                                <td></td>
+                                <td>2차인증 완료</td>
+                                <td><a href="CSMCC-06-02-02-sms-auth-bot-popup.html">CSMCC-06-02-02</a>
+                                </td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>65</td>
+                                <td></td>
+                                <td>전자증명서 동의</td>
+                                <td><a href="CSMCC-10-01-01-consent.html">CSMCC-10-01-01</a></td>
+                                <td>20241016</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>66</td>
+                                <td></td>
+                                <td>전자증명서 발급 동의(진행중)</td>
+                                <td><a href="CSMCC-10-01-02-consent-ing.html">CSMCC-10-01-02</a></td>
+                                <td>20241017</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>67</td>
+                                <td></td>
+                                <td>전자증명서 동의(제출완료 팝업)</td>
+                                <td><a href="CSMCC-10-01-03-consent-bot-popup.html">CSMCC-10-01-03</a></td>
+                                <td>20241016</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>68</td>
+                                <td></td>
+                                <td>장치설정 안내 팝업</td>
+                                <td><a href="CSAD-ENT-02-01-setting-bot-popup.html">CSAD-ENT-02-01</a></td>
+                                <td>202409</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>69-70</td>
+                                <td></td>
+                                <td>장치설정 안내 화면</td>
+                                <td><a href="CSAD-ENT-03-01-setting.html">CSAD-ENT-03-01, CSAD-ENT-03-02</a></td>
+                                <td>202409</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>71</td>
+                                <td></td>
+                                <td>상담사 재접속</td>
+                                <td>
+                                    <a href="CSAD-VID-04-01-layer-pop.html">CSAD-VID-04-01</a>
+                                </td>
+                                <td>20241010</td>
+                                <td>Layer 팝업</td>
+                            </tr>
+                            <tr>
+                                <td>72</td>
+                                <td>상담사 대체이미지 화면</td>
+                                <td></td>
+                                <td>
+                                    <a href="CSETW-04-01-01-counsel-start.html">CSAD-VID-04-02</a>
+                                </td>
+                                <td>20241016</td>
+                                <td></td>
+                            </tr>
+                            <tr class="comp02">
+                                <td>73</td>
+                                <td></td>
+                                <td>설문조사</td>
+                                <td>
+                                    <!-- <a href="CSEND-02-01-01-survey.html">CSEND-02-01-01</a> -->
+                                    CSEND-02-01-01
+                                </td>
+                                <td>작업대상 X - 신규</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>74</td>
+                                <td></td>
+                                <td>END</td>
+                                <td>
+                                    <a href="CSEND-02-01-02-END.html">CSEND-02-01-02</a>
+                                </td>
+                                <td>20241008</td>
+                                <td></td>
+                            </tr>
+
+                            
+                            
+
+
+
+
+
+                            <!-- <tr style="background-color: #F37321;">
+                                <td>32</td>
+                                <td></td>
+                                <td>간편인증</td>
+                                <td>
+                                    <a href="CSMCC-06-03-03-easy-auth-bot-popup.html">CSMCC-06-03-03</a>
+                                </td>
+                                <td></td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr style="background-color: #F37321;">
+                                <td>34</td>
+                                <td></td>
+                                <td>신용카드인증 안내팝업</td>
+                                <td>
+                                    <a href="CSMCC-06-05-01-credit-auth.html">CSMCC-06-05-01</a>
+                                </td>
+                                <td>신규</td>
+                                <td>Layer 팝업</td>
+                            </tr>
+                            <tr style="background-color: #F37321;">
+                                <td>59</td>
+                                <td></td>
+                                <td>전자증명서 동의</td>
+                                <td>
+                                    <a href="CSMCC-06-05-01-consent.html">CSMCC-06-05-01</a>
+                                </td>
+                                <td>20241010</td>
+                                <td></td>
+                            </tr>
+                            <tr style="background-color: #F37321;">
+                                <td>60</td>
+                                <td></td>
+                                <td>전자증명서 동의 완료</td>
+                                <td>
+                                    <a href="CSMCC-06-05-02-consent-bot-popup.html">CSMCC-06-05-02</a>
+                                </td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr>
+                            <tr style="background-color: #F37321;">
+                                <td>61</td>
+                                <td></td>
+                                <td>전자증명서 동의 실패팝업</td>
+                                <td>
+                                    <a href="CSMCC-06-05-03-consent-bot-popup.html">CSMCC-06-05-03</a>
+                                </td>
+                                <td>20241010</td>
+                                <td>Bottom 팝업</td>
+                            </tr> -->
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="frame">
+                <div style="display: flex;align-items: center;justify-content: center;width: 360px;height: 622px;border: 10px solid rgba(0,0,0,0.2);border-radius: 10px;">
+                    <iframe src="CSISC-01-01-01-welcome-img.html" frameborder="0" style="width: 360px;height: 622px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

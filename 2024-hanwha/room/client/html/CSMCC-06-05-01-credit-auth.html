@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>    
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div>
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header>
+        <main>   
+            <div class="title-area">
+                <h2 class="title">
+                    신용카드인증
+                    <p class="cus-only">고객님께만 보이는 화면입니다</p>
+                </h2>
+            </div>
+            <div class="cont-wrap">  
+                <div class="scroll-box">
+                    <div class="form">
+                        <dl>
+                            <dt><span class="label es">약관동의</span></dt>
+                            <dd>
+                                <div class="wrap-agree">
+                                    <div class="agree-box">
+                                        <div class="chk-wrap">
+                                            <div>
+                                                <input type="checkbox" name="agree01" id="agree01">
+                                                <label for="agree01">(필수) 개인(신용)정보 제공 동의</label>
+                                            </div>
+                                        </div>
+                                        <div class="scroll-box" style="display: none;">
+                                            <!--약관-->
+                                             <div class="terms-wrap">
+                                                <div class="terms-sec">
+                                                    <div class="terms-title">개인정보 수집 · 이용에 관한 사항</div>
+                                                    <p>한화생명은 수집한 개인정보를 다음의 목적으로 보유하고 활용합니다</p>
+                
+                                                    <div class="tbl-scroll">
+                                                        <div class="terms-table">
+                                                            <table>
+                                                                <colgroup>
+                                                                    <col span="3">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>수집하는 개인정보의 항목</th>
+                                                                        <th>개인정보의 수집•이용 목적</th>
+                                                                        <th>개인정보의 보유 및 이용기간</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>성명, 회원ID, 비밀번호, 성별, 생년월일, 연락처(자택주소, 전화번호, 휴대전화번호), 이메일, 직장주소, 직장전화등부가정보, CI(연계정보)</td>
+                                                                        <td>컨텐츠 제공, 금융거래 본인 인증 및 금융 서비스,  회원가입 및 서비스 이용 시 본인 확인, 불량회원의 부정이용 및 비인가 사용방지, 가입 및 가입횟수 제한, 분쟁조정을 위한 기록 보존, 불만 및 민원처리, 공지사항 전달, 뉴스레터 제공, 이벤트 안내, 경품 배송, 고객문의사항 처리 및 응대</td>
+                                                                        <td>수집   이용 목적을∙달성한 경우, 회원 탈퇴 요청한 경우, 수집 ∙이용 동의 철회 요청한 경우, 개인정보 삭제 요청한 경우 삭제</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>접속 정보 및 서비스 이용 정보, 쿠키, 접속IP 정보</td>
+                                                                        <td>원활하고 상시적인 서비스 제공 분쟁 해결 접속빈도 및 서비스 이용 통계</td>
+                                                                        <td>회원탈퇴한 날로부터 3 개월 경과후 삭제</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                
+                                                    <p>※ 고객님이 한화생명에 대하여 '별도의 개인(신용)정보에 관한 동의'를 한 경우(금융거래 등 상거래의 체결 유지 관리 목적 등)로서 해당 동의 목적으로 위 개인정보가 수집 및 이용되는 경우에는 해당 동의에 따른 보유 및 이용기간이 적용됩니다.</p>
+                                                </div>
+                
+                                                <div class="terms-sec">
+                                                    <div class="terms-title">개인정보취급 및 위탁에 관한 사항 </div>
+                                                    <div class="terms-table">
+                                                        <table>
+                                                            <colgroup>
+                                                                <col span="2">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>개인정보 취급 위탁을 받는 자(수탁자)</th>
+                                                                    <th>개인정보 취급 위탁을 하는 업무의 내용</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>구루미</td>
+                                                                    <td>솔루션 유지보수, 개인정보의 수집·보관, 모바일고객센터 관련 개인정보의 처리 및 전산개발</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>네이버</td>
+                                                                    <td>본인확인/신분증 진위확인</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>카카오, 네이버, 패스, 토스, 페이코</td>
+                                                                    <td>본인확인/간편인증</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>이벤트대행업체<br>(구체적인 업체명은 이벤트 진행 시 별도로 알려드리며, 개인정보 처리방침에도 공개하고 있습니다.)</td>
+                                                                    <td>이벤트 당첨자 경품배송</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <p>고객님께서는 상기 동의를 거부할 수 있습니다. 다만, 서비스 제공을 위한 필수 사항이므로 거부 시 회원가입이 제한됩니다.</p>
+                                                </div>
+                
+                                                <div class="terms-sec">
+                                                    <div class="terms-title">고유식별정보의 처리에 관한 사항</div>
+                
+                                                    <div class="tbl-scroll">
+                                                        <div class="terms-table">
+                                                            <table>
+                                                                <colgroup>
+                                                                    <col span="3">
+                                                                </colgroup>
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>수집하는 개인정보의 항목</th>
+                                                                        <th>개인정보의 수집•이용 목적</th>
+                                                                        <th>개인정보의 보유 및 이용기간</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>주민등록번호, 금융거래정보</td>
+                                                                        <td>인터넷창구 서비스 원활한 이용<br>금융거래와 관련된 상담 및 응대</td>
+                                                                        <td>회원탈퇴 시 삭제</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>접속 정보 및 서비스 이용 정보, 쿠키, 접속IP 정보</td>
+                                                                        <td>원활하고 상시적인 서비스 제공 분쟁 해결 접속빈도 및 서비스 이용 통계</td>
+                                                                        <td>회원탈퇴한 날로부터 3 개월 경과후 삭제</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <p>고객님께서는 상기 동의를 거부할 수 있습니다. 다만, 서비스 제공을 위한 필수 사항이므로 거부 시 회원가입이 제한됩니다.</p>
+                                                </div>
+                                            </div>
+                                            <!--//약관-->
+                                        </div>
+                                        <button class="btn-fold " type="button"><span class="hide">접기</span></button>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt><label for="" class="label es">카드사</label></dt>
+                            <dd>
+                                <select name="" id="">
+                                    <option value="">선택하세요</option>
+                                    <option value="">신한카드</option>
+                                    <option value="">삼성카드</option>
+                                    <option value="">현대카드</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <div class="toggle-wrap">
+                            <button type="button">카드사 안내</button>           
+                            <div class="area-box-wrap">               
+                                <div class="area-box">
+                                    <ul class="txt-list">
+                                        <li>인증 가능한 카드사<br>신한, 현대, 삼성, 국민, NH농협, 롯데, 하나</li>
+                                        <li>BC로고 사용 카드사<br>우리카드, SC제일은행, 기업은행, 대구은행, 경남은행, 씨티은행<br>예) 우리카드 중 BC 로고 : 인증 가능 <br>우리카드 중 마스터 로고 : 인증 불가능</li>
+                                    </ul>
+                                </div>
+                            </div>  
+                        </div>
+                        <dl>
+                            <dt><label for="" class="label es">카드번호</label></dt>
+                            <dd>
+                                <div class="credit-form-wrap">
+                                    <div class="credit-form">
+                                        <div>   
+                                            <input type="number" class="input" placeholder="●●●●">
+                                            <span>-</span>           
+                                            <input type="number" class="input" placeholder="●●●●">
+                                            <span>-</span>           
+                                            <input type="number" class="input" placeholder="●●●●">
+                                            <span>-</span>           
+                                            <input type="number" class="input" placeholder="●●●●">
+                                        </div>     
+                                        <div>   
+                                            <input type="number" class="input" placeholder="●●●●">
+                                            <span>-</span>           
+                                            <input type="number" class="input wid6" placeholder="●●●●●●">
+                                            <span>-</span>           
+                                            <input type="number" class="input wid5" placeholder="●●●●●">
+                                        </div>     
+                                        <div>   
+                                            <input type="number" class="input" placeholder="●●●●">
+                                            <span>-</span>           
+                                            <input type="number" class="input wid6" placeholder="●●●●●●">
+                                            <span>-</span>           
+                                            <input type="number" class="input" placeholder="●●●●">
+                                        </div>     
+                                    </div>
+                                    <div class="btns">
+                                        <button type="button">16자리</button>
+                                        <button type="button">15자리</button>
+                                        <button type="button">14자리</button>
+                                    </div>
+                                </div>
+                            </dd>
+                            <!-- <dd class="txt">필수 입력 항목입니다.</dd> -->
+                        </dl>
+                        <dl><!--에러시 error 클래스 추가-->
+                            <dt><label for="" class="label es">ARS 인증 휴대폰 번호</label></dt>
+                            <dd>
+                                <div class="input-wrap num">
+                                    <div class="time-wrap">
+                                        <input type="tel" class="input" placeholder="'-'없이 숫자만 입력 " readonly value="01045647897">                      
+                                        <span class="time">2:59</span>
+                                    </div>  
+                                    <button type="button">요청</button>
+                                    <!--<button type="button" class="retry">재요청</button>-->
+                                </div>
+                            </dd>
+                            <dd class="txt">정보오입력, 불일치 등으로 실패하였습니다.<br>다시 진행해주세요.</dd>
+                        </dl>  
+                    </div>
+                    <div class="area-box">
+                        <p class="title">신용카드 본인인증 안내 (추후업데이트)</p>
+                        <ul class="txt-list">
+                            <li>개인정보(주민등록번호)와 신용카드 소유주가 동일해야 합니다.</li>
+                            <li>내용 추가 예정입니다.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>           
+        <div class="btn-wrap type02">        
+            <button type="button" class="btn style01 bg01">
+                <span>취소</span>
+            </button>  
+            <button type="button" class="btn style01">
+                <span>인증완료</span>
+            </button>
+        </div>  
+    </div>
+    <script>
+        agreeBox()
+        creditForm()
+        toggleNotice()
+
+        
+        //이미 구현된 동작임 참고용으로..
+        function agreeBox(){
+            document.querySelectorAll('.btn-fold').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var parent = this.parentElement;
+                    if (parent.classList.contains('show')) {
+                        document.querySelectorAll('.agree-box .scroll-box').forEach(function(scrollBox) {
+                            scrollBox.style.display = 'none';
+                        });
+                        parent.classList.remove('show');
+                    } else {
+                        document.querySelectorAll('.agree-box .scroll-box').forEach(function(scrollBox) {
+                            scrollBox.style.display = 'none';
+                        });
+                        document.querySelectorAll('.agree-box').forEach(function(agreeBox) {
+                            agreeBox.classList.remove('show');
+                        });
+                        parent.classList.add('show');
+                        parent.querySelector('.scroll-box').style.display = 'block';
+                    }
+                });
+            });
+
+            var agreeRadio = document.querySelectorAll('.agree-box .chk-wrap input[type="radio"]');
+            agreeRadio.forEach(function(radio) {
+                radio.addEventListener('click', function() {
+                    var parentAgreeBox = this.closest('.agree-box');
+                    if (this.checked) {
+                        parentAgreeBox.classList.add('checked');
+                    } else {
+                        parentAgreeBox.classList.remove('checked');
+                    }
+                });
+            });
+        }        
+        
+        //신용카드 자리수 버튼 동작
+        function creditForm(){        
+            const creditFormWrap = document.querySelector('.credit-form-wrap');
+            const creditDivs = creditFormWrap.querySelectorAll('.credit-form div'); 
+            const creditBtns = creditFormWrap.querySelectorAll('.btns button'); 
+            
+            creditDivs[0].classList.add('active');
+            creditBtns[0].classList.add('active');
+
+            creditBtns.forEach((creditBtn, index) => {
+                creditBtn.addEventListener('click', () => {
+                    creditBtns.forEach(btn => btn.classList.remove('active'));
+                    creditBtn.classList.add('active');
+                    
+                    creditDivs.forEach(div => div.classList.remove('active'));
+                    creditDivs[index].classList.add('active');
+                });
+            });
+        }
+
+        //카드사 안내 동작
+        function toggleNotice(){
+            const toggleWrap = document.querySelector('.toggle-wrap')
+            const toggleBtn = toggleWrap.querySelector('button')
+            toggleBtn.addEventListener('click', (t) =>{
+                t.currentTarget.classList.toggle('open')
+            })
+        }
+    </script>
+</body>

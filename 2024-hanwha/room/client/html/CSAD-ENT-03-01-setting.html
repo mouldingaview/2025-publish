@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!--<script src="../js/ui.js"></script>-->
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div class="btn-close"><span class="hide">닫기</span></div>
+        </header>
+        <main>
+            <div class="cont-wrap">
+                <div class="cont-top">
+                    <div class="txt03">장치 권한을 차단하신 경우<br>재설정할 수 있는 방법을 안내드립니다.</div>       
+                    <div class="txt02">장치 재설정을 아래와 같이 진행해 주세요.</div>
+                </div> 
+                <div class="tab-wrap">
+                    <div class="tab-btn">
+                        <button type="button"><span>안드로이드</span></button>
+                        <button type="button"><span>iOS</span></button>
+                    </div>
+                    <div class="tab-cont">
+                        <ol>
+                            <li>
+                                <div class="title">1. 설정 을 탭합니다.</div>
+                                <div class="img"><img src="../img/img-and-setting01.png" alt=""></div>
+                            </li>
+                            <li>
+                                <div class="title">2. 어플리케이션을 탭합니다.</div>
+                                <div class="img"><img src="../img/img-and-setting02.png" alt=""></div>
+                            </li>
+                            <li>
+                                <div class="title">3. 상단 메뉴에서  <img src="../img/icon-more.png" alt="">  버튼을 탭하고 권한 관리자를 탭합니다.</div>
+                                <div class="img"><img src="../img/img-and-setting03.png" alt=""></div>
+                                <div class="img"><img src="../img/img-and-setting03-02.png" alt=""></div>
+                            </li>
+                            <li>
+                                <div class="title">4. 마이크를 탭합니다.</div>
+                                <div class="img"><img src="../img/img-and-setting04.png" alt=""></div>
+                            </li>
+                            <li>
+                                <div class="title">5. Chrome 을 탭합니다.</div>
+                                <div class="img"><img src="../img/img-and-setting05.png" alt=""></div>
+                            </li>
+                            <li>
+                                <div class="title">6. 항상 확인을 선택하고 상단 왼쪽 <img src="../img/icon-prev.png" alt=""> 버튼을 탭하여 종료합니다.</div>
+                                <div class="img"><img src="../img/img-and-setting06.png" alt=""></div>
+                            </li>
+                            <li>
+                                <div class="title">7. 카메라 권한도 4번 단계에서 카메라 탭 후 5,6번을 동일한 방법으로 진행하시면 허용됩니다.</div>
+                                <div class="img"><img src="../img/img-and-setting07.png" alt=""></div>
+                            </li> 
+                        </ol>
+                        
+                        <ol>
+                            <li>
+                                <div class="title">1. 설정 을 탭합니다.</div>
+                                <div class="img"><img src="../img/img-ios-setting01.png" alt=""></div>
+                            </li>
+                            <li>
+                                <div class="title">2. 개인정보 보호 및 보안 을 탭합니다.</div>
+                                <div class="img"><img src="../img/img-ios-setting02.png" alt=""></div>
+                            </li>
+                            <li>
+                                <div class="title">3. 마이크 를 탭합니다.</div>
+                                <div class="img"><img src="../img/img-ios-setting03.png" alt=""></div>
+                            </li>
+                            <li>
+                                <div class="title">4. Chrome 항목 오른쪽에 있는 버튼을 탭하여 아래 그림과 같이 활성화 상태를 확인합니다.</div>
+                                <div class="img"><img src="../img/img-ios-setting04.png" alt=""></div>
+                            </li>
+                            <li>
+                                <div class="title">5. 다시 개인정보 보호 및 보안 화면으로 돌아와서 카메라 를 탭하여, 위 4번과 동일한 방법으로 진행합니다.</div>
+                                <div class="img"><img src="../img/img-ios-setting05.png" alt=""></div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="msg-box02">
+                    <p class="txt01">모바일 화상상담 고객센터 번호 안내</p>
+                    <p class="txt02">051.669.6905</p>
+                    <p class="txt02">032.329.9585</p>
+                </div>     
+                <div class="btn-wrap">        
+                    <button type="button" class="btn style01">
+                        <span>확인</span>
+                    </button>
+                </div>
+            </div>
+        </main> 
+    </div>
+    <script>
+        tabAction();
+        function tabAction() {
+            document.querySelector('.tab-btn button').classList.add('active');
+            document.querySelector('.tab-cont ol').classList.add('active');
+            const buttons = document.querySelectorAll('.tab-btn button');
+            const ols = document.querySelectorAll('.tab-cont ol');
+            buttons.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    ols.forEach(ol => ol.classList.remove('active'));
+                    button.classList.add('active');
+                    ols[index].classList.add('active');
+                });
+            });
+        }
+    </script>
+</body> 

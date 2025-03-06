@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>한화생명 화상상담 퍼블리싱 리스트</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #frame-wrap{display: flex;flex-direction: column;height: 100vh;}
+        .frame-wrap{flex:1;min-height:0;overflow-y: auto;display: flex;justify-content: space-between;align-items: center;padding:0 20px;}
+        .frame{width:400px}
+        .scroll-box{flex:1;min-height:0;overflow-y: auto;height: calc(100vh - 43px);}
+        table{border-collapse: collapse;table-layout: fixed;}
+        .tbl_style01 {width:100%;border-top: 1px solid #c1bfbf;}
+        .tbl_style01 th {padding: 0 3px;height: 24px;font-size: 15px;text-align: center;border: none;border-left: 1px solid #c1bfbf;border-bottom: 1px solid #c1bfbf;background: #eaeaea;word-break: break-all;word-wrap: break-word;}
+        .tbl_style01 th:first-child {border-left: none;}
+        .tbl_style01 td {padding: 0 3px;height: 24px;line-height: 1.3em;color: #666;border: none;border-left: 1px solid #c1bfbf;border-bottom: 1px solid #c1bfbf;word-break: break-all;word-wrap: break-word;}
+        .tbl_style01 td a {color: #666;text-decoration: underline;}
+        .tal{text-align: left !important}
+        
+        ::-webkit-scrollbar{height: 6px;width: 6px;background: transparent;}
+        ::-webkit-scrollbar-thumb{background: #F0F0F0;border-radius:3px}
+        ::-webkit-scrollbar-corner {background: rgba(0,0,0,0.2);}
+        .tbl_style01 .ad th{background:#000;color:#FFF}
+        .tbl_style01 .ad td{background-color:silver;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.tbl_style01 a').click(function(event){
+                event.preventDefault();
+                var clickLink = $(this).attr('href');
+                $('.frame').find('iframe').attr('src', clickLink);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="frame-wrap">
+        <h1>한화생명 모바일 화상상담 서비스 퍼블리싱 리스트</h1>
+        <div class="frame-wrap">
+            <div class="scroll-box">
+                <div class="tbl_style01">
+                    <table>
+                        <colgroup>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>화면명</th>
+                                <th>화면아이디</th>
+                                <th>화면경로</th>
+                                <th>ppt</th>
+                                <th>완료일</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="ad">
+                                <th>고도화 모바일 고객 인입</th>
+                                <th class="tal">웰컴페이지</th>
+                                <td><a href="8.welcome.html">8.welcome</a></td>
+                                <td>고객&gt;모바일&gt;웰컴페이지</td>
+                                <td>8</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="14">모바일 고객 인입</th>
+                                <th class="tal">웰컴페이지</th>
+                                <td><a href="8.welcome.html">8.welcome</a></td>
+                                <td>고객&gt;모바일&gt;웰컴페이지</td>
+                                <td>8</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">웰컴페이지</th>
+                                <td><a href="8.service-closed.html">8.service-closed</a></td>
+                                <td>고객&gt;모바일&gt;웰컴페이지 : 상담 시간이 아닐 경우</td>
+                                <td>8</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">장치 설정 안내 / 장치 허용 팝업</th>
+                                <td><a href="9.setting-dim-popup.html">9.setting-dim-popup</a></td>
+                                <td>고객&gt;모바일&gt;장치 설정 안내</td>
+                                <td>9,10,11</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">장치 설정 안내 &gt; 장치 허용 팝업</th>
+                                <td><a href="11.setting-dim-bottom-popup.html">11.setting-dim-bottom-popup</a></td>
+                                <td>고객&gt;모바일&gt;장치 설정 안내 &gt;장치 허용 팝업</td>
+                                <td>11</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">장치 테스트</th>
+                                <td><a href="13.test-camera.html">13.test-camera</a></td>
+                                <td>고객&gt;모바일&gt;장치 테스트</td>
+                                <td>13</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">장치 테스트</th>
+                                <td><a href="13.test-camera-error-popup.html">13.test-camera-error-popup</a></td>
+                                <td>고객&gt;모바일&gt;장치 테스트</td>
+                                <td>13</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">이용 약관 동의</th>
+                                <td><a href="14.terms-agree.html">14.terms-agree</a></td>
+                                <td>고객&gt;모바일&gt;이용 약관 동의&gt;개인(신용)정보 제공 동의</td>
+                                <td>14</td>
+                                <td>2023-10-16</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">입장 대기</th>
+                                <td><a href="18.counsel-waiting.html">18.counsel-waiting</a></td>
+                                <td>고객&gt;모바일&gt;입장 대기&gt;상담취소</td>
+                                <td>18</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">입장 대기</th>
+                                <td><a href="18.counsel-waiting-bot-popup01.html">18.counsel-waiting-bot-popup01</a></td>
+                                <td>고객&gt;모바일&gt;입장 대기&gt;상담취소&gt;상담 취소 팝업</td>
+                                <td>18</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">입장 대기</th>
+                                <td><a href="19.counsel-waiting-bot-popup02.html">19.counsel-waiting-bot-popup02</a></td>
+                                <td>고객&gt;모바일&gt;입장 대기&gt;나중 상담</td>
+                                <td>19</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">입장 대기</th>
+                                <td><a href="20.counsel-waiting-bot-popup03.html">20.counsel-waiting-bot-popup03</a></td>
+                                <td>고객&gt;모바일&gt;입장 대기&gt;신청 마감</td>
+                                <td>20</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">나중상담</th>
+                                <td><a href="22.counsel-timeover.html">22.counsel-timeover</a></td>
+                                <td>고객&gt;모바일&gt;입장 대기&gt;나중상담&gt;링크 유효기간 만료</td>
+                                <td>22</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">나중상담</th>
+                                <td><a href="22.counsel-timeover-bot-popup.html">22.counsel-timeover-bot-popup</a></td>
+                                <td>고객&gt;모바일&gt;입장 대기&gt;나중상담&gt;링크 유효기간 만료&gt;접속 링크 안내 팝업</td>
+                                <td>22</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">나중상담</th>
+                                <td><a href="23.counsel-waitplz.html">23.counsel-waitplz</a></td>
+                                <td>고객&gt;모바일&gt;입장 대기&gt;나중상담&gt;입장 대기 화면</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <!--화상상담 입장-->
+                            <tr>
+                                <th rowspan="17">화상상담 입장</th>
+                                <th class="tal">화상상담 입장</th>
+                                <td><a href="25.entrance.html">25.entrance</a></td>
+                                <td>고객&gt;모바일&gt;입장대기</td>
+                                <td>25</td>
+                                <td>2023-10-13</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">화상상담 입장</th>
+                                <td><a href="25.counsel-start.html">25.counsel-start</a></td>
+                                <td>고객&gt;모바일&gt;화상상담</td>
+                                <td>25</td>
+                                <td>2023-10-13</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">입장/본인확인</th >
+                                <td><a href="27.photo-idcard.html">27.photo-idcard</a></td>
+                                <td>고객&gt;모바일&gt;신분증 촬영</td>
+                                <td>27</td>
+                                <td>2023-10-13</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">입장/본인확인</th >
+                                <td><a href="27.photo-idcard-bot-popup.html">27.photo-idcard-bot-popup</a></td>
+                                <td>고객&gt;모바일&gt;신분증 촬영</td>
+                                <td>27</td>
+                                <td>2023-10-13</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">입장/본인확인</th >
+                                <td><a href="27.photo-idcard-bot-popup02.html">27.photo-idcard-bot-popup02</a></td>
+                                <td>고객&gt;모바일&gt;신분증 촬영</td>
+                                <td>27</td>
+                                <td>2023-10-18</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">입장/본인확인</th >
+                                <td><a href="27.photo-idcard-bot-popup03.html">27.photo-idcard-bot-popup03</a></td>
+                                <td>고객&gt;모바일&gt;신분증 촬영</td>
+                                <td>27</td>
+                                <td>2023-10-18</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">계약확인/서식호출</th >
+                                <td><a href="29.insurance-list.html">29.insurance-list</a></td>
+                                <td>고객&gt;모바일&gt;기 계약 목록</td>
+                                <td>29,30</td>
+                                <td>2023-10-17</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">계약확인/서식호출</th >
+                                <td><a href="31.bank-account-list.html">31.bank-account-list</a></td>
+                                <td>고객&gt;모바일&gt;기 계약 목록&gt;(선택업무) 계좌목록</td>
+                                <td>31</td>
+                                <td>2023-10-17</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">계약확인/서식호출</th >
+                                <td><a href="32.input-tel.html">32.input-tel</a></td>
+                                <td>고객&gt;모바일&gt;기 계약 목록&gt;(선택업무) 연락처</td>
+                                <td>32</td>
+                                <td>2023-10-17</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">계약확인/서식호출</th >
+                                <td><a href="33-1.select-bank.html">33-1.select-bank</a></td>
+                                <td>고객&gt;모바일&gt;기 계약 목록&gt;(선택업무) 계좌</td>
+                                <td>33</td>
+                                <td>2023-10-17</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">계약확인/서식호출</th >
+                                <td><a href="33-2.input-bank-account.html">33-2.input-bank-account</a></td>
+                                <td>고객&gt;모바일&gt;기 계약 목록&gt;(선택업무) 계좌</td>
+                                <td>33</td>
+                                <td>2023-10-17</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">계약확인/서식호출</th >
+                                <td><a href="34-1.address-confirm.html">34-1.address-confirm</a></td>
+                                <td>고객&gt;모바일&gt;기 계약 목록&gt;(선택업무) 연락처, 주소, 이메일</td>
+                                <td>34</td>
+                                <td>2023-10-17</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">계약확인/서식호출</th >
+                                <td><a href="34-2.email-confirm.html">34-2.email-confirm</a></td>
+                                <td>고객&gt;모바일&gt;기 계약 목록&gt;(선택업무) 연락처, 주소, 이메일</td>
+                                <td>34</td>
+                                <td>2023-10-17</td>
+                                <td></td>
+                            </tr>
+                            
+                            <tr>
+                                <th class="tal">서류촬영</th>
+                                <td><a href="36.photo-sheet.html">36.photo-sheet</a></td>
+                                <td>고객&gt;모바일&gt;첨부 서류 제출</td>
+                                <td>36</td>
+                                <td>2023-10-16</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">첨부서류 제출</th>
+                                <td><a href="37.file-attach.html">37.file-attach</a></td>
+                                <td>고객&gt;모바일&gt;첨부 서류 제출</td>
+                                <td>37</td>
+                                <td>2023-10-16</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">2차 인증</th>
+                                <td><a href="39.easy-auth.html">39.easy-auth</a></td>
+                                <td>고객&gt;모바일&gt;2차 인증</td>
+                                <td>39</td>
+                                <td>2023-10-19</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="tal">서비스 종료</th>
+                                <td><a href="39.end.html">40.end</a></td>
+                                <td>고객&gt;모바일&gt;업무완료</td>
+                                <td>40</td>
+                                <td>2023-10-13</td>
+                                <td></td>
+                            </tr>                    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="frame">
+                <div style="display: flex;align-items: center;justify-content: center;width: 360px;height: 622px;border: 10px solid rgba(0,0,0,0.2);border-radius: 10px;">
+                    <iframe src="8.welcome.html" frameborder="0" style="width: 360px;height: 622px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

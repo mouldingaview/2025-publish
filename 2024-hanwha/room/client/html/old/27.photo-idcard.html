@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            var boxW = $('.area-photo .box').width();
+            $('.area-photo .box').height(boxW*0.63 + 'px');
+        });
+    </script> 
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div>
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header>
+        <!-- 촬영 -->
+        <main>
+            <div class="title-area">
+                <h2 class="title" style="height:50px;padding-top:15px">신분증 촬영</h2>
+            </div>
+            <div class="area-photo">
+                <div class="cont">
+                    <p class="txt-notice"><span>사각형 안에 신분증을 놓아주세요</span></p>
+                    <div class="box">
+                        <div class="clamp"></div>
+                    </div>
+                    <p class="txt-notice02"><span>어두운 배경에 빛이 반사되지<br>않도록 촬영해주세요!</span></p>
+                </div>
+                <div class="btn-wrap">        
+                    <button type="button" class="btn style01 active">
+                        <span>촬영하기</span>
+                    </button>
+                </div>
+            </div>
+        </main>       
+    </div>
+</body>

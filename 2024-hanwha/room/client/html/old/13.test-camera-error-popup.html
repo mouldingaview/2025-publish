@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            var winH = $(window).innerHeight();
+            var headerH = $('header').innerHeight();
+            var btnWrapH = $('.btn-wrap').innerHeight();
+            var cameraH = winH - (headerH + btnWrapH + 122);
+            $('.wrap-camera').height(cameraH + 'px');
+            $('.slider').width(cameraH + 'px');
+        });
+    </script>
+</head>
+<body>
+    <div class="dim"></div>
+    <!-- 장치오류해결콜센터 팝업 -->
+    <div class="bottom-popup">
+        <div class="cont">
+            <p class="fw700 fs22">카메라, 마이크 설정 해결을 위해<br>아래의 연락처로 문의해주세요.</p>
+            <div class="msg-box">
+                <p class="txt01">콜센터 상담번호</p>
+                <p class="txt02">1588-6363</p>
+                <p class="txt03">9:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="btn-wrap type02">        
+            <button type="button" class="btn style01 bg01">
+                <span>나가기</span>
+            </button>        
+            <button type="button" class="btn style01">
+                <span>전화 연결</span>
+            </button>     
+        </div>
+    </div>
+</body> 

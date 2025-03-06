@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div>
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header>
+        <main>   
+            <div class="title-area">
+                <h2 class="title">
+                    간편인증
+                    <p class="cus-only">고객님께만 보이는 화면입니다</p>
+                </h2>
+            </div>
+            <div class="cont-wrap">  
+                <div class="form">
+                    <dl><!--에러시 error 클래스 추가-->
+                        <dt><label for="" class="label es">이름</label></dt>
+                        <dd>
+                            <input type="text" class="input" placeholder="이름 입력">                        
+                        </dd>
+                        <dd class="txt">필수 입력 항목입니다.</dd>
+                    </dl>  
+                    <dl class="error">
+                        <dt><label for="" class="label es">휴대폰 번호</label></dt>
+                        <dd>
+                            <input type="text" class="input" placeholder="‘-’ 없이 숫자만 입력">                        
+                        </dd>
+                        <dd class="txt">필수 입력 항목입니다.</dd>
+                    </dl>  
+                    <dl>
+                        <dt><label for="" class="label es">주민등록번호</label></dt>
+                        <dd class="id-num">
+                            <input type="text" class="input" placeholder="앞 6자리">
+                            <span>-</span>           
+                            <input type="text" class="input" style="width: 50px;">      
+                            <span>******</span>       
+                        </dd>
+                        <dd class="txt">필수 입력 항목입니다.</dd>
+                    </dl> 
+                    <dl>
+                        <dt><div class="label">본인인증 수단</div></dt>
+                        <dd>                           
+                            <ul class="list-bank cert">
+                                <li class="kakao">
+                                    <button type="button">카카오</button>
+                                </li>
+                                <li class="naver sele">
+                                    <button type="button">네이버</button>
+                                </li>
+                                <li class="pass">
+                                    <button type="button">PASS</button>
+                                </li>
+                                <li class="toss">
+                                    <button type="button">토스</button>
+                                </li>
+                                <li class="payco">
+                                    <button type="button">PAYCO </button>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </main>           
+        <div class="btn-wrap">        
+            <button type="button" class="btn style01">
+                <span>다음</span>
+            </button>
+        </div>  
+    </div>
+</body>

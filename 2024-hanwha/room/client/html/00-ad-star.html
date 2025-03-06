@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap-star">
+        <button type="button" class="star"></button>
+        <button type="button" class="star"></button>
+        <button type="button" class="star"></button>
+        <button type="button" class="star"></button>
+        <button type="button" class="star"></button>
+        <input type="hidden" id="imgStarCount" />
+    </div>
+    
+    <style>
+        .wrap-star{display: flex;gap:20px;justify-content: center;padding:25px 0 14px;}
+        .wrap-star button{width:27px;height:27px;background: url(../img/icon-survey-on.png) no-repeat 0 0/contain;}
+        .wrap-star button.off {background-image: url(../img/icon-survey-off.png);}
+    </style>
+    
+    <script>
+        const stars = document.querySelectorAll(".star");
+        stars.forEach(function(star, index) {
+            star.addEventListener("click", function() {
+                StarOn(index + 1);
+            });
+        });
+    
+        function StarOn(count) {
+            document.getElementById("imgStarCount").value = count;
+            stars.forEach((star, idx) => {
+                if (idx < count) {
+                    star.classList.remove("off");
+                } else {
+                    star.classList.add("off");
+                }
+            });
+        }
+    </script>
+</body> 

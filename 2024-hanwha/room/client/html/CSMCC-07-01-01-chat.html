@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/2.0.0/jquery.mobile-events.min.js"> </script>
+    <script src="../js/ui.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            //상담사, 고객리스트
+            var listW =  $('.list-client').find('li').width();
+            var ratio = listW * 1.7;//디자인 97*172:
+            $('.list-client').find('li').height(ratio + 'px');
+
+            //swipe 
+            $('.btn-swipe').bind('swipeup', handler);
+            function handler(event) { 
+                $('.wrap-swipe').addClass("swipe-up");    
+                scrollH2();        
+            }  
+           $('.btn-swipe').bind('swipedown', handler2);
+            function handler2(event) { 
+                $('.wrap-swipe').removeClass("swipe-up");    
+                scrollH();        
+            }
+                 
+            //scroll-box height            
+            var winH = $(window).innerHeight();
+            var headerH = $('header').innerHeight();
+            var areaCounselH = $('.area-counsel').innerHeight();
+            var swipeBtnH = $('.btn-swipe').innerHeight();
+            var listTitH = $('.list-title').innerHeight();
+            var listTopH = $('.list-top').innerHeight();  
+            var scrollBoxH = winH - (headerH + areaCounselH + swipeBtnH + listTitH + listTopH + 14);
+            var scrollBoxH2 = winH - (headerH + swipeBtnH + listTitH + listTopH + 20);
+            
+            scrollH();   
+            
+            function scrollH(){    
+                $('.scroll-box').height(scrollBoxH + 'px');
+            }
+            
+            function scrollH2(){      
+                $('.scroll-box').height(scrollBoxH2 + 'px');
+            }
+        });
+    </script>
+</head>
+<body>    
+    <div class="wrap">
+        <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div>
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header>
+        <main>
+            <div class="area-counsel">
+                <div class="list-client">
+                    <ul>
+                        <li>
+                            <div class="camera"></div>
+                            <div class="name"><strong>이생명</strong> </div>
+                            <div class="area-device video-off">
+                                <span class="ico-off mic"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="camera"></div>
+                            <div class="name"><strong>이생명</strong> </div>
+                            <div class="area-device">
+                                <span class="ico-off mic"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="camera"></div>
+                            <div class="name"><strong>이생명</strong> </div>
+                            <div class="area-device">
+                                <span class="ico-off mic"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="camera"></div>
+                            <div class="name"><strong>이생명</strong> </div>
+                            <div class="area-device">
+                                <span class="ico-off mic"></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="camera"></div>
+                            <div class="name"><strong>이생명</strong> </div>
+                            <div class="area-device">
+                                <span class="ico-off mic"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrap-swipe">
+                <button type="button" class="btn-swipe"></button>    
+                <div class="title-area">
+                    <h2 class="title">보험 계약 목록</h2>  
+                </div>  
+                <div class="cont-wrap02">        
+                    <div class="list-top">
+                        총 <span>10</span>건
+                    </div>
+                    <div class="scroll-box">
+                        <ul class="list-style01 type02">
+                            <li>
+                                <button type="button">
+                                    <div class="info">
+                                        <span class="num">1</span>
+                                        <div>
+                                            <span class="state st01">유지(납입중)</span>
+                                            <span class="state st02">대상계약</span>
+                                        </div>
+                                    </div>
+                                    <div class="title">e시그니처암보험무배당(올케어)</div>
+                                    <dl>
+                                        <dt>계약번호</dt>
+                                        <dd>123456789</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>계약일</dt>
+                                        <dd>20160123</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>피보험자</dt>
+                                        <dd>장유나</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>보험료</dt>
+                                        <dd>50,000원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>최종납일월</dt>
+                                        <dd>202306/90회차</dd>
+                                    </dl>
+                                </button>
+                            </li>
+                            <li class="sele">
+                                <button type="button">
+                                    <div class="info">
+                                        <span class="num">1</span>
+                                        <div>
+                                            <span class="state st01">유지(납입중)</span>
+                                            <span class="state st02">대상계약</span>
+                                        </div>
+                                    </div>
+                                    <div class="title">e시그니처암보험무배당e시그니처암보험무배당(올케어)</div>
+                                    <dl>
+                                        <dt>계약번호</dt>
+                                        <dd>123456789</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>계약일</dt>
+                                        <dd>20160123</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>피보험자</dt>
+                                        <dd>장유나</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>보험료</dt>
+                                        <dd>50,000원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>최종납일월</dt>
+                                        <dd>202306/90회차</dd>
+                                    </dl>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button">
+                                    <div class="info">
+                                        <span class="num">1</span>
+                                        <div>
+                                            <span class="state st01">유지</span>
+                                            <span class="state st02">대상계약</span>
+                                        </div>
+                                    </div>
+                                    <div class="title">e시그니처암보험무배당(올케어)</div>
+                                    <dl>
+                                        <dt>계약번호</dt>
+                                        <dd>123456789</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>계약일</dt>
+                                        <dd>20160123</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>피보험자</dt>
+                                        <dd>장유나</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>보험료</dt>
+                                        <dd>50,000원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>최종납일월</dt>
+                                        <dd>202306/90회차</dd>
+                                    </dl>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button">
+                                    <div class="info">
+                                        <span class="num">1</span>
+                                        <div>
+                                            <span class="state st01">유지(납입중)</span>
+                                            <span class="state st02">대상계약</span>
+                                        </div>
+                                    </div>
+                                    <div class="title">e시그니처암보험무배당(올케어)</div>
+                                    <dl>
+                                        <dt>계약번호</dt>
+                                        <dd>123456789</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>계약일</dt>
+                                        <dd>20160123</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>피보험자</dt>
+                                        <dd>장유나</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>보험료</dt>
+                                        <dd>50,000원</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>최종납일월</dt>
+                                        <dd>202306/90회차</dd>
+                                    </dl>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>

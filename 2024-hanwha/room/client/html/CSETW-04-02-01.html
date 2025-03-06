@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" /> 
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>    
+    <div class="wrap "><!--counsel-start-->
+        <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div class="state-time">
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header>
+        <main>
+            <!-- dim 위치 -->
+            <div class="full-counsel">                    
+                <div class="area-counselor">
+                    <div class="camera"></div>
+                </div>
+                <div class="list-client">
+                    <ul>
+                        <li>
+                            <div class="camera"></div>
+                            <div class="name"><strong>이생명</strong> 고객님</div>
+                            <div class="area-device">
+                                <span class="ico-off mic"></span>
+                            </div>
+                            <div class="state">4</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+            <div class="dim">
+                <div class="inner">
+                    <div class="dim-pop icon01">
+                        <div class="cont">
+                            <div class="txt01">이전 상담을 진행하고 있습니다.<br>잠시만 기다려주세요.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+            <!-- 장치 설정 안내 팝업 -->
+            <div class="rolling-box">
+                <div class="cont">
+                    <div class="txt-rolling">
+                        <ul>
+                            <li>상담 중 통화 연결 시에는<br>서비스가 중단될 수 있습니다.</li>
+                            <li>상담을 위해 신분증을<br>지참해 주세요.</li>
+                            <li>본인 외 초대 고객의 정보(성명, 연락처)를 상담사에게 알려 주세요.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>     
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setInterval(function() {
+                const boxIn = document.querySelector('.txt-rolling ul');
+                const boxRow = document.querySelector('.txt-rolling ul li:first-child');
+
+                const rowHeight = boxRow.offsetHeight;
+                
+                boxRow.style.transition = 'height 300ms, opacity 300ms';
+                boxRow.style.height = rowHeight + 'px'; 
+                boxRow.style.opacity = 1; 
+                
+                setTimeout(function() {
+                    boxRow.style.height = '0';
+                    boxRow.style.opacity = 0; 
+                }, 10);
+
+                setTimeout(function() {
+                    boxIn.appendChild(boxRow);
+                    boxRow.style.height = rowHeight + 'px';
+                    boxRow.style.opacity = 1;
+                }, 300);
+
+            }, 3000);
+        });
+    </script>
+</body>

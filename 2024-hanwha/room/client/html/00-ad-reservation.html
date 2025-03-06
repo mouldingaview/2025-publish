@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <style>
+        .reserve-btns ul{display:flex;flex-wrap: wrap;justify-content: space-between;gap:10px}
+        .reserve-btns ul li{width:calc(50% - 5px)}
+        .reserve-btns ul li button{width:100%;padding:10px}
+        /*.reserve-btns ul li button:disabled{}*/
+        .reserve-btns ul li button.sele{background:greenyellow}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="btn-close"><span class="hide">닫기</span></div>
+        </header>
+        <main>
+            <div class="reserve-btns">
+                <ul>
+                    <li><button type="button"><span>9:00</span></button></li>
+                    <li><button type="button" disabled><span>9:30</span></button></li>
+                    <li><button type="button" class="sele"><span>10:00</span></button></li>
+                    <li><button type="button"><span>10:30</span></button></li>
+                    <li><button type="button" disabled><span>11:00</span></button></li>
+                    <li><button type="button"><span>11:30</span></button></li>
+                    <li><button type="button"><span>12:00</span></button></li>
+                    <li><button type="button" disabled><span>12:30</span></button></li>
+                    <li><button type="button"><span>13:00</span></button></li>
+                    <li><button type="button"><span>13:30</span></button></li>
+                    <li><button type="button"><span>14:00</span></button></li>
+                    <li><button type="button"><span>14:30</span></button></li>
+                    <li><button type="button"><span>15:00</span></button></li>
+                    <li><button type="button"><span>15:30</span></button></li>
+                    <li><button type="button"><span>16:00</span></button></li>
+                    <li><button type="button"><span>16:30</span></button></li>
+                    <li><button type="button"><span>17:00</span></button></li>
+                    <li><button type="button"><span>17:30</span></button></li>
+                </ul>
+            </div>
+        </main>     
+    </div>
+    <script>
+        function reserveBtnToggle(){
+            const reserveBtns = document.querySelectorAll('.reserve-btns ul li button')
+            reserveBtns.forEach((reserveBtn) => {
+                reserveBtn.addEventListener('click', (e) => {
+                    reserveBtns.forEach(btn => btn.classList.remove('sele')); //**********
+                    e.currentTarget.classList.add('sele')//e.target은 이벤트 발생요소의 내부요소를 가리킬수 있음(span) / e.currentTarget은 이벤트 리스너가 바인딩된 요소를 참조
+                })
+            })
+        }
+        reserveBtnToggle();
+    </script>
+</body> 

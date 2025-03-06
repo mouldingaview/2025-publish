@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" /> 
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <style>
+        .txt-rolling {
+            width: 100%; /* 컨테이너 너비 */
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .txt-rolling ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            width: 300%; /* 컨테이너 너비와 같게 설정 */
+        }
+
+        .txt-rolling ul li {
+            display: block;
+            padding: 0 10px; /* 여백 추가 */
+            white-space: nowrap;
+            width: calc(100% / 3);
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .txt-rolling ul {
+            animation: slide 10s linear infinite;
+        }
+        </style>
+</head>
+<body>    
+    <div class="wrap counsel-start">
+        <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div class="state-time">
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header>
+        <main>
+        </main>
+    </div>
+    <!-- 장치 설정 안내 팝업 -->
+    <div class="rolling-box">
+        <div class="cont">
+            <div class="txt-rolling">
+                <ul>
+                    <li>상담 중 통화 연결 시에는<br>서비스가 중단될 수 있습니다.</li>
+                    <li>상담을 위해 신분증을<br>지참해 주세요.</li>
+                    <li>본인 외 초대 고객의 정보(성명, 연락처)를 상담사에게 알려 주세요.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function slideText() {
+            const boxIn = document.querySelector('.txt-rolling ul');
+            let offset = 0;
+
+            setInterval(() => {
+                offset -= 100; // 한 번에 100% 이동
+                if (Math.abs(offset) >= 100) { // -100% 이상 이동 시
+                    offset = 0; // 이동을 초기화
+                    boxIn.appendChild(boxIn.firstElementChild); // 첫 번째 항목을 마지막으로 이동
+                }
+                boxIn.style.transform = `translateX(${offset}%)`; // 이동 적용
+            }, 5000); // 3초마다 이동
+        }
+
+        window.onload = slideText;
+    </script>
+</body>

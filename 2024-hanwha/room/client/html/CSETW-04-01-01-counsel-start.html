@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" /> 
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>    
+    <div class="wrap "><!--counsel-start-->
+        <header class="fixed">
+            <h1><span class="hide">한화생명</span></h1>
+            <div class="state-time">
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header>
+        <main>
+            <!-- dim 위치 -->
+            <div class="full-counsel">                    
+                <div class="area-counselor">
+                    <span class="ico-off mic"></span>
+                    <div class="camera"></div>
+                    <div class="pause">                        
+                        <div class="main-wrap">
+                            <div>                    
+                                <h1 class="tit">잠시만<br>기다려주세요</h1>
+                                <p class="txt01">업무 확인중입니다.</p>
+                            </div>
+                            <div class="img-wrap">
+                                <img src="../img/img-main-admin.png" alt="웰컴이미지">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-client">
+                    <ul>
+                        <li>
+                            <div class="camera"></div>
+                            <div class="name"><strong>이생명</strong> 고객님</div>
+                            <div class="area-device video-off">
+                                <span class="ico-off mic"></span>
+                            </div>
+                            <div class="state"><span>1차 인중 중</span></div>
+                        </li>
+                        <li>2
+                            <div class="camera"></div>
+                            <div class="name"><strong>이생명</strong> 고객님</div>
+                            <div class="area-device">
+                                <span class="ico-off mic"></span>
+                            </div>
+                            <div class="state"><span>2차 인증 중</span></div>
+                        </li>
+                        <li>
+                            <div class="camera"></div>
+                            <div class="name"><strong>이생명</strong> 고객님</div>
+                            <div class="area-device">
+                                <span class="ico-off mic"></span>
+                            </div>
+                            <div class="state"><span>3서류제출 중</span></div>
+                        </li>
+                        <li>
+                            <div class="camera"></div>
+                            <div class="name"><strong>이생명</strong> 고객님</div>
+                            <div class="area-device">
+                                <span class="ico-off mic"></span>
+                            </div>
+                            <div class="state">4</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>       
+            <!-- 장치 설정 안내 팝업 -->
+            <div class="rolling-box">
+                <div class="cont">
+                    <div class="txt-rolling">
+                        <ul>
+                            <li>상담 중 통화 연결 시에는<br>서비스가 중단될 수 있습니다.</li>
+                            <li>상담을 위해 신분증을</li>
+                            <li>본인 외 초대 고객의 정보(성명, 연락처)를 상담사에게 알려 주세요.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>     
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setInterval(function() {
+                const boxIn = document.querySelector('.txt-rolling ul');
+                const boxRow = document.querySelector('.txt-rolling ul li:first-child');
+
+                const rowHeight = boxRow.offsetHeight;
+                
+                boxRow.style.transition = 'height 300ms, opacity 300ms';
+                //boxRow.style.height = rowHeight + 'px'; 
+                boxRow.style.opacity = 1; 
+                
+                setTimeout(function() {
+                    boxRow.style.height = '0';
+                    boxRow.style.opacity = 0; 
+                }, 10);
+
+                setTimeout(function() {
+                    boxIn.appendChild(boxRow);
+                    boxRow.style.height = rowHeight + 'px';
+                    boxRow.style.opacity = 1;
+                }, 300);
+
+            }, 3000);
+        });
+    </script>
+</body>

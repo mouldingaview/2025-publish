@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+    <script>
+        $(document).ready(function(){     
+
+            //파일삭제
+            $('.btn-del').click(function(){
+                $(this).parent().remove();
+            });
+            
+        });
+    </script> 
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div>
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header>
+        <!-- 촬영 -->
+        <main>            
+            <div class="title-area">
+                <h2 class="title">첨부서류 제출</h2>
+                <p class="sub-txt">제출할 서류의 사진을 등록해주세요.</p>
+            </div>
+            <div class="cont-wrap">
+                <div class="cont">
+                    <div class="button-wrap">
+                        <div class="area-btn">
+                            <button type="button" class="camera"><span>사진 촬영</span></button>
+                            <div class="filebox">                            
+                                <label for="ex_filename">사진 불러오기</label> 
+                                <input type="file" id="ex_filename" class="upload-hidden"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-attach">
+                        <div class="list-top">최대 10장</div>
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                                <li>
+                                    <img src="../img/IMG_4115.png" style="width:100%" alt="">
+                                    <button type="button" class="btn-del"><span class="hide">삭제</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>       
+        <div class="btn-wrap">        
+            <button type="button" class="btn style01 bg01">
+                <span>취소</span>
+            </button>  
+            <button type="button" class="btn style01">
+                <span>확인</span>
+            </button>
+        </div>
+    </div>
+</body>

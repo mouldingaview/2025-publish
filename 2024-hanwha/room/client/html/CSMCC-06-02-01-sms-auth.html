@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div>
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header>
+        <main>   
+            <div class="title-area">
+                <h2 class="title">
+                    문자인증
+                    <p class="cus-only">고객님께만 보이는 화면입니다</p>
+                </h2>
+                <p class="sub-txt">인증번호를 문자로 전송하였습니다.<br>인증번호를 입력해주세요.</p>
+            </div>
+            <div class="cont-wrap">  
+                <div class="form">                        
+                    <dl>
+                        <dt><label for="" class="label">인증번호</label></dt>
+                        <dd class="limit error comp"><!-- 일치시 : comp / 에러시 : error 클래스 추가-->
+                            <input type="text" class="input" placeholder="숫자 6자리 입력">
+                            <span class="time">2:59</span>
+                        </dd>
+                        <dd class="txt">인증번호가 일치합니다.</dd>
+                        <!-- <dd class="txt">인증번호가 일치하지 않습니다.</dd> -->
+                    </dl> 
+                </div>
+            </div>
+        </main>           
+        <div class="btn-wrap">        
+            <button type="button" class="btn style01" disabled>
+                <span>인증요청</span>
+            </button>
+        </div>  
+    </div>
+</body>

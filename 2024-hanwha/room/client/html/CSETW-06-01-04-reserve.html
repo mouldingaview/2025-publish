@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div class="state-time">
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header> -->
+        <main>   
+            <div class="title-area">
+                <!-- <button type="button" class="btn-prev"><span class="hide">이전</span></button> -->
+                <h2 class="title">예약신청</h2>
+                <!--<h2 class="title">예약취소</h2>-->
+            </div> 
+            <div class="cont-wrap">
+                <div class="reserve-wrap">
+                    <div class="txt txt01">예약일자와 시간을 확인해주세요.</div>
+                    <div>
+                        <table>
+                            <colgroup>
+                                <col style="width:40%">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>예약자</th>
+                                    <td>김생명</td>
+                                </tr>
+                                <tr>
+                                    <th>예약일자</th>
+                                    <td>2024년 2월 28일(수)</td>
+                                </tr>
+                                <tr>
+                                    <th>예약시간</th>
+                                    <td>13시00분</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 예약취소시
+                    <div class="reserve-cancel">
+                        <div class="title">예약취소</div>
+                        <div class="box-select">
+                            <div>
+                                <label for="sele">
+                                    <input type="radio" name="sele" id="sele">
+                                    <span>문제가 해결되었습니다.</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label for="sele02">
+                                    <input type="radio" name="sele" id="sele02">
+                                    <span>나중에 다시 상담을 하겠습니다.</span>
+                                </label>
+                            </div>
+                            <div class="etc">
+                                <label for="sele03">
+                                    <input type="radio" name="sele" id="sele03">
+                                    <span>기타</span>
+                                </label>
+                            </div>   
+                            <div class="textarea-wrap">
+                                <textarea name="" id="" placeholder="기타 내용을 입력하세요."></textarea>
+                                <div class="txt-count">0/50</div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </main>           
+        <div class="btn-wrap">        
+            <button type="button" class="btn style01">
+                <span>상담예약 신청</span>
+            </button>       
+            <!-- 상담예약 취소시
+            <button type="button" class="btn style01">
+                <span>상담예약 취소</span>
+            </button>-->
+        </div>  
+    </div>
+
+    <script>
+        const etcRadio = document.getElementById('sele03');
+        const textareaWrap = document.querySelector('.textarea-wrap');
+        const radios = document.querySelectorAll('input[name="sele"]');
+    
+        radios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (etcRadio.checked) {
+                    textareaWrap.style.display = 'block';
+                } else {
+                    textareaWrap.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>

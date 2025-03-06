@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>  
+    <script>        
+        $(document).ready(function(){    
+            $('.chk-wrap input:radio').click(function(){
+                $('.chk-wrap').next().hide();
+            });
+            $('.chk-wrap>div:last-child input:radio').click(function(){
+                $(this).parent().parent().next().show(); 
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="dim"></div>
+    <!--상담취소사유 팝업-->
+    <div class="bottom-popup">
+        <div class="cont">
+            <p class="txt01">상담을 취소하시는<br>사유를 선택해주세요.</p>
+            <div class="chk-wrap cancel">
+                <div>
+                    <input type="radio" name="label" id="label01"><label for="label01">대기시간이 길어 상담을 취소합니다.</label>
+                </div>
+                <div>
+                    <input type="radio" name="label" id="label02"><label for="label02">급한 용무가 생겨 상담을 취소합니다.</label>
+                </div>
+                <div>
+                    <input type="radio" name="label" id="etc"><label for="etc">기타</label>
+                </div>
+            </div>
+            <div class="input-etc">
+                <input type="text" name="" id="" placeholder="취소 사유를 입력 해주세요.">
+            </div>
+        </div>
+        <div class="btn-wrap type02">        
+            <button type="button" class="btn style01 bg01" >
+                <span>취소</span>
+            </button>     
+            <button type="button" class="btn style01" >
+                <span>확인</span>
+            </button>
+        </div>
+    </div>
+</body> 

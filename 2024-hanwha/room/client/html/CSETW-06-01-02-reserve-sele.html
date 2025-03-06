@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../js/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- <header>
+            <h1><span class="hide">한화생명</span></h1>
+            <div class="state-time">
+                <div class="state">상담중</div>
+                <div class="time">10:25</div>
+            </div>
+        </header> -->
+        <main>   
+            <div class="title-area">
+                <!-- <button type="button" class="btn-prev"><span class="hide">이전</span></button> -->
+                <h2 class="title">예약신청</h2>
+            </div> 
+            <div class="cont-wrap pt0">
+                <div class="calendar-wrap">
+                    <div class="name">
+                        <dl>
+                            <dt><label for="">성명</label></dt>
+                            <dd class="correct">
+                                <input type="text" name="" id="" class="input">
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="box">
+                        <!--<div class="title">일자 선택</div>-->
+                        <div class="calendar-cont"> 
+                            <div class="calendar-month-header">
+                                <div class="dateHeaderTitle">
+                                    2024년 10월
+                                </div>
+                                <div class="dateButtonWrap">
+                                    <button
+                                    class="dateButtonPrev">
+                                    <span class="hide">이전</span>
+                                    </button>
+                                    <button
+                                    class="dateButtonNext" disabled>
+                                    <span class="hide">다음</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="calendar-month-body">
+
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        
+.calendar-cont .calendar {
+  height: auto;
+}
+.calendar-month-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  padding: 15px 20px 0 40px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  border-radius: 16px 16px 0 0;
+}
+
+.dateButtonWrap{
+    display:flex;
+}
+.dateButtonPrev,
+.dateButtonNext {
+    height:20px;width:30px;border-radius: 10px 0 0 10px;background:#333 url(../img/btn-month-prev.png) no-repeat 60% 50%/8px auto;
+}
+.dateButtonNext {border-radius: 0 10px 10px 0;background-image: url(../img/btn-month-next.png);background-position: 40% 50%;
+}
+.dateButtonWrap button:disabled{background-color: #B3B3B3;}
+.dateHeaderTitle {
+  font-size: 18px;
+  margin: 0px;
+}
+.calendar-month-body {
+  padding: 17px 16px 20px;
+}
+
+
+                    </style>
+                    <div class="calendar-btns">
+                        <div>
+                            <div class="hour-wrap">
+                                <button type="button" class="btn-toggle">오전</button>
+                                <div class="btns hour">
+                                    <button type="button">09시</button> 
+                                    <button type="button" disabled>10시</button>
+                                    <button type="button">11시</button>
+                                    <button type="button">12시</button>
+                                </div>
+                            </div>
+                            <div class="btns minute">
+                                <button type="button">00분</button>
+                                <button type="button" disabled>15분</button>
+                                <button type="button">30분</button>
+                                <button type="button">45분</button>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="hour-wrap">
+                                <button type="button" class="btn-toggle">오후</button>
+                                <div class="btns hour">
+                                    <button type="button">13시</button>
+                                    <button type="button" disabled>14시</button>
+                                    <button type="button" disabled>16시</button>
+                                    <button type="button">17시</button>
+                                </div>
+                            </div>
+                            <div class="btns minute">
+                                <button type="button">00분</button>
+                                <button type="button" disabled>15분</button>
+                                <button type="button">30분</button>
+                                <button type="button">45분</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="closed-notice">예약상담이 마감되었습니다</p>
+                </div>
+            </div>
+        </main>           
+        <div class="btn-wrap">        
+            <button type="button" class="btn style01">
+                <span>다음</span>
+            </button>
+        </div>  
+    </div>
+    <script>
+        const btnsHour = document.querySelectorAll('.btns.hour button')
+        const calendarBtns = document.querySelectorAll('.calendar-btns')
+        const btnsMinute = document.querySelectorAll('.btns.minute button')
+        const calendarBtnsDivs = document.querySelectorAll('.calendar-btns > div')
+
+        btnsHour.forEach((btnH) =>{
+            btnH.addEventListener('click', (b) =>{
+                btnsHour.forEach((bh) =>{
+                    bh.classList.remove('sele');
+                })
+                btnsMinute.forEach(btnM =>{
+                    btnM.classList.remove('sele');
+                })
+                b.currentTarget.classList.add('sele');
+                calendarBtnsDivs.forEach((calendarBtnsDiv) =>{
+                    calendarBtnsDiv.classList.remove('open')
+                })
+                const hourWrap = b.currentTarget.closest('.hour-wrap');
+                if (hourWrap && hourWrap.parentElement) {
+                    hourWrap.parentElement.classList.add('open');
+                }                
+            })
+        })
+
+        btnsMinute.forEach((btnM) => {
+            btnM.addEventListener('click', (m) =>{
+                btnsMinute.forEach((bm) =>{
+                    bm.classList.remove('sele');
+                })
+                m.currentTarget.classList.add('sele');
+            })
+        })
+
+        /*const dateBtn = document.getElementById('date');
+        const btnsHour = document.querySelector('.btns.hour')
+        const btnsMinute = document.querySelector('.btns.minute')
+        const hourBtns = btnsHour.querySelectorAll('button')
+        dateBtn.addEventListener('click', () => {
+            btnsHour.classList.add('show')
+        })
+        hourBtns.forEach((hourBtn) => {
+            hourBtn.addEventListener('click', (h) => {
+                btnsMinute.classList.add('show')
+                btnsHour.classList.add('radius')//이 동작 추가
+            })
+        })*/
+    </script>
+</body>
