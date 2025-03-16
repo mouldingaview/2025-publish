@@ -550,4 +550,5 @@ const fixedElem = document.querySelector('.fixed-wrap');
 scrollbar.addListener( status => {
   const offset = status.offset;
 	fixedElem.style.transform = `translateY(${offset.y}px)`
+	
 })
