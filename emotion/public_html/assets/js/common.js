@@ -3,12 +3,15 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const container = document.querySelector('#container');
+//smoothscrollbar 정의
 const Scrollbar = window.Scrollbar;
 const scrollbar = Scrollbar.init(container, {
   damping: 0.05,
   alwaysShowTracks: false,
 });
+//smoothscrollbar 정의
 
+//gsap + scrolltrigger
 ScrollTrigger.scrollerProxy(container, {
   scrollTop(value) {
     if (arguments.length) {
@@ -20,6 +23,7 @@ ScrollTrigger.scrollerProxy(container, {
 
 scrollbar.addListener(ScrollTrigger.update);
 ScrollTrigger.defaults({scroller: container});
+//smoothscrollbar 사용시 필수 필요
 
 
 // 커서 이미지
@@ -62,7 +66,7 @@ addCursorImage(cursorLinks, 'cursor-link'); // cursor-link ? cursor-hide ?
 // Go To Top
 const topButton = document.querySelector('.btn-scrollTop');
 topButton.addEventListener('click',() => {
-  scrollbar.scrollTo(0, 0 , 600);
+  scrollbar.scrollTo(0, 0 , 600);//smoothscrollbar 문법
 });
 
 // footer animation
@@ -79,7 +83,7 @@ document.addEventListener('mousemove', ()=> {
   footerCopyMove();
 })
 
-// Footer 텍스트 애니메이션
+// Footer 텍스트 마우스무브애니
 function footerCopyMove(){
   footerCopyText.forEach((item, index) => {
     ftCenter = cursorX - window.innerWidth / 2;
@@ -88,6 +92,7 @@ function footerCopyMove(){
   })
 }
 
+//footer 등장시 애니메이션
 const footerCopyTl = gsap.timeline();
 footerCopyTl.fromTo(footerCopyText, 
 	{scaleY: 0},

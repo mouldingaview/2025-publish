@@ -10,7 +10,7 @@ let scrollY = 0;
 
 // scroll Event
 scrollbar.addListener((data) => {
-	scrollY = data.offset.y;
+	scrollY = data.offset.y;//smoothscrollbar 문법
 
 	if (scrollY > 100) {
 		header.classList.add('header-fixed');
@@ -81,7 +81,7 @@ function mainIntro() {
 			},
 		})
 		// intro slogan 02
-		.to(intro02, { autoAlpha: 1 }, '-=.5')
+		.to(intro02, { autoAlpha: 1 }, '-=.5')//앞 애니가 끝나기 -.5 전에 실행
 		.from(intro02Char, {
 				autoAlpha: 0,
 				y: 10,
@@ -110,12 +110,13 @@ function mainIntro() {
 		})
 		.fromTo(introBg,
 			{scale: 0}, 
-			{duration:1, scale:(200), ease: 'expo.inOut'}, '<' )
-		.to('#main-intro', {autoAlpha: 0}, '<')
+			{duration:1, scale:(200), ease: 'expo.inOut'}, '<' )//'<' 타임라인 포지셔닝 옵션 - 앞에 있는 애랑 같이 진행해
+		.to('#main-intro', {autoAlpha: 0}, '<')//'<' 타임라인 포지셔닝 옵션 - 앞에 있는 애랑 같이 진행해
 
 
+		//gsap 문법
 		mainIntroTl.eventCallback('onComplete', ()=> {
-			// 메인 슬로건 시작
+ 			// 메인 슬로건 시작
 			mainSlogan();
 			// work thumbnail 등장
 			setTimeout(workThumbnailShow, 100);
@@ -264,16 +265,16 @@ function setWorkItemsSize(){
 
 	secWorkHeight = secWork.offsetHeight;
 	secWorkContHeight = secWorkCont.offsetHeight;
-  listWidth = workList.scrollWidth;
+  	listWidth = workList.scrollWidth;
 	listHeight = workList.offsetHeight;
-  itemWidth = workItem[1].offsetWidth;
+  	itemWidth = workItem[1].offsetWidth;
 	itemHeight = workItem[1].offsetHeight;
-  itemSpace = ((listWidth - itemWidth * itemNum) / (itemNum - 1));
+  	itemSpace = ((listWidth - itemWidth * itemNum) / (itemNum - 1));
 	startY = secWork.offsetTop - (window.innerHeight - secWorkContHeight);
 	endY = startY + (moveYPerItem * (itemNum - 3));
 	sideItemWidth = Math.round((window.innerWidth - 160 - itemSpace * 2 - itemWidth) / 2);
 
-  workList.style.left = `-${ itemWidth - sideItemWidth }px`;
+  	workList.style.left = `-${ itemWidth - sideItemWidth }px`;
 }
 
 // smooth scrollbar Event

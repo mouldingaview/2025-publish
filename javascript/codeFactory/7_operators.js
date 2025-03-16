@@ -124,4 +124,4 @@ console.log(name)
 
 let name2;
 name2 ??= '마브레이블' //같은 표현 ==> name2 = name2 ?? '마브레이블'
-console.log(name2)
+console.log(name2) 
