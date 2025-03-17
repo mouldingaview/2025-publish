@@ -1,0 +1,158 @@
+@import "reset";
+//@import "layout";
+@import "fonts";
+
+$red: #ee2c3c;
+$ffMontserrat: "Montserrat", sans-serif;
+$ffNotoSans: "Noto Sans KR", sans-serif;
+
+
+@keyframes yoyoDown {
+	0% {
+		transform: translate3d(0, 5px, 0) rotate(180deg);
+	}
+	100% {
+		transform: translate3d(0, -5px, 0) rotate(180deg);
+	}
+}
+
+// Section
+.section-main {
+	* {
+		font-family: $ffMontserrat;
+	}
+	position: relative;
+
+	.section-main-inner {
+		position: relative;
+	}
+
+	.sec-tit {
+		margin-bottom: 80px;
+		color: #000;
+		font-size: 24px;
+		font-family: $ffMontserrat;
+		font-weight: 600;
+
+		.color2 {
+			color: $red;
+		}
+	}
+}
+
+// Section Intro   sdfsdf
+.section-intro {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+  
+      .section-main-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+      }
+  
+      .intro-bg {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          transform: translate(-50%, 0);
+          background-color: #fff;
+          z-index: 2;
+      }
+  
+      .intro-text {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          &::before {
+              content:'';
+              display: block;
+              position: absolute;
+              inset: 0;
+              background-color: $red;
+              
+          }
+  
+          .txt-intro {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              display: flex;
+              transform: translate(-50%, -50%);
+              color: #fff;
+              font-family: $ffMontserrat;
+              font-size: clamp(50px, 5vw, 90px);
+              font-weight: 600;
+              letter-spacing: -0.05em;
+              white-space: nowrap;
+              opacity: 0;
+              
+          }
+      }
+  }
+
+  // Section Slogan
+.section-slogan {
+	.section-main-inner {
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.slogan-text {
+		.txt-slogan {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: flex;
+			transform: translate(-50%, -50%);
+			color: $red;
+			font-family: $ffMontserrat;
+			font-size: clamp(50px, 5vw, 85px);
+			// font-size: 90px;
+			font-weight: 700;
+			letter-spacing: -0.05em;
+			white-space: nowrap;
+			opacity: 0;
+		}
+	}
+
+	.scroll-down {
+		position: absolute;
+		left: 80px;
+		bottom: 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 12px;
+
+		.ico-arr {
+			position: relative;
+			display: block;
+			width: 24px;
+			height: 24px;
+			background: url(assets/images/common/ico-arrow-up.svg) no-repeat center/contain;
+			// transform: translate3d(0, 0, 0) rotate(180deg);
+			transition: .2s ease-in;
+			animation: yoyoDown .3s infinite alternate;	
+		}
+		.txt {
+			font-size: 16px;
+			font-weight: 500;
+		}
+
+	}
+}
