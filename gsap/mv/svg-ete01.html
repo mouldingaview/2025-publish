@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>눈 깜빡이기 애니메이션</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        object {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- SVG 파일을 object 태그로 로드 -->
+    <object id="eyeSvg" class="eye" data="eyes.svg" type="image/svg+xml"></object>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const eyeSvgObject = document.getElementById("eyeSvg");
+
+            eyeSvgObject.addEventListener("load", function () {
+                const svgDoc = eyeSvgObject.contentDocument;
+                const eye = svgDoc.querySelector(".eye"); // 눈 요소 선택
+
+                if (!eye) {
+                    console.error("SVG 파일에서 .eye 클래스를 찾을 수 없습니다.");
+                    return;
+                }
+
+                // GSAP 타임라인 설정
+                const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
+
+                tl.to(eye, { scaleY: 0.1, duration: 0.1, ease: "power2.inOut" }) // 눈 감기
+                  .to(eye, { scaleY: 1, duration: 0.1, ease: "power2.inOut", delay: 0.1 }); // 눈 뜨기
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,7 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 html,
 body,
 div,
@@ -86,6 +82,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
+  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -103,9 +100,9 @@ nav,
 section {
   display: block;
 }
-/*body {
+body {
   line-height: 1;
-}*/
+}
 ol,
 ul {
   list-style: none;
@@ -119,48 +116,9 @@ blockquote:after,
 q:before,
 q:after {
   content: "";
+  content: none;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body {
-  font-size: 18px;
-  color: #101010;
-}
-img {
-  max-width: 100%;
-}
-a {
-  text-decoration: none;
-}
-button {
-  border: none;
-  cursor: pointer;
-}
-// input[type="file"] {
-//   cursor: pointer;
-// }
-// textarea {
-//   font-family: "Noto Sans KR", "Arial", "Apple SD Gothic Neo", sans-serif;
-//   font-size: 14px;
-//   color: #333;
-// }
-// textarea::-webkit-input-placeholder {
-//   color: #b4b4b4;
-// }
-// textarea:-ms-input-placeholder {
-//   color: #b4b4b4;
-// }
-
-// input {
-//   font-family: "Noto Sans KR", "Arial", "Apple SD Gothic Neo", sans-serif;
-//   font-size: 14px;
-//   color: #333;
-// }
-// input::-webkit-input-placeholder {
-//   color: #b4b4b4;
-// }
-// input:-ms-input-placeholder {
-//   color: #b4b4b4;
-// }

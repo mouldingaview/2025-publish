@@ -105,10 +105,9 @@ section {
   display: block;
 }
 
-body {
+/*body {
   line-height: 1;
-}
-
+}*/
 ol,
 ul {
   list-style: none;
@@ -149,6 +148,18 @@ button {
   cursor: pointer;
 }
 
+@font-face {
+  font-family: "Belwe";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/belwe/BelweMediumBT.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BelweLT";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/belwe/BelweLightBT.ttf") format("truetype");
+}
 @keyframes yoyoDown {
   0% {
     transform: translate3d(0, 5px, 0) rotate(180deg);

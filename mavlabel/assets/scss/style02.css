@@ -1,0 +1,297 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/*body {
+  line-height: 1;
+}*/
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-size: 18px;
+  color: #101010;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Belwe";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/belwe/BelweMediumBT.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BelweLT";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/belwe/BelweLightBT.ttf") format("truetype");
+}
+.intro-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #d8d5e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.intro-wrap .intro-heart {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.intro-wrap .intro-heart img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.intro-wrap .intro-heart img:first-child {
+  position: static;
+}
+.intro-wrap .intro-heart .star {
+  width: 100%;
+  height: 100%;
+}
+.intro-wrap .intro-heart .star img {
+  position: absolute;
+  left: 50%;
+  width: 10%;
+  animation: sparkle 2s infinite alternate ease-in-out;
+}
+.intro-wrap .intro-heart .star img.star01 {
+  width: 7%;
+  left: 66%;
+  top: 20%;
+}
+.intro-wrap .intro-heart .star img.star02 {
+  width: 6.5%;
+  left: 29%;
+  top: 68%;
+  animation-name: sparkle02;
+  animation-duration: 3s;
+}
+.intro-wrap .intro-heart .star img.star03 {
+  width: 3%;
+  left: 36%;
+  top: 75%;
+  animation-name: sparkle02;
+}
+.intro-wrap .intro-heart .star img.star04 {
+  left: 44%;
+  top: 10%;
+  width: 1.5%;
+}
+.intro-wrap .intro-heart .star img.star05 {
+  left: 18%;
+  top: 20%;
+  width: 2%;
+  animation-name: sparkle02;
+}
+.intro-wrap .intro-heart .star img.star06 {
+  left: 85%;
+  top: 60%;
+  width: 1.8%;
+}
+.intro-wrap .intro-heart .star img.star07 {
+  left: 63%;
+  top: 85%;
+  width: 1.5%;
+  animation-name: sparkle02;
+}
+
+.txt-intro {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  text-align: center;
+  color: #FFF;
+  font-family: "Belwe", sans-serif;
+  font-size: 5rem;
+  letter-spacing: -1px;
+}
+.txt-intro em {
+  font-family: "BelweLT", sans-serif;
+}
+
+.fixed-item > * {
+  position: absolute;
+}
+.fixed-item nav {
+  top: 0;
+  left: 0;
+}
+.fixed-item button {
+  bottom: 0;
+  right: 0;
+}
+.fixed-item .txt-scroll {
+  left: 0;
+  bottom: 0;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes sparkle02 {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}/*# sourceMappingURL=style02.css.map */
