@@ -1,3 +1,50 @@
+
+gsap.registerPlugin(Draggable);
+
+const dragBtn = document.querySelector('.drag-btn'); // 클래스 선택자로 변경
+let threshold = 50; // 드래그 거리
+let dragged = false; // 드래그 여부 체크
+
+// 드래그 기능 적용
+Draggable.create(dragBtn, {
+  type: "y", // 세로 드래그 허용
+  bounds: { minY: 0, maxY: threshold },
+  onPress: function () {
+    dragged = false; // 드래그 시작 시 초기화
+  },
+  onDrag: function () {
+    dragged = true; // 드래그 발생하면 true
+  },
+  onRelease: function () {
+    if (this.y >= threshold) {
+      let link = dragBtn.getAttribute("href");
+      let newTab = window.open(link, "_blank"); // 새 창에서 링크 열기
+
+      if (!newTab) {
+        alert("팝업이 차단되었습니다. 팝업 차단을 해제해주세요!");
+      }
+
+      gsap.to(dragBtn, { y: 0, duration: 0.2, ease: "bounce.out" });
+    } else {
+      gsap.to(dragBtn, { y: 0, duration: 0.2, ease: "elastic.out(1, 0.5)" });
+    }
+  }
+});
+
+// 클릭 시 새 창에서 열기
+dragBtn.addEventListener("click", function (e) {
+  if (!dragged) { // 클릭만 했을 경우
+    e.preventDefault(); // 기본 링크 이동 막기
+    let link = dragBtn.getAttribute("href");
+    let newTab = window.open(link, "_blank"); // 새 창에서 링크 열기
+
+    if (!newTab) {
+      alert("팝업이 차단되었습니다. 팝업 차단을 해제해주세요!");
+    }
+  }
+});
+
+
 // 페이지 로드 후 실행
 document.addEventListener("DOMContentLoaded", function(){
     sliceTextInit();

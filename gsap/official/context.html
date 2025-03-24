@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/gOWxmWG.css">
+    <style>
+        /* external css from 
+https://codepen.io/GreenSock/pen/gOWxmWG.css */
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+    font-size: 2rem;
+    background-color: orange;
+}
+
+button {
+  position: fixed;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%) scale(2) ;
+}
+
+.box {
+  width: 150px; height: 150px;
+}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+    <div class="box revert box gradient-green-2" style="color: white">revert</div>
+    <div class="box kill box gradient-blue">kill</div>
+
+    <button>
+        revert / kill
+    </button>
+<script>
+    let button = document.querySelector('button');
+    let revertTween = gsap.to('.revert', {
+        rotation: 360,
+        duration: 4,
+        repeat: -1,
+        delay: 1,
+        ease: "none",
+    })
+    let killTween = gsap.to('.kill', {
+        rotation: 360,
+        duration: 4,
+        repeat: -1,
+        delay: 1,
+        ease: 'none',
+    })
+    button.addEventListener('click', (e) => {
+        revertTween.revert();
+        killTween.kill();
+
+    })
+</script>
+
+</body>
+</html>

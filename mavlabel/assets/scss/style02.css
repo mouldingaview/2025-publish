@@ -146,6 +146,7 @@ a {
 button {
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 @font-face {
@@ -264,9 +265,15 @@ button {
   top: 0;
   left: 0;
 }
-.fixed-item button {
-  bottom: 0;
-  right: 0;
+.fixed-item .drag-btn {
+  background: url(/assets/images/button.png) no-repeat 0 0;
+  background-size: contain;
+  top: 0;
+  right: 20px;
+  height: 80vh;
+  width: 100px;
+  animation: bounce 1s infinite alternate ease-in-out;
+  cursor: grab;
 }
 .fixed-item .txt-scroll {
   left: 0;
@@ -293,5 +300,16 @@ button {
   }
   100% {
     opacity: 0.1;
+  }
+}
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: 0;
   }
 }/*# sourceMappingURL=style02.css.map */

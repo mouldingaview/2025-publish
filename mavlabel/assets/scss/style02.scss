@@ -103,17 +103,24 @@
         top:0;
         left:0;
     }
-    button{
-        bottom: 0;
-        right:0;
+    .drag-btn{
+        background: url(/assets/images/button.png) no-repeat 0 0;
+        background-size: contain;
+        top: 0;
+        right:20px;
+        height:80vh;
+        width:100px;
+        animation: bounce 1s infinite alternate ease-in-out;
+        cursor: grab;
     }
     .txt-scroll{
         left:0;
         bottom: 0;
-    }
-    
+    }   
     
 }
+
+
 @keyframes sparkle {
     0% { opacity: 1; }
     50% { opacity: 0.1; }
@@ -123,4 +130,18 @@
     0% { opacity: 0.1; }
     50% { opacity: 1; }
     100% { opacity: 0.1; }
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -20px;
+  }
+
+  100% {
+    top: 0;
+  }
 }
